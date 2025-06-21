@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>أجهزة الشبكات - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس الأساسيات</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="intro.html">مقدمة في الشبكات</a></li>
+<li><a href="types.html">أنواع الشبكات</a></li>
+<li><a href="topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="protocols.html">بروتوكولات الشبكات</a></li>
+<li><a class="active" href="devices.html">أجهزة الشبكات</a></li>
+<li><a href="osi.html">نموذج OSI</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">أجهزة الشبكات</h1>
+<div class="lesson-content">
+<h2>مقدمة عن أجهزة الشبكات</h2>
+<p>أجهزة الشبكات (Network Devices) هي المكونات المادية التي تستخدم لبناء شبكات الحاسوب وتشغيلها. تلعب هذه الأجهزة دورًا حيويًا في توصيل الأجهزة ببعضها البعض، وتوجيه البيانات، وتأمين الشبكة، وتحسين أدائها.</p>
+<p>تختلف أجهزة الشبكات في وظائفها وقدراتها وتعقيدها، من الأجهزة البسيطة مثل بطاقات الشبكة والمودمات، إلى الأجهزة المعقدة مثل الراوترات والسويتشات المتقدمة.</p>
+<img alt="نظرة عامة على أجهزة الشبكات" src="../images/common_network_devices_geeksforgeeks_updated.png"/>
+<h2>أنواع أجهزة الشبكات</h2>
+<p>فيما يلي شرح مفصل لأهم أجهزة الشبكات المستخدمة في بناء وتشغيل شبكات الحاسوب:</p>
+<h3>1. بطاقة الشبكة (Network Interface Card - NIC)</h3>
+<p>بطاقة الشبكة هي المكون الأساسي الذي يسمح للحاسوب بالاتصال بالشبكة. تقوم بتحويل البيانات من الحاسوب إلى إشارات يمكن إرسالها عبر وسائط الشبكة، والعكس.</p>
+<h4>الخصائص الرئيسية:</h4>
+<ul>
+<li>تأتي إما مدمجة في اللوحة الأم أو كبطاقة توسعة.</li>
+<li>تحتوي على عنوان MAC فريد مكون من 48 بت.</li>
+<li>تدعم سرعات مختلفة (10/100/1000 ميجابت/ثانية أو أكثر).</li>
+<li>تتوفر بأنواع مختلفة: سلكية (Ethernet) أو لاسلكية (Wi-Fi) أو بلوتوث.</li>
+</ul>
+<img alt="بطاقة الشبكة" src="../images/INTERFcommon_network_devices_geeksforgeeks_updated.png"/>
+<h3>2. المودم (Modem)</h3>
+<p>المودم (Modulator-Demodulator) هو جهاز يقوم بتحويل الإشارات الرقمية إلى إشارات تناظرية والعكس، مما يسمح بنقل البيانات عبر خطوط الهاتف أو الكابل أو الأقمار الصناعية.</p>
+<h4>الأنواع الرئيسية للمودمات:</h4>
+<ul>
+<li><strong>مودم الهاتف (Dial-up Modem):</strong> يستخدم خطوط الهاتف العادية، وهو بطيء نسبيًا (56 كيلوبت/ثانية).</li>
+<li><strong>مودم DSL:</strong> يستخدم خطوط الهاتف ولكن بتقنية مختلفة تسمح بسرعات أعلى (من 1 إلى 100 ميجابت/ثانية).</li>
+<li><strong>مودم الكابل:</strong> يستخدم شبكة الكابل التلفزيوني، ويوفر سرعات عالية (من 10 إلى 1000 ميجابت/ثانية).</li>
+<li><strong>مودم الألياف البصرية:</strong> يستخدم الألياف البصرية، ويوفر أعلى السرعات (من 100 ميجابت/ثانية إلى عدة جيجابت/ثانية).</li>
+</ul>
+<img alt="أنواع المودمات" src="../images/common_network_devices_geeksforgeeks_updated.png"/>
+<h3>3. الهاب (Hub)</h3>
+<p>الهاب هو جهاز بسيط يستخدم لربط عدة أجهزة في شبكة محلية. يعمل في الطبقة الفيزيائية من نموذج OSI، ويقوم بإرسال البيانات الواردة إلى جميع الأجهزة المتصلة به.</p>
+<h4>خصائص الهاب:</h4>
+<ul>
+<li>جهاز غير ذكي (لا يحتفظ بجدول عناوين).</li>
+<li>يرسل البيانات إلى جميع المنافذ (البث).</li>
+<li>يستهلك عرض النطاق الترددي بشكل غير فعال.</li>
+<li>لا يوفر أي حماية أو خصوصية للبيانات.</li>
+<li>أصبح نادر الاستخدام حاليًا، وتم استبداله بالسويتشات.</li>
+</ul>
+<img alt="جهاز الهاب" src="../images/common_network_devices_geeksforgeeks_updated.png"/>
+<h3>4. السويتش (Switch)</h3>
+<p>السويتش هو جهاز متطور يستخدم لربط عدة أجهزة في شبكة محلية. يعمل في طبقة الوصلة من نموذج OSI، ويقوم بتوجيه البيانات فقط إلى الجهاز المقصود.</p>
+<h4>خصائص السويتش:</h4>
+<ul>
+<li>جهاز ذكي يحتفظ بجدول عناوين MAC.</li>
+<li>يرسل البيانات فقط إلى المنفذ المقصود (التبديل).</li>
+<li>يستخدم عرض النطاق الترددي بكفاءة.</li>
+<li>يوفر مستوى أعلى من الأمان والخصوصية مقارنة بالهاب.</li>
+<li>يدعم تقنيات متقدمة مثل VLAN و QoS.</li>
+</ul>
+<h4>أنواع السويتشات:</h4>
+<ul>
+<li><strong>السويتشات غير المدارة (Unmanaged Switches):</strong> سهلة الاستخدام وتعمل بشكل تلقائي، مناسبة للشبكات الصغيرة.</li>
+<li><strong>السويتشات المدارة (Managed Switches):</strong> توفر إمكانيات إدارة وتكوين متقدمة، مناسبة للشبكات المتوسطة والكبيرة.</li>
+<li><strong>السويتشات الذكية (Smart Switches):</strong> توفر بعض إمكانيات الإدارة بسعر أقل من السويتشات المدارة.</li>
+</ul>
+<img alt="جهاز السويتش" src="../images/what-is-network-switching-628x353.jpeg"/>
+<h3>5. الراوتر (Router)</h3>
+<p>الراوتر هو جهاز متقدم يستخدم لربط شبكتين أو أكثر معًا، وتوجيه البيانات بينهما. يعمل في طبقة الشبكة من نموذج OSI، ويستخدم عناوين IP لتوجيه البيانات.</p>
+<h4>خصائص الراوتر:</h4>
+<ul>
+<li>يربط بين شبكات مختلفة (مثل الشبكة المحلية والإنترنت).</li>
+<li>يحتفظ بجدول توجيه يحدد المسار الأفضل للبيانات.</li>
+<li>يوفر وظائف أمان مثل جدار الحماية (Firewall).</li>
+<li>يدعم بروتوكولات التوجيه مثل RIP و OSPF و BGP.</li>
+<li>يمكن أن يوفر خدمات مثل DHCP و NAT.</li>
+</ul>
+<h4>أنواع الراوترات:</h4>
+<ul>
+<li><strong>راوترات المنزل والمكاتب الصغيرة:</strong> بسيطة وسهلة الاستخدام، توفر اتصالًا بالإنترنت لعدد محدود من الأجهزة.</li>
+<li><strong>راوترات الشركات:</strong> متطورة وقوية، توفر إمكانيات متقدمة للشبكات الكبيرة.</li>
+<li><strong>راوترات الحافة (Edge Routers):</strong> تربط بين شبكة المؤسسة والإنترنت.</li>
+<li><strong>راوترات النواة (Core Routers):</strong> تستخدم في قلب شبكات مزودي خدمة الإنترنت.</li>
+</ul>
+<img alt="جهاز الراوتر" src="../images/wifi-router.jpg"/>
+<h3>6. نقطة الوصول اللاسلكية (Wireless Access Point - WAP)</h3>
+<p>نقطة الوصول اللاسلكية هي جهاز يسمح للأجهزة اللاسلكية بالاتصال بشبكة سلكية. تعمل كجسر بين الشبكة السلكية واللاسلكية.</p>
+<h4>خصائص نقطة الوصول اللاسلكية:</h4>
+<ul>
+<li>توفر اتصالًا لاسلكيًا للأجهزة المحمولة.</li>
+<li>تدعم معايير Wi-Fi المختلفة (802.11a/b/g/n/ac/ax).</li>
+<li>توفر تغطية لاسلكية في منطقة محددة.</li>
+<li>يمكن استخدام عدة نقاط وصول لتوسيع التغطية.</li>
+<li>تدعم ميزات أمان مثل WPA2/WPA3.</li>
+</ul>
+<p>ملاحظة: العديد من راوترات المنزل والمكاتب الصغيرة تجمع بين وظائف الراوتر والسويتش ونقطة الوصول اللاسلكية في جهاز واحد.</p>
+<img alt="نقطة الوصول اللاسلكية" src="../images/wireless_access_point.jpeg"/>
+<h3>7. جدار الحماية (Firewall)</h3>
+<p>جدار الحماية هو جهاز أو برنامج يراقب ويتحكم في حركة البيانات الداخلة والخارجة من الشبكة، ويحميها من التهديدات الخارجية.</p>
+<h4>أنواع جدران الحماية:</h4>
+<ul>
+<li><strong>جدران الحماية البرمجية:</strong> برامج تعمل على أجهزة الحاسوب.</li>
+<li><strong>جدران الحماية المادية:</strong> أجهزة مخصصة لحماية الشبكة.</li>
+<li><strong>جدران الحماية المدمجة:</strong> مدمجة في أجهزة أخرى مثل الراوترات.</li>
+</ul>
+<h4>وظائف جدار الحماية:</h4>
+<ul>
+<li>تصفية حزم البيانات بناءً على قواعد محددة.</li>
+<li>منع الوصول غير المصرح به إلى الشبكة.</li>
+<li>مراقبة وتسجيل محاولات الاختراق.</li>
+<li>توفير خدمات VPN للاتصال الآمن عن بعد.</li>
+</ul>
+<img alt="جهاز جدار الحماية" src="../images/Firecommon_network_devices_geeksforgeeks_updated.png"/>
+<h3>8. البوابة (Gateway)</h3>
+<p>البوابة هي جهاز يربط بين شبكتين مختلفتين تستخدمان بروتوكولات مختلفة. تعمل في جميع طبقات نموذج OSI، وتقوم بترجمة البروتوكولات بين الشبكات.</p>
+<h4>أنواع البوابات:</h4>
+<ul>
+<li><strong>بوابة البروتوكول:</strong> تترجم بين بروتوكولات مختلفة.</li>
+<li><strong>بوابة التطبيق:</strong> تعمل على مستوى التطبيقات مثل البريد الإلكتروني أو نقل الملفات.</li>
+<li><strong>البوابة الافتراضية:</strong> هي الراوتر الذي يوجه البيانات خارج الشبكة المحلية.</li>
+</ul>
+<h3>9. المكرر (Repeater)</h3>
+<p>المكرر هو جهاز بسيط يستخدم لتقوية الإشارة وتمديد مسافة الشبكة. يعمل في الطبقة الفيزيائية من نموذج OSI.</p>
+<h4>خصائص المكرر:</h4>
+<ul>
+<li>يستقبل الإشارة الضعيفة ويعيد إرسالها بقوة أكبر.</li>
+<li>لا يقوم بأي معالجة للبيانات.</li>
+<li>يستخدم لتمديد مسافة الشبكة السلكية أو اللاسلكية.</li>
+</ul>
+<h3>10. الجسر (Bridge)</h3>
+<p>الجسر هو جهاز يستخدم لربط قطاعين من نفس الشبكة. يعمل في طبقة الوصلة من نموذج OSI، ويقوم بتصفية حركة البيانات بين القطاعين.</p>
+<h4>خصائص الجسر:</h4>
+<ul>
+<li>يحتفظ بجدول عناوين MAC.</li>
+<li>يسمح فقط بمرور البيانات المقصودة للقطاع الآخر.</li>
+<li>يقلل من الازدحام في الشبكة.</li>
+<li>يمكن أن يربط بين أنواع مختلفة من الشبكات (مثل Ethernet و Wi-Fi).</li>
+</ul>
+<h2>اختيار أجهزة الشبكات المناسبة</h2>
+<p>يعتمد اختيار أجهزة الشبكات المناسبة على عدة عوامل، منها:</p>
+<ul>
+<li><strong>حجم الشبكة:</strong> عدد الأجهزة المتصلة.</li>
+<li><strong>نوع الشبكة:</strong> سلكية أو لاسلكية أو هجينة.</li>
+<li><strong>متطلبات الأداء:</strong> سرعة نقل البيانات وزمن الاستجابة.</li>
+<li><strong>متطلبات الأمان:</strong> مستوى الحماية المطلوب.</li>
+<li><strong>الميزانية:</strong> التكلفة المتاحة للأجهزة والصيانة.</li>
+<li><strong>قابلية التوسع:</strong> إمكانية توسيع الشبكة في المستقبل.</li>
+</ul>
+<h2>صيانة أجهزة الشبكات</h2>
+<p>تحتاج أجهزة الشبكات إلى صيانة دورية لضمان عملها بكفاءة واستمرارية، وتشمل الصيانة:</p>
+<ul>
+<li>تحديث البرامج الثابتة (Firmware) بانتظام.</li>
+<li>مراقبة أداء الأجهزة وتحديد المشكلات المحتملة.</li>
+<li>تنظيف الأجهزة من الغبار والأوساخ.</li>
+<li>التأكد من التهوية المناسبة لمنع ارتفاع درجة الحرارة.</li>
+<li>توثيق إعدادات الأجهزة والتغييرات التي تتم عليها.</li>
+</ul>
+<h2>خلاصة</h2>
+<p>تعتبر أجهزة الشبكات العمود الفقري لأي شبكة حاسوبية، فهي تمكن الأجهزة من الاتصال وتبادل البيانات بشكل فعال وآمن. فهم وظائف وخصائص هذه الأجهزة يساعد في تصميم وتنفيذ وصيانة شبكات فعالة تلبي احتياجات المستخدمين.</p>
+<p>مع تطور تكنولوجيا الشبكات، تتطور أيضًا أجهزة الشبكات لتوفير سرعات أعلى وأمان أفضل وميزات متقدمة. لذلك، من المهم مواكبة التطورات الجديدة في هذا المجال.</p>
+</div>
+<div class="lesson-navigation">
+<a class="prev-lesson" href="protocols.html">الدرس السابق: بروتوكولات الشبكات</a>
+<a class="next-lesson" href="osi.html">الدرس التالي: نموذج OSI</a>
+</div>
+</main>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

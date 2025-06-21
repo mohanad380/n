@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>اختبار التوجيه والتبديل - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* نفس أنماط CSS الموجودة في basics-test.html */
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        .question h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .options li {
+            margin-bottom: 10px;
+        }
+        
+        .options label {
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .options label:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .options input[type="radio"] {
+            margin-left: 10px;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4169E1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #3151b5;
+        }
+        
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background-color: #4169E1;
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.3s;
+        }
+    </style>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الصفحة -->
+<div class="container page-container">
+<h1 class="page-title">اختبار التوجيه والتبديل</h1>
+<div class="page-description">
+<p>اختبر فهمك لمفاهيم التوجيه (Routing) والتبديل (Switching) الأساسية، بما في ذلك أنواع التوجيه وبروتوكولاته، ووظائف المبدلات والشبكات المحلية الافتراضية (VLANs). يتكون الاختبار من 12 سؤال.</p>
+<p>اختر الإجابة الصحيحة لكل سؤال، ثم انقر على زر "إرسال الإجابات" في نهاية الاختبار لمعرفة نتيجتك.</p>
+</div>
+<div class="progress-container">
+<div class="progress-bar" id="progress"></div>
+</div>
+<div class="quiz-container">
+<form id="quiz-form">
+<div class="question" id="q1">
+<h3>1. ما هي الوظيفة الأساسية للموجه (Router)؟</h3>
+<ul class="options">
+<li><label><input name="q1" required="" type="radio" value="a"/> توصيل الأجهزة في نفس الشبكة المحلية.</label></li>
+<li><label><input name="q1" type="radio" value="b"/> تحديد أفضل مسار لنقل البيانات بين الشبكات المختلفة.</label></li>
+<li><label><input name="q1" type="radio" value="c"/> تحويل الإشارات الرقمية إلى تناظرية.</label></li>
+<li><label><input name="q1" type="radio" value="d"/> تصفية حركة المرور بناءً على عناوين MAC.</label></li>
+</ul>
+<div class="result" id="result1"></div>
+</div>
+<div class="question" id="q2">
+<h3>2. ما هو الفرق الرئيسي بين التوجيه الثابت (Static Routing) والتوجيه الديناميكي (Dynamic Routing)؟</h3>
+<ul class="options">
+<li><label><input name="q2" required="" type="radio" value="a"/> التوجيه الثابت أسرع دائمًا.</label></li>
+<li><label><input name="q2" type="radio" value="b"/> التوجيه الديناميكي يتطلب تكوينًا يدويًا للمسارات.</label></li>
+<li><label><input name="q2" type="radio" value="c"/> التوجيه الثابت يتطلب تكوينًا يدويًا للمسارات، بينما الديناميكي يكتشف المسارات تلقائيًا باستخدام بروتوكولات التوجيه.</label></li>
+<li><label><input name="q2" type="radio" value="d"/> التوجيه الديناميكي يستخدم فقط في الشبكات الصغيرة.</label></li>
+</ul>
+<div class="result" id="result2"></div>
+</div>
+<div class="question" id="q3">
+<h3>3. أي من البروتوكولات التالية هو بروتوكول توجيه يعتمد على عدد القفزات (Hop Count) كمقياس؟</h3>
+<ul class="options">
+<li><label><input name="q3" required="" type="radio" value="a"/> OSPF (Open Shortest Path First)</label></li>
+<li><label><input name="q3" type="radio" value="b"/> EIGRP (Enhanced Interior Gateway Routing Protocol)</label></li>
+<li><label><input name="q3" type="radio" value="c"/> RIP (Routing Information Protocol)</label></li>
+<li><label><input name="q3" type="radio" value="d"/> BGP (Border Gateway Protocol)</label></li>
+</ul>
+<div class="result" id="result3"></div>
+</div>
+<div class="question" id="q4">
+<h3>4. ما هي الوظيفة الأساسية للمبدل (Switch)؟</h3>
+<ul class="options">
+<li><label><input name="q4" required="" type="radio" value="a"/> ربط شبكات مختلفة.</label></li>
+<li><label><input name="q4" type="radio" value="b"/> توصيل الأجهزة داخل نفس الشبكة المحلية وتوجيه البيانات بناءً على عنوان MAC.</label></li>
+<li><label><input name="q4" type="radio" value="c"/> ترجمة أسماء النطاقات إلى عناوين IP.</label></li>
+<li><label><input name="q4" type="radio" value="d"/> تخصيص عناوين IP للأجهزة.</label></li>
+</ul>
+<div class="result" id="result4"></div>
+</div>
+<div class="question" id="q5">
+<h3>5. ما هو الغرض من استخدام الشبكات المحلية الافتراضية (VLANs)؟</h3>
+<ul class="options">
+<li><label><input name="q5" required="" type="radio" value="a"/> زيادة سرعة الاتصال بالإنترنت.</label></li>
+<li><label><input name="q5" type="radio" value="b"/> تقسيم شبكة محلية فيزيائية واحدة إلى عدة شبكات منطقية منفصلة.</label></li>
+<li><label><input name="q5" type="radio" value="c"/> ربط الأجهزة اللاسلكية بالشبكة.</label></li>
+<li><label><input name="q5" type="radio" value="d"/> تشفير الاتصالات داخل الشبكة المحلية.</label></li>
+</ul>
+<div class="result" id="result5"></div>
+</div>
+<div class="question" id="q6">
+<h3>6. كيف يتعلم المبدل (Switch) عناوين MAC للأجهزة المتصلة به؟</h3>
+<ul class="options">
+<li><label><input name="q6" required="" type="radio" value="a"/> عن طريق بروتوكول DHCP.</label></li>
+<li><label><input name="q6" type="radio" value="b"/> يتم تكوينها يدويًا بواسطة مسؤول الشبكة.</label></li>
+<li><label><input name="q6" type="radio" value="c"/> عن طريق فحص عنوان MAC المصدر في الإطارات (Frames) الواردة.</label></li>
+<li><label><input name="q6" type="radio" value="d"/> عن طريق بروتوكول ARP.</label></li>
+</ul>
+<div class="result" id="result6"></div>
+</div>
+<div class="question" id="q7">
+<h3>7. ما هو بروتوكول الشجرة الممتدة (Spanning Tree Protocol - STP) وما وظيفته؟</h3>
+<ul class="options">
+<li><label><input name="q7" required="" type="radio" value="a"/> بروتوكول توجيه يحدد أسرع مسار.</label></li>
+<li><label><input name="q7" type="radio" value="b"/> بروتوكول يمنع حدوث حلقات (Loops) في الشبكات التي تستخدم مبدلات متعددة.</label></li>
+<li><label><input name="q7" type="radio" value="c"/> بروتوكول لنقل الملفات الكبيرة.</label></li>
+<li><label><input name="q7" type="radio" value="d"/> بروتوكول لتأمين الاتصالات اللاسلكية.</label></li>
+</ul>
+<div class="result" id="result7"></div>
+</div>
+<div class="question" id="q8">
+<h3>8. أي نوع من أنواع التبديل (Switching) يقوم بفحص عنوان الوجهة فقط قبل إعادة توجيه الإطار؟</h3>
+<ul class="options">
+<li><label><input name="q8" required="" type="radio" value="a"/> Cut-through switching</label></li>
+<li><label><input name="q8" type="radio" value="b"/> Store-and-forward switching</label></li>
+<li><label><input name="q8" type="radio" value="c"/> Fragment-free switching</label></li>
+<li><label><input name="q8" type="radio" value="d"/> Adaptive switching</label></li>
+</ul>
+<div class="result" id="result8"></div>
+</div>
+<div class="question" id="q9">
+<h3>9. ما هو مفهوم "البوابة الافتراضية" (Default Gateway)؟</h3>
+<ul class="options">
+<li><label><input name="q9" required="" type="radio" value="a"/> عنوان IP الخاص بالمبدل.</label></li>
+<li><label><input name="q9" type="radio" value="b"/> عنوان IP الخاص بخادم DNS.</label></li>
+<li><label><input name="q9" type="radio" value="c"/> عنوان IP الخاص بالموجه الذي يستخدمه الجهاز لإرسال البيانات إلى خارج الشبكة المحلية.</label></li>
+<li><label><input name="q9" type="radio" value="d"/> عنوان MAC الخاص بالموجه.</label></li>
+</ul>
+<div class="result" id="result9"></div>
+</div>
+<div class="question" id="q10">
+<h3>10. لكي تتواصل الأجهزة الموجودة في VLANs مختلفة مع بعضها البعض، ماذا تحتاج؟</h3>
+<ul class="options">
+<li><label><input name="q10" required="" type="radio" value="a"/> مبدل (Switch) من الطبقة الثانية فقط.</label></li>
+<li><label><input name="q10" type="radio" value="b"/> موزع (Hub).</label></li>
+<li><label><input name="q10" type="radio" value="c"/> موجه (Router) أو مبدل من الطبقة الثالثة (Layer 3 Switch).</label></li>
+<li><label><input name="q10" type="radio" value="d"/> لا يمكنها التواصل مع بعضها البعض.</label></li>
+</ul>
+<div class="result" id="result10"></div>
+</div>
+<div class="question" id="q11">
+<h3>11. أي بروتوكول توجيه يعتبر بروتوكول حالة الارتباط (Link-State)؟</h3>
+<ul class="options">
+<li><label><input name="q11" required="" type="radio" value="a"/> RIPv1</label></li>
+<li><label><input name="q11" type="radio" value="b"/> RIPv2</label></li>
+<li><label><input name="q11" type="radio" value="c"/> IGRP</label></li>
+<li><label><input name="q11" type="radio" value="d"/> OSPF</label></li>
+</ul>
+<div class="result" id="result11"></div>
+</div>
+<div class="question" id="q12">
+<h3>12. ما هو المنفذ الجذعي (Trunk Port) في المبدل؟</h3>
+<ul class="options">
+<li><label><input name="q12" required="" type="radio" value="a"/> منفذ يتصل بجهاز كمبيوتر واحد.</label></li>
+<li><label><input name="q12" type="radio" value="b"/> منفذ يتصل بموجه.</label></li>
+<li><label><input name="q12" type="radio" value="c"/> منفذ يمكنه حمل بيانات لشبكات VLAN متعددة بين المبدلات.</label></li>
+<li><label><input name="q12" type="radio" value="d"/> منفذ يستخدم فقط لبروتوكول STP.</label></li>
+</ul>
+<div class="result" id="result12"></div>
+</div>
+<button class="submit-btn" type="submit">إرسال الإجابات</button>
+</form>
+<div class="result" id="final-result"></div>
+</div>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script>
+        const quizForm = document.getElementById('quiz-form');
+        const finalResult = document.getElementById('final-result');
+        const progressBar = document.getElementById('progress');
+        const questions = document.querySelectorAll(".question");
+        const totalQuestions = questions.length;
+
+        const correctAnswers = {
+            q1: 'b',
+            q2: 'c',
+            q3: 'c', // RIP is distance-vector, uses hop count
+            q4: 'b',
+            q5: 'b',
+            q6: 'c', // Switches learn MACs from source addresses
+            q7: 'b', // STP prevents loops
+            q8: 'a', // Cut-through only reads destination MAC
+            q9: 'c',
+            q10:'c', // Inter-VLAN routing needs a Layer 3 device
+            q11:'d', // OSPF is link-state
+            q12:'c'  // Trunk ports carry multiple VLANs
+        };
+
+        let answeredQuestions = 0;
+
+        // Update progress bar on answer selection
+        questions.forEach((question, index) => {
+            const radios = question.querySelectorAll('input[type="radio"]');
+            radios.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    // Check if this question was already counted
+                    if (!question.dataset.answered) {
+                        answeredQuestions++;
+                        question.dataset.answered = 'true';
+                        updateProgressBar();
+                    }
+                });
+            });
+        });
+
+        function updateProgressBar() {
+            const progressPercentage = (answeredQuestions / totalQuestions) * 100;
+            progressBar.style.width = progressPercentage + '%';
+        }
+
+        quizForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let score = 0;
+            const formData = new FormData(quizForm);
+            
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionId = 'q'+ i;
+                const selectedAnswer = formData.get(questionId);
+                const resultDiv = document.getElementById('result' + i);
+                const questionDiv = document.getElementById(questionId);
+                const labels = questionDiv.querySelectorAll('label');
+
+                // Reset previous styles
+                labels.forEach(label => {
+                    label.style.border = 'none';
+                    label.style.fontWeight = 'normal';
+                });
+                resultDiv.style.display = 'none'; // Hide previous result
+
+                if (selectedAnswer) {
+                    const correctAnswer = correctAnswers[questionId];
+                    const selectedLabel = questionDiv.querySelector(`input[value="${selectedAnswer}"]`).closest('label');
+                    const correctLabel = questionDiv.querySelector(`input[value="${correctAnswer}"]`).closest('label');
+
+                    if (selectedAnswer === correctAnswer) {
+                        score++;
+                        resultDiv.textContent = 'إجابة صحيحة!';
+                        resultDiv.className = 'result correct';
+                        selectedLabel.style.border = '2px solid #28a745'; // Green border for correct
+                        selectedLabel.style.fontWeight = 'bold';
+                    } else {
+                        resultDiv.innerHTML = `إجابة خاطئة. <span class="feedback">الإجابة الصحيحة هي الخيار الذي يبدأ بـ: ${correctLabel.innerText.split('\n')[0]}</span>`;
+                        resultDiv.className ='result incorrect';
+                        selectedLabel.style.border = '2px solid #dc3545'; // Red border for incorrect
+                        correctLabel.style.border = '2px solid #28a745'; // Highlight correct answer
+                        correctLabel.style.fontWeight = 'bold';
+                    }
+                    resultDiv.style.display = 'block';
+                } else {
+                    // Handle unanswered questions if needed, though \'required\' attribute should prevent this
+                    resultDiv.textContent = 'لم يتم الإجابة على هذا السؤال.';
+                    resultDiv.className = 'result incorrect';
+                    resultDiv.style.display = 'block';
+                }
+            }
+            
+            const percentage = (score / totalQuestions) * 100;
+            finalResult.innerHTML = `<h2>نتيجتك النهائية: ${score} من ${totalQuestions} (${percentage.toFixed(1)}%)</h2>`;
+            if (percentage >= 75) { // Success threshold for this test
+                finalResult.className = 'result correct';
+                finalResult.innerHTML += '<p>ممتاز! لقد اجتزت الاختبار بنجاح.</p>';
+            } else {
+                finalResult.className = 'result incorrect';
+                finalResult.innerHTML += '<p>تحتاج إلى مراجعة المادة. حاول مرة أخرى!</p>';
+            }
+            finalResult.style.display = 'block';
+
+            // Scroll to the final result
+            finalResult.scrollIntoView({ behavior: 'smooth'});
+        });
+
+        // Initial progress bar update (usually 0%)
+        updateProgressBar();
+    </script>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>مقدمة في الشبكات - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس الأساسيات</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a class="active" href="intro.html">مقدمة في الشبكات</a></li>
+<li><a href="types.html">أنواع الشبكات</a></li>
+<li><a href="topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="devices.html">أجهزة الشبكات</a></li>
+<li><a href="osi.html">نموذج OSI</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">مقدمة في الشبكات</h1>
+<div class="lesson-content">
+<h2>ما هي الشبكات؟</h2>
+<p>شبكة الحاسوب (Computer Network) هي مجموعة من أجهزة الحاسوب والأجهزة الأخرى المتصلة ببعضها البعض بهدف تبادل البيانات والموارد. تتيح الشبكات للمستخدمين التواصل وتبادل المعلومات بسهولة وسرعة، سواء كانوا في نفس المبنى أو في أماكن متباعدة حول العالم.</p>
+<img alt="تعريف الشبكات" src="../images/network_types_illustration.png"/>
+<h2>أهمية الشبكات</h2>
+<p>أصبحت الشبكات جزءًا أساسيًا من حياتنا اليومية، وتتجلى أهميتها في النقاط التالية:</p>
+<ul>
+<li><strong>تبادل المعلومات:</strong> تسهيل تبادل البيانات والملفات بين المستخدمين بسرعة وكفاءة.</li>
+<li><strong>مشاركة الموارد:</strong> إمكانية مشاركة الموارد مثل الطابعات وأجهزة التخزين والبرامج بين عدة مستخدمين.</li>
+<li><strong>توفير التكاليف:</strong> تقليل تكاليف الأجهزة والبرمجيات من خلال مشاركتها بين المستخدمين.</li>
+<li><strong>تسهيل التواصل:</strong> توفير وسائل اتصال متنوعة مثل البريد الإلكتروني والمحادثات الفورية ومؤتمرات الفيديو.</li>
+<li><strong>مركزية البيانات:</strong> تخزين البيانات في مكان مركزي يسهل الوصول إليها وإدارتها وحمايتها.</li>
+</ul>
+<h2>التطور التاريخي للشبكات</h2>
+<img alt="شبكة ARPANET" src="../images/arpanet_logical_map_1977.png"/>
+<p>مرت شبكات الحاسوب بمراحل تطور عديدة منذ ظهورها في ستينيات القرن العشرين:</p>
+<h3>1. بدايات الشبكات (1960s-1970s)</h3>
+<p>بدأت فكرة شبكات الحاسوب مع مشروع ARPANET في عام 1969، وهو المشروع الذي طورته وكالة مشاريع البحوث المتقدمة الدفاعية (DARPA) في الولايات المتحدة. كان الهدف الأساسي من ARPANET هو ربط مراكز الأبحاث والجامعات لتسهيل تبادل المعلومات العلمية والعسكرية.</p>
+<img alt="شبكة ARPANET" src="../images/3-12.jpg"/>
+<h3>2. ظهور الإنترنت (1980s)</h3>
+<p>في الثمانينيات، تم تطوير بروتوكول TCP/IP الذي أصبح الأساس لشبكة الإنترنت الحديثة. كما تم إنشاء نظام أسماء النطاقات (DNS) لتسهيل الوصول إلى المواقع عبر أسماء بدلاً من عناوين IP الرقمية.</p>
+<h3>3. انتشار الشبكات المحلية (1980s-1990s)</h3>
+<p>شهدت هذه الفترة انتشار الشبكات المحلية (LAN) في الشركات والمؤسسات، مع ظهور تقنيات مثل Ethernet وToken Ring. كما بدأت الشبكات اللاسلكية في الظهور.</p>
+<h3>4. عصر الويب (1990s)</h3>
+<p>مع اختراع شبكة الويب العالمية (WWW) بواسطة تيم بيرنرز لي في عام 1989، وإطلاق أول متصفح ويب رسومي (Mosaic) في عام 1993، بدأ عصر جديد من استخدام الإنترنت للجمهور العام.</p>
+<img alt="تاريخ شبكة الويب العالمية" src="../images/tim_berners_lee_www.jpeg"/>
+<h3>5. الشبكات الحديثة (2000s-الآن)</h3>
+<p>شهدت الألفية الجديدة تطورات هائلة في مجال الشبكات، بما في ذلك:</p>
+<ul>
+<li>انتشار الإنترنت عالي السرعة (Broadband)</li>
+<li>تطور الشبكات اللاسلكية (Wi-Fi، Bluetooth، 3G/4G/5G)</li>
+<li>ظهور الحوسبة السحابية (Cloud Computing)</li>
+<li>إنترنت الأشياء (IoT)</li>
+<li>شبكات الجيل الخامس (5G) وما بعدها</li>
+</ul>
+<h2>المكونات الأساسية للشبكات</h2>
+<p>تتكون أي شبكة حاسوبية من عدة مكونات أساسية:</p>
+<h3>1. الأجهزة (Hardware)</h3>
+<ul>
+<li><strong>أجهزة الحاسوب والخوادم:</strong> تمثل نقاط النهاية في الشبكة التي ترسل وتستقبل البيانات.</li>
+<li><strong>أجهزة الشبكة:</strong> مثل الراوتر (Router) والسويتش (Switch) والهاب (Hub) والمودم (Modem)، وهي مسؤولة عن توجيه البيانات ونقلها بين الأجهزة.</li>
+<li><strong>وسائط النقل:</strong> مثل الكابلات (النحاسية والألياف البصرية) أو الوسائط اللاسلكية (موجات الراديو).</li>
+</ul>
+<img alt="أجهزة الشبكات" src="../images/common_network_devices_geeksforgeeks_updated.png"/>
+<h3>2. البرمجيات (Software)</h3>
+<ul>
+<li><strong>أنظمة التشغيل الشبكية:</strong> مثل Windows Server و Linux Server، وهي مسؤولة عن إدارة موارد الشبكة.</li>
+<li><strong>برامج الشبكات:</strong> مثل برامج مشاركة الملفات وبرامج الاتصال وبرامج الحماية.</li>
+<li><strong>البروتوكولات:</strong> مجموعة القواعد التي تحكم عملية الاتصال وتبادل البيانات بين الأجهزة، مثل TCP/IP و HTTP و FTP.</li>
+</ul>
+<h3>3. البيانات (Data)</h3>
+<p>وهي المعلومات التي يتم تبادلها عبر الشبكة، وتشمل النصوص والصور والصوت والفيديو وغيرها.</p>
+<h2>خلاصة</h2>
+<p>تعد شبكات الحاسوب من أهم التقنيات التي غيرت وجه العالم في العصر الحديث. فهي تمكننا من التواصل وتبادل المعلومات بسرعة وكفاءة غير مسبوقة، وتفتح آفاقًا جديدة للتعاون والابتكار في مختلف المجالات. ومع استمرار التطور التكنولوجي، ستظل الشبكات تلعب دورًا محوريًا في تشكيل مستقبل المجتمعات الرقمية.</p>
+</div>
+<div class="lesson-navigation">
+<a class="prev-lesson" href="../basics.html">العودة إلى قائمة الدروس</a>
+<a class="next-lesson" href="types.html">الدرس التالي: أنواع الشبكات</a>
+</div>
+</main>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

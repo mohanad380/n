@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تكوين VPN في مايكروتك - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<!-- Old Nav (Hidden by CSS) -->
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<!-- <button class="sidebar-toggle" aria-label="Toggle sidebar"><i class="fas fa-list"></i></button> --> <!-- Removed sidebar toggle button -->
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس المستوى الثاني</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="mikrotik-intro.html">مقدمة في أجهزة وأنظمة مايكروتك</a></li>
+<li><a href="mikrotik-setup.html">تركيب وإعداد أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-config.html">برمجة وتكوين أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-routing.html">التوجيه المتقدم في مايكروتك</a></li>
+<li><a href="mikrotik-wireless.html">تكوين الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a class="active" href="mikrotik-vpn.html">تكوين VPN في مايكروتك</a></li>
+<li><a href="advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="cloud-networking.html">الحوسبة السحابية وتقنيات الشبكات الحديثة</a></li>
+<li><a href="iot-networking.html">شبكات إنترنت الأشياء (IoT)</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">تكوين VPN في مايكروتك</h1>
+<div class="lesson-content">
+<!-- Start of original content from mikrotik-vpn.html -->
+<div class="lesson-section">
+<h2>مقدمة في VPN على RouterOS</h2>
+<p>تعتبر الشبكات الخاصة الافتراضية (VPN) أداة أساسية لتوفير اتصالات آمنة عبر الشبكات العامة مثل الإنترنت. يوفر نظام RouterOS من مايكروتك دعمًا قويًا لمجموعة متنوعة من بروتوكولات VPN، مما يتيح للمستخدمين إنشاء اتصالات آمنة للوصول عن بُعد أو لربط فروع الشركات.</p>
+<div class="lesson-image">
+<img alt="رسم توضيحي لنفق EoIP VPN في مايكروتك" src="images/placeholder.svg"/>
+<p class="image-caption">مثال على نفق EoIP لربط شبكتين عبر VPN في RouterOS</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>أنواع بروتوكولات VPN المدعومة</h2>
+<p>يدعم RouterOS العديد من بروتوكولات VPN الشائعة، ولكل منها مزايا وعيوب:</p>
+<ul>
+<li><strong>PPTP (Point-to-Point Tunneling Protocol):</strong> بروتوكول قديم وسهل الإعداد، ولكنه يعتبر أقل أمانًا مقارنة بالبروتوكولات الأحدث.</li>
+<li><strong>L2TP (Layer 2 Tunneling Protocol):</strong> يوفر آلية نفق ولكن لا يوفر تشفيرًا بمفرده. غالبًا ما يستخدم مع IPsec لتوفير الأمان (L2TP/IPsec).</li>
+<li><strong>IPsec (Internet Protocol Security):</strong> مجموعة من البروتوكولات لتأمين اتصالات IP. يوفر مصادقة وتشفيرًا قويين. يمكن استخدامه بمفرده أو مع L2TP.</li>
+<li><strong>OpenVPN:</strong> بروتوكول مفتوح المصدر ومرن للغاية، يستخدم SSL/TLS لتوفير أمان قوي. يعتبر خيارًا شائعًا وموثوقًا.</li>
+<li><strong>SSTP (Secure Socket Tunneling Protocol):</strong> بروتوكول VPN من مايكروسوفت يستخدم SSL/TLS، مما يجعله قادرًا على تجاوز معظم جدران الحماية.</li>
+<li><strong>WireGuard:</strong> بروتوكول VPN حديث وبسيط وسريع، يهدف إلى أن يكون أسهل في التكوين وأكثر أداءً من IPsec و OpenVPN.</li>
+</ul>
+</div>
+<div class="lesson-section">
+<h2>إعداد خادم PPTP VPN</h2>
+<p>على الرغم من ضعف أمانه، لا يزال PPTP يستخدم في بعض السيناريوهات لسهولة إعداده.</p>
+<ol>
+<li><strong>تمكين خادم PPTP:</strong>
+<div class="code-block">
+<pre><code>/interface pptp-server server
+set enabled=yes</code></pre>
+</div>
+</li>
+<li><strong>إنشاء ملف تعريف (Profile):</strong> يحدد إعدادات الشبكة للعملاء المتصلين.
+                            <div class="code-block">
+<pre><code>/ppp profile
+add name=pptp-profile local-address=192.168.89.1 remote-address=pptp-pool dns-server=8.8.8.8,8.8.4.4</code></pre>
+<p>(استبدل <code>192.168.89.1</code> بعنوان IP المحلي للخادم، و <code>pptp-pool</code> باسم تجمع عناوين IP للعملاء)</p>
+</div>
+</li>
+<li><strong>إنشاء تجمع عناوين IP (IP Pool):</strong>
+<div class="code-block">
+<pre><code>/ip pool
+add name=pptp-pool ranges=192.168.89.10-192.168.89.20</code></pre>
+<p>(استبدل النطاق بنطاق العناوين الذي ترغب في تخصيصه للعملاء)</p>
+</div>
+</li>
+<li><strong>إنشاء حسابات المستخدمين (Secrets):</strong>
+<div class="code-block">
+<pre><code>/ppp secret
+add name=user1 password=secretpassword profile=pptp-profile service=pptp</code></pre>
+</div>
+</li>
+<li><strong>قواعد جدار الحماية (Firewall):</strong> تأكد من السماح باتصالات PPTP (منفذ TCP 1723 وبروتوكول GRE 47).
+                            <div class="code-block">
+<pre><code>/ip firewall filter
+add action=accept chain=input protocol=tcp dst-port=1723
+add action=accept chain=input protocol=gre</code></pre>
+</div>
+</li>
+</ol>
+</div>
+<div class="lesson-section">
+<h2>إعداد خادم L2TP/IPsec VPN</h2>
+<p>يعتبر L2TP/IPsec خيارًا أكثر أمانًا من PPTP ومتوافقًا مع معظم أنظمة التشغيل.</p>
+<ol>
+<li><strong>تمكين خادم L2TP:</strong>
+<div class="code-block">
+<pre><code>/interface l2tp-server server
+set enabled=yes use-ipsec=yes ipsec-secret=YourIpsecSecret default-profile=l2tp-profile</code></pre>
+<p>(استبدل <code>YourIpsecSecret</code> بمفتاح IPsec المشترك مسبقًا)</p>
+</div>
+</li>
+<li><strong>إنشاء ملف تعريف (Profile):</strong> (يمكن استخدام نفس ملف التعريف الخاص بـ PPTP أو إنشاء واحد جديد)
+                            <div class="code-block">
+<pre><code>/ppp profile
+add name=l2tp-profile local-address=192.168.89.1 remote-address=l2tp-pool dns-server=8.8.8.8,8.8.4.4</code></pre>
+</div>
+</li>
+<li><strong>إنشاء تجمع عناوين IP (IP Pool):</strong> (يمكن استخدام نفس التجمع الخاص بـ PPTP أو إنشاء واحد جديد)
+                            <div class="code-block">
+<pre><code>/ip pool
+add name=l2tp-pool ranges=192.168.89.30-192.168.89.40</code></pre>
+</div>
+</li>
+<li><strong>إنشاء حسابات المستخدمين (Secrets):</strong>
+<div class="code-block">
+<pre><code>/ppp secret
+add name=user2 password=anotherpassword profile=l2tp-profile service=l2tp</code></pre>
+</div>
+</li>
+<li><strong>قواعد جدار الحماية (Firewall):</strong> تأكد من السماح باتصالات L2TP/IPsec (منافذ UDP 500, 4500 وبروتوكول ESP 50).
+                            <div class="code-block">
+<pre><code>/ip firewall filter
+add action=accept chain=input protocol=udp dst-port=500,4500
+add action=accept chain=input protocol=ipsec-esp</code></pre>
+</div>
+</li>
+</ol>
+</div>
+<div class="lesson-section">
+<h2>إعداد خادم OpenVPN</h2>
+<p>يوفر OpenVPN أمانًا قويًا ومرونة عالية.</p>
+<ol>
+<li><strong>إنشاء شهادات (Certificates):</strong> يتطلب OpenVPN استخدام شهادات للخادم والعملاء. يمكنك إنشاؤها باستخدام RouterOS أو أدوات خارجية مثل EasyRSA.
+                            <p>إنشاء شهادة CA (Certificate Authority):</p>
+<div class="code-block">
+<pre><code>/certificate
+add name=ca-template common-name=MyCA key-usage=key-cert-sign,crl-sign
+sign ca-template name=MyCA
+</code></pre>
+</div>
+<p>إنشاء شهادة للخادم:</p>
+<div class="code-block">
+<pre><code>/certificate
+add name=server-template common-name=server
+sign server-template ca=MyCA name=server-cert
+</code></pre>
+</div>
+<p>إنشاء شهادة للعميل:</p>
+<div class="code-block">
+<pre><code>/certificate
+add name=client-template common-name=client1
+sign client-template ca=MyCA name=client1-cert
+</code></pre>
+</div>
+<p>تصدير الشهادات اللازمة للعميل (MyCA.crt, client1.crt, client1.key).</p>
+</li>
+<li><strong>تمكين خادم OpenVPN:</strong>
+<div class="code-block">
+<pre><code>/interface ovpn-server server
+set enabled=yes certificate=server-cert require-client-certificate=yes auth=sha1 cipher=aes256</code></pre>
+</div>
+</li>
+<li><strong>إنشاء ملف تعريف (Profile):</strong>
+<div class="code-block">
+<pre><code>/ppp profile
+add name=ovpn-profile local-address=192.168.90.1 remote-address=ovpn-pool dns-server=8.8.8.8</code></pre>
+</div>
+</li>
+<li><strong>إنشاء تجمع عناوين IP (IP Pool):</strong>
+<div class="code-block">
+<pre><code>/ip pool
+add name=ovpn-pool ranges=192.168.90.10-192.168.90.20</code></pre>
+</div>
+</li>
+<li><strong>إنشاء حسابات المستخدمين (Secrets):</strong>
+<div class="code-block">
+<pre><code>/ppp secret
+add name=client1 profile=ovpn-profile service=ovpn</code></pre>
+</div>
+</li>
+<li><strong>قواعد جدار الحماية (Firewall):</strong> اسمح باتصالات OpenVPN (المنفذ الافتراضي UDP 1194 أو TCP حسب الإعداد).
+                            <div class="code-block">
+<pre><code>/ip firewall filter
+add action=accept chain=input protocol=udp dst-port=1194</code></pre>
+</div>
+</li>
+</ol>
+</div>
+<div class="lesson-section">
+<h2>إعداد اتصال Site-to-Site VPN باستخدام IPsec</h2>
+<p>يستخدم لربط شبكتين محليتين في موقعين مختلفين بشكل آمن عبر الإنترنت. يتطلب التكوين على كلا جهازي التوجيه في الموقعين.</p>
+<p>افترض أن لدينا موقعين:</p>
+<ul>
+<li>الموقع أ: شبكة محلية 192.168.1.0/24، عنوان IP عام [IP_العام_للموقع_أ]</li>
+<li>الموقع ب: شبكة محلية 192.168.2.0/24، عنوان IP عام [IP_العام_للموقع_ب]</li>
+</ul>
+<p>سنقوم بتكوين نفق IPsec بين الجهاز الأول (الموقع أ) والجهاز الثاني (الموقع ب).</p>
+<h4>على الجهاز الأول (الموقع أ):</h4>
+<div class="code-block">
+<pre><code>
+# تعريف سياسة IPsec
+/ip ipsec policy
+add src-address=192.168.1.0/24 dst-address=192.168.2.0/24 \
+    sa-src-address=[IP_العام_للموقع_أ] sa-dst-address=[IP_العام_للموقع_ب] \
+    tunnel=yes action=encrypt proposal=default-proposal
+
+# تعريف النظير (Peer)
+/ip ipsec peer
+add address=[IP_العام_للموقع_ب] secret=YourSharedSecret
+
+# تعريف الهوية (Identity)
+/ip ipsec identity
+add peer=[اسم_النظير_أو_IP] secret=YourSharedSecret
+
+# إضافة قاعدة NAT Bypass (إذا لزم الأمر)
+/ip firewall nat
+add chain=srcnat src-address=192.168.1.0/24 dst-address=192.168.2.0/24 action=accept
+                        </code></pre>
+</div>
+<h4>على الجهاز الثاني (الموقع ب):</h4>
+<div class="code-block">
+<pre><code>
+# تعريف سياسة IPsec
+/ip ipsec policy
+add src-address=192.168.2.0/24 dst-address=192.168.1.0/24 \
+    sa-src-address=[IP_العام_للموقع_ب] sa-dst-address=[IP_العام_للموقع_أ] \
+    tunnel=yes action=encrypt proposal=default-proposal
+
+# تعريف النظير (Peer)
+/ip ipsec peer
+add address=[IP_العام_للموقع_أ] secret=YourSharedSecret
+
+# تعريف الهوية (Identity)
+/ip ipsec identity
+add peer=[اسم_النظير_أو_IP] secret=YourSharedSecret
+
+# إضافة قاعدة NAT Bypass (إذا لزم الأمر)
+/ip firewall nat
+add chain=srcnat src-address=192.168.2.0/24 dst-address=192.168.1.0/24 action=accept
+                        </code></pre>
+</div>
+<p><strong>ملاحظات هامة:</strong></p>
+<ul>
+<li>استبدل <code>[IP_العام_للموقع_أ]</code> و <code>[IP_العام_للموقع_ب]</code> بالعناوين العامة الفعلية لكل موقع.</li>
+<li>استبدل <code>192.168.1.0/24</code> و <code>192.168.2.0/24</code> بنطاقات الشبكات المحلية الفعلية لكل موقع.</li>
+<li>استخدم نفس <code>YourSharedSecret</code> على كلا الجهازين.</li>
+<li>تأكد من تطابق إعدادات <code>proposal</code> (مثل خوارزميات التشفير والمصادقة) على كلا الجهازين.</li>
+<li>قد تحتاج إلى إضافة قواعد جدار حماية للسماح بحركة IPsec (UDP 500, UDP 4500, ESP, AH).</li>
+</ul>
+</div>
+<div class="lesson-section">
+<h2>خلاصة</h2>
+<p>توفر أجهزة مايكروتك مجموعة واسعة من خيارات VPN لتلبية احتياجات مختلفة، بدءًا من الوصول عن بُعد للمستخدمين الفرديين إلى ربط فروع الشركات الكبيرة. يعد فهم البروتوكولات المختلفة وكيفية تكوينها أمرًا ضروريًا لإنشاء اتصالات آمنة وموثوقة. في هذا الدرس، استعرضنا كيفية إعداد بعض بروتوكولات VPN الأكثر شيوعًا على RouterOS، بما في ذلك PPTP و L2TP/IPsec و OpenVPN، بالإضافة إلى كيفية إعداد اتصال Site-to-Site VPN باستخدام IPsec.</p>
+</div>
+<!-- End of original content -->
+</div>
+<!-- أزرار التنقل بين الدروس -->
+<div class="lesson-navigation">
+<a class="prev-lesson" href="mikrotik-wireless.html">الدرس السابق: تكوين الشبكات اللاسلكية</a>
+<a class="next-lesson" href="advanced-network-security.html">الدرس التالي: أمن الشبكات المتقدم</a>
+</div>
+</main>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

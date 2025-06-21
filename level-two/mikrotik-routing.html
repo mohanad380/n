@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>التوجيه في أجهزة مايكروتك - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<button aria-label="Toggle sidebar" class="sidebar-toggle"><i class="fas fa-list"></i></button>
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس المستوى الثاني</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="mikrotik-intro.html">مقدمة في أجهزة وأنظمة مايكروتك</a></li>
+<li><a href="mikrotik-setup.html">تركيب وإعداد أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-config.html">برمجة وتكوين أجهزة مايكروتك</a></li>
+<li><a class="active" href="mikrotik-routing.html">التوجيه المتقدم في مايكروتك</a></li>
+<li><a href="mikrotik-wireless.html">تكوين الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="mikrotik-vpn.html">تكوين VPN في مايكروتك</a></li>
+<li><a href="advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="cloud-networking.html">الحوسبة السحابية وتقنيات الشبكات الحديثة</a></li>
+<li><a href="iot-networking.html">شبكات إنترنت الأشياء (IoT)</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">التوجيه في أجهزة مايكروتك</h1>
+<div class="lesson-content">
+<div class="lesson-section">
+<h2>مقدمة في التوجيه على أجهزة مايكروتك</h2>
+<p>تعتبر أجهزة مايكروتك من أفضل الحلول المستخدمة في مجال توجيه البيانات بين الشبكات المختلفة، وذلك بفضل نظام التشغيل RouterOS الذي يوفر مجموعة واسعة من ميزات التوجيه المتقدمة. في هذا الدرس، سنتعرف على كيفية إعداد وتكوين التوجيه على أجهزة مايكروتك، وكيفية استخدام بروتوكولات التوجيه المختلفة.</p>
+<div class="lesson-image">
+<img alt="التوجيه في أجهزة مايكروتك" src="../images/mikrotik_routing_concept.webp"/>
+<p class="image-caption">واجهة إدارة التوجيه في RouterOS</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>أساسيات التوجيه الثابت (Static Routing)</h2>
+<p>التوجيه الثابت هو أبسط أنواع التوجيه، حيث يتم تعريف مسارات ثابتة يدويًا للوصول إلى الشبكات المختلفة. على الرغم من بساطته، إلا أنه يعتبر خيارًا مناسبًا للشبكات الصغيرة أو الشبكات ذات الطوبولوجيا البسيطة.</p>
+<h3>إضافة مسار ثابت في RouterOS</h3>
+<p>يمكن إضافة مسار ثابت في RouterOS من خلال واجهة WinBox أو من خلال سطر الأوامر (CLI). فيما يلي الخطوات الأساسية:</p>
+<div class="code-block">
+<pre><code>
+/ip route add dst-address=192.168.2.0/24 gateway=10.0.0.1
+                    </code></pre>
+</div>
+<p>حيث:</p>
+<ul>
+<li><strong>dst-address</strong>: عنوان الشبكة الوجهة</li>
+<li><strong>gateway</strong>: عنوان البوابة (الموجه التالي) للوصول إلى الشبكة الوجهة</li>
+</ul>
+<p>يمكن أيضًا إضافة خيارات إضافية مثل:</p>
+<ul>
+<li><strong>distance</strong>: قيمة المسافة الإدارية للمسار (الافتراضي: 1)</li>
+<li><strong>check-gateway</strong>: للتحقق من توفر البوابة</li>
+<li><strong>comment</strong>: لإضافة تعليق توضيحي للمسار</li>
+</ul>
+<div class="lesson-image">
+<img alt="التوجيه الثابت في مايكروتك" src="../images/mikrotik_new_static_route_window.png"/>
+<p class="image-caption">إعداد التوجيه الثابت في واجهة WinBox</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>التوجيه الديناميكي (Dynamic Routing)</h2>
+<p>التوجيه الديناميكي يسمح للموجهات بتبادل معلومات التوجيه فيما بينها وتحديث جداول التوجيه تلقائيًا عند حدوث تغييرات في الشبكة. يدعم RouterOS العديد من بروتوكولات التوجيه الديناميكي، بما في ذلك:</p>
+<h3>1. بروتوكول RIP (Routing Information Protocol)</h3>
+<p>بروتوكول RIP هو بروتوكول توجيه بسيط يستخدم خوارزمية المسافة المتجهة (Distance Vector). يعتبر مناسبًا للشبكات الصغيرة والمتوسطة.</p>
+<p>لتفعيل بروتوكول RIP في RouterOS:</p>
+<div class="code-block">
+<pre><code>
+/routing rip
+/routing rip network add network=192.168.0.0/24
+                    </code></pre>
+</div>
+<h3>2. بروتوكول OSPF (Open Shortest Path First)</h3>
+<p>بروتوكول OSPF هو بروتوكول توجيه يستخدم خوارزمية حالة الرابط (Link-State). يعتبر أكثر تقدمًا من RIP ويناسب الشبكات المتوسطة والكبيرة.</p>
+<p>لتفعيل بروتوكول OSPF في RouterOS:</p>
+<div class="code-block">
+<pre><code>
+/routing ospf instance add name=default
+/routing ospf area add name=backbone area-id=0.0.0.0 instance=default
+/routing ospf network add network=192.168.0.0/24 area=backbone
+                    </code></pre>
+</div>
+<h3>3. بروتوكول BGP (Border Gateway Protocol)</h3>
+<p>بروتوكول BGP هو بروتوكول توجيه خارجي يستخدم للتوجيه بين الأنظمة المستقلة (AS) في الإنترنت. يعتبر أكثر تعقيدًا من OSPF و RIP ويستخدم غالبًا من قبل مزودي خدمة الإنترنت.</p>
+<p>لتفعيل بروتوكول BGP في RouterOS:</p>
+<div class="code-block">
+<pre><code>
+/routing bgp instance add name=default as=65000
+/routing bgp peer add name=peer1 remote-address=10.0.0.2 remote-as=65001 instance=default
+                    </code></pre>
+</div>
+<div class="lesson-image">
+<img alt="التوجيه الديناميكي في مايكروتك" src="../images/mikrotik_ospf_network_diagram.png"/>
+<p class="image-caption">إعداد التوجيه الديناميكي في واجهة WinBox</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>التوجيه المتقدم في RouterOS</h2>
+<h3>1. التوجيه المستند إلى السياسات (Policy-Based Routing)</h3>
+<p>التوجيه المستند إلى السياسات يسمح بتوجيه الحزم بناءً على معايير أخرى غير عنوان الوجهة، مثل عنوان المصدر، أو المنفذ، أو نوع البروتوكول.</p>
+<p>يمكن تنفيذ التوجيه المستند إلى السياسات في RouterOS باستخدام جداول التوجيه المتعددة وقواعد التوجيه:</p>
+<div class="code-block">
+<pre><code>
+/ip route table add name=alternative
+/ip route add dst-address=0.0.0.0/0 gateway=10.0.0.2 routing-table=alternative
+/ip route rule add src-address=192.168.1.0/24 table=alternative
+                    </code></pre>
+</div>
+<h3>2. التوجيه المتعدد المسارات (ECMP - Equal Cost Multi-Path)</h3>
+<p>التوجيه المتعدد المسارات يسمح بتوزيع الحركة على عدة مسارات متساوية التكلفة للوصول إلى نفس الوجهة، مما يوفر توازن الحمل وزيادة الأداء.</p>
+<p>لتفعيل ECMP في RouterOS:</p>
+<div class="code-block">
+<pre><code>
+/ip route add dst-address=192.168.2.0/24 gateway=10.0.0.1,10.0.0.2
+                    </code></pre>
+</div>
+<h3>3. التوجيه المستند إلى الجودة (QoS-Based Routing)</h3>
+<p>التوجيه المستند إلى الجودة يسمح بتوجيه الحزم بناءً على متطلبات جودة الخدمة، مثل التأخير، أو الارتعاش، أو فقدان الحزم.</p>
+<p>يمكن تنفيذ التوجيه المستند إلى الجودة في RouterOS باستخدام مزيج من قواعد التوجيه وعلامات الحزم:</p>
+<div class="code-block">
+<pre><code>
+/ip firewall mangle add chain=prerouting protocol=tcp dst-port=80 action=mark-routing new-routing-mark=web-traffic
+/ip route add dst-address=0.0.0.0/0 gateway=10.0.0.1 routing-mark=web-traffic
+                    </code></pre>
+</div>
+</div>
+<div class="lesson-section">
+<h2>مراقبة وتشخيص مشكلات التوجيه</h2>
+<p>تتضمن RouterOS العديد من الأدوات لمراقبة وتشخيص مشكلات التوجيه:</p>
+<h3>1. عرض جدول التوجيه</h3>
+<div class="code-block">
+<pre><code>
+/ip route print
+                    </code></pre>
+</div>
+<h3>2. تتبع المسار (Traceroute)</h3>
+<div class="code-block">
+<pre><code>
+/tool traceroute 8.8.8.8
+                    </code></pre>
+</div>
+<h3>3. اختبار الاتصال (Ping)</h3>
+<div class="code-block">
+<pre><code>
+/ping 8.8.8.8
+                    </code></pre>
+</div>
+<h3>4. مراقبة حالة بروتوكولات التوجيه</h3>
+<div class="code-block">
+<pre><code>
+/routing ospf neighbor print
+/routing bgp peer print
+                    </code></pre>
+</div>
+<div class="lesson-image">
+<img alt="مراقبة التوجيه في مايكروتك" src="../images/mikrotik_routing_monitoring_graph.png"/>
+<p class="image-caption">أدوات مراقبة التوجيه في RouterOS</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>أفضل الممارسات للتوجيه في RouterOS</h2>
+<ul>
+<li>استخدم التوجيه الثابت للشبكات الصغيرة والبسيطة</li>
+<li>استخدم OSPF للشبكات المتوسطة والكبيرة</li>
+<li>استخدم BGP للاتصال بمزودي خدمة الإنترنت أو للشبكات الكبيرة جدًا</li>
+<li>قم بتقسيم الشبكة إلى مناطق OSPF لتحسين الأداء</li>
+<li>استخدم التوجيه المستند إلى السياسات لتلبية متطلبات محددة</li>
+<li>قم بتوثيق جميع إعدادات التوجيه باستخدام التعليقات</li>
+<li>قم بمراقبة حالة التوجيه بانتظام</li>
+<li>قم بإعداد تنبيهات لمشكلات التوجيه</li>
+</ul>
+</div>
+<div class="lesson-section">
+<h2>خلاصة</h2>
+<p>توفر أجهزة مايكروتك مجموعة واسعة من ميزات التوجيه التي تناسب مختلف احتياجات الشبكات، من الشبكات الصغيرة إلى الشبكات الكبيرة والمعقدة. من خلال فهم مفاهيم التوجيه المختلفة وكيفية تطبيقها في RouterOS، يمكنك تصميم وتنفيذ حلول توجيه فعالة وموثوقة.</p>
+<p>في الدرس القادم، سنتعرف على كيفية إعداد وتكوين الشبكات الافتراضية الخاصة (VPN) على أجهزة مايكروتك.</p>
+</div>
+<div class="lesson-navigation">
+<a class="btn" href="../level-two.html">العودة إلى المستوى الثاني</a>
+<a class="btn" href="../tests/level-two-test.html">اختبار المستوى الثاني</a>
+</div>
+</div>
+</main></div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

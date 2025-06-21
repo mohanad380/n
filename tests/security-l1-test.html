@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>اختبار أمن الشبكات (المستوى الأول) - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* نفس أنماط CSS الموجودة في basics-test.html */
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        .question h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .options li {
+            margin-bottom: 10px;
+        }
+        
+        .options label {
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .options label:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .options input[type="radio"] {
+            margin-left: 10px;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4169E1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #3151b5;
+        }
+        
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background-color: #4169E1;
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.3s;
+        }
+    </style>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الصفحة -->
+<div class="container page-container">
+<h1 class="page-title">اختبار أمن الشبكات (المستوى الأول)</h1>
+<div class="page-description">
+<p>اختبر معرفتك بمفاهيم أمن الشبكات الأساسية التي تمت تغطيتها في المستوى الأول، مثل جدران الحماية، التهديدات الشائعة، وأهمية كلمات المرور القوية. يتكون الاختبار من 10 أسئلة.</p>
+<p>اختر الإجابة الصحيحة لكل سؤال، ثم انقر على زر "إرسال الإجابات" في نهاية الاختبار لمعرفة نتيجتك.</p>
+</div>
+<div class="progress-container">
+<div class="progress-bar" id="progress"></div>
+</div>
+<div class="quiz-container">
+<form id="quiz-form">
+<div class="question" id="q1">
+<h3>1. ما هي الوظيفة الرئيسية لجدار الحماية (Firewall)؟</h3>
+<ul class="options">
+<li><label><input name="q1" required="" type="radio" value="a"/> تسريع الاتصال بالإنترنت.</label></li>
+<li><label><input name="q1" type="radio" value="b"/> منع الوصول غير المصرح به إلى الشبكة أو منها.</label></li>
+<li><label><input name="q1" type="radio" value="c"/> تخزين كلمات المرور بشكل آمن.</label></li>
+<li><label><input name="q1" type="radio" value="d"/> ترجمة عناوين IP.</label></li>
+</ul>
+<div class="result" id="result1"></div>
+</div>
+<div class="question" id="q2">
+<h3>2. أي مما يلي يعتبر مثالاً على البرامج الضارة (Malware)؟</h3>
+<ul class="options">
+<li><label><input name="q2" required="" type="radio" value="a"/> نظام التشغيل ويندوز.</label></li>
+<li><label><input name="q2" type="radio" value="b"/> متصفح جوجل كروم.</label></li>
+<li><label><input name="q2" type="radio" value="c"/> فيروس كمبيوتر.</label></li>
+<li><label><input name="q2" type="radio" value="d"/> برنامج مكافحة الفيروسات.</label></li>
+</ul>
+<div class="result" id="result2"></div>
+</div>
+<div class="question" id="q3">
+<h3>3. ما هو "التصيد الاحتيالي" (Phishing)؟</h3>
+<ul class="options">
+<li><label><input name="q3" required="" type="radio" value="a"/> نوع من جدران الحماية.</label></li>
+<li><label><input name="q3" type="radio" value="b"/> محاولة الحصول على معلومات حساسة (مثل أسماء المستخدمين وكلمات المرور) عن طريق انتحال صفة جهة موثوقة.</label></li>
+<li><label><input name="q3" type="radio" value="c"/> بروتوكول لتأمين الشبكات اللاسلكية.</label></li>
+<li><label><input name="q3" type="radio" value="d"/> طريقة لتقسيم الشبكات.</label></li>
+</ul>
+<div class="result" id="result3"></div>
+</div>
+<div class="question" id="q4">
+<h3>4. لماذا يعتبر استخدام كلمات مرور قوية وفريدة لكل حساب أمرًا مهمًا؟</h3>
+<ul class="options">
+<li><label><input name="q4" required="" type="radio" value="a"/> لتسهيل تذكرها.</label></li>
+<li><label><input name="q4" type="radio" value="b"/> لجعل الحسابات أبطأ.</label></li>
+<li><label><input name="q4" type="radio" value="c"/> لمنع المهاجمين من تخمينها بسهولة والوصول إلى حسابات متعددة في حال اختراق أحدها.</label></li>
+<li><label><input name="q4" type="radio" value="d"/> لا يوجد سبب مهم لذلك.</label></li>
+</ul>
+<div class="result" id="result4"></div>
+</div>
+<div class="question" id="q5">
+<h3>5. أي من الإجراءات التالية يساعد في تأمين شبكة Wi-Fi منزلية؟</h3>
+<ul class="options">
+<li><label><input name="q5" required="" type="radio" value="a"/> ترك اسم الشبكة (SSID) الافتراضي.</label></li>
+<li><label><input name="q5" type="radio" value="b"/> استخدام تشفير WPA2 أو WPA3 بكلمة مرور قوية.</label></li>
+<li><label><input name="q5" type="radio" value="c"/> عدم استخدام كلمة مرور للشبكة.</label></li>
+<li><label><input name="q5" type="radio" value="d"/> مشاركة كلمة المرور مع الجيران.</label></li>
+</ul>
+<div class="result" id="result5"></div>
+</div>
+<div class="question" id="q6">
+<h3>6. ما هو الغرض من تحديث البرامج وأنظمة التشغيل بانتظام؟</h3>
+<ul class="options">
+<li><label><input name="q6" required="" type="radio" value="a"/> لإبطاء أداء الجهاز.</label></li>
+<li><label><input name="q6" type="radio" value="b"/> لإضافة ميزات غير ضرورية.</label></li>
+<li><label><input name="q6" type="radio" value="c"/> لإصلاح الثغرات الأمنية التي يمكن للمهاجمين استغلالها.</label></li>
+<li><label><input name="q6" type="radio" value="d"/> لزيادة استهلاك البيانات.</label></li>
+</ul>
+<div class="result" id="result6"></div>
+</div>
+<div class="question" id="q7">
+<h3>7. ما هو الإجراء الأمني الذي يتضمن استخدام عاملين أو أكثر للتحقق من هوية المستخدم (مثل كلمة مرور ورمز يتم إرساله إلى الهاتف)؟</h3>
+<ul class="options">
+<li><label><input name="q7" required="" type="radio" value="a"/> التشفير (Encryption)</label></li>
+<li><label><input name="q7" type="radio" value="b"/> المصادقة الثنائية (Two-Factor Authentication - 2FA)</label></li>
+<li><label><input name="q7" type="radio" value="c"/> جدار الحماية (Firewall)</label></li>
+<li><label><input name="q7" type="radio" value="d"/> النسخ الاحتياطي (Backup)</label></li>
+</ul>
+<div class="result" id="result7"></div>
+</div>
+<div class="question" id="q8">
+<h3>8. أي مما يلي يعتبر من ممارسات الأمان المادي (Physical Security)؟</h3>
+<ul class="options">
+<li><label><input name="q8" required="" type="radio" value="a"/> استخدام كلمة مرور قوية.</label></li>
+<li><label><input name="q8" type="radio" value="b"/> تحديث برنامج مكافحة الفيروسات.</label></li>
+<li><label><input name="q8" type="radio" value="c"/> قفل غرفة الخوادم (Server Room).</label></li>
+<li><label><input name="q8" type="radio" value="d"/> استخدام تشفير WPA3.</label></li>
+</ul>
+<div class="result" id="result8"></div>
+</div>
+<div class="question" id="q9">
+<h3>9. ما هو "هجوم حجب الخدمة" (Denial of Service - DoS)؟</h3>
+<ul class="options">
+<li><label><input name="q9" required="" type="radio" value="a"/> سرقة البيانات من الشبكة.</label></li>
+<li><label><input name="q9" type="radio" value="b"/> محاولة جعل خدمة أو مورد شبكة غير متاح للمستخدمين الشرعيين عن طريق إغراقه بالطلبات.</label></li>
+<li><label><input name="q9" type="radio" value="c"/> تثبيت برامج ضارة على جهاز المستخدم.</label></li>
+<li><label><input name="q9" type="radio" value="d"/> انتحال هوية مستخدم آخر.</label></li>
+</ul>
+<div class="result" id="result9"></div>
+</div>
+<div class="question" id="q10">
+<h3>10. ما هو أفضل وصف لـ VPN (Virtual Private Network)؟</h3>
+<ul class="options">
+<li><label><input name="q10" required="" type="radio" value="a"/> برنامج لتسريع الألعاب عبر الإنترنت.</label></li>
+<li><label><input name="q10" type="radio" value="b"/> تقنية تنشئ اتصالاً آمنًا ومشفراً عبر شبكة عامة (مثل الإنترنت).</label></li>
+<li><label><input name="q10" type="radio" value="c"/> نوع من أنواع الموجهات اللاسلكية.</label></li>
+<li><label><input name="q10" type="radio" value="d"/> خدمة لتخزين الملفات السحابية.</label></li>
+</ul>
+<div class="result" id="result10"></div>
+</div>
+<button class="submit-btn" type="submit">إرسال الإجابات</button>
+</form>
+<div class="result" id="final-result"></div>
+</div>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script>
+        const quizForm = document.getElementById('quiz-form');
+        const finalResult = document.getElementById('final-result');
+        const progressBar = document.getElementById('progress');
+        const questions = document.querySelectorAll(".question");
+        const totalQuestions = questions.length;
+
+        const correctAnswers = {
+            q1: 'b',
+            q2: 'c',
+            q3: 'b',
+            q4: 'c',
+            q5: 'b',
+            q6: 'c',
+            q7: 'b',
+            q8: 'c',
+            q9: 'b',
+            q10:'b'
+        };
+
+        let answeredQuestions = 0;
+
+        // Update progress bar on answer selection
+        questions.forEach((question, index) => {
+            const radios = question.querySelectorAll('input[type="radio"]');
+            radios.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    // Check if this question was already counted
+                    if (!question.dataset.answered) {
+                        answeredQuestions++;
+                        question.dataset.answered = 'true';
+                        updateProgressBar();
+                    }
+                });
+            });
+        });
+
+        function updateProgressBar() {
+            const progressPercentage = (answeredQuestions / totalQuestions) * 100;
+            progressBar.style.width = progressPercentage + '%';
+        }
+
+        quizForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let score = 0;
+            const formData = new FormData(quizForm);
+            
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionId = 'q'+ i;
+                const selectedAnswer = formData.get(questionId);
+                const resultDiv = document.getElementById('result'+ i);
+                const questionDiv = document.getElementById(questionId);
+                const labels = questionDiv.querySelectorAll('label');
+
+                // Reset previous styles
+                labels.forEach(label => {
+                    label.style.border = 'none';
+                    label.style.fontWeight = 'normal';
+                });
+                resultDiv.style.display = 'none'; // Hide previous result
+
+                if (selectedAnswer) {
+                    const correctAnswer = correctAnswers[questionId];
+                    const selectedLabel = questionDiv.querySelector(`input[value="${selectedAnswer}"]`).closest('label');
+                    const correctLabel = questionDiv.querySelector(`input[value="${correctAnswer}"]`).closest('label');
+
+                    if (selectedAnswer === correctAnswer) {
+                        score++;
+                        resultDiv.textContent = 'إجابة صحيحة!';
+                        resultDiv.className = 'result correct';
+                        selectedLabel.style.border = '2px solid #28a745'; // Green border for correct
+                        selectedLabel.style.fontWeight = 'bold';
+                    } else {
+                        resultDiv.innerHTML = `إجابة خاطئة. <span class="feedback">الإجابة الصحيحة هي الخيار الذي يبدأ بـ: ${correctLabel.innerText.split('\n')[0]}</span>`;
+                        resultDiv.className = 'result incorrect';
+                        selectedLabel.style.border = '2px solid #dc3545'; // Red border for incorrect
+                        correctLabel.style.border = '2px solid #28a745'; // Highlight correct answer
+                        correctLabel.style.fontWeight = 'bold';
+                    }
+                    resultDiv.style.display = 'block';
+                } else {
+                    // Handle unanswered questions if needed, though \'required\' attribute should prevent this
+                    resultDiv.textContent = 'لم يتم الإجابة على هذا السؤال.';
+                    resultDiv.className = 'result incorrect';
+                    resultDiv.style.display = 'block';
+                }
+            }
+            
+            const percentage = (score / totalQuestions) * 100;
+            finalResult.innerHTML = `<h2>نتيجتك النهائية: ${score} من ${totalQuestions} (${percentage.toFixed(1)}%)</h2>`;
+            if (percentage >= 70) { // Success threshold for this test
+                finalResult.className = 'result correct';
+                finalResult.innerHTML += '<p>ممتاز! لقد اجتزت الاختبار بنجاح.</p>';
+            } else {
+                finalResult.className = 'result incorrect';
+                finalResult.innerHTML += '<p>تحتاج إلى مراجعة المادة. حاول مرة أخرى!</p>';
+            }
+            finalResult.style.display = 'block';
+
+            // Scroll to the final result
+            finalResult.scrollIntoView({ behavior: 'smooth'});
+        });
+
+        // Initial progress bar update (usually 0%)
+        updateProgressBar();
+    </script>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

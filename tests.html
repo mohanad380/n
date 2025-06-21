@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>الاختبارات - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="index.html">الرئيسية</a></li>
+<li><a href="basics.html">الأساسيات</a></li>
+<li><a href="level-one.html">المستوى الأول</a></li>
+<li><a href="level-two.html">المستوى الثاني</a></li>
+<li><a href="tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="basics/types.html">أنواع الشبكات</a></li>
+<li><a href="basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="level-one/routing.html">التوجيه</a></li>
+<li><a href="level-one/switching.html">التبديل</a></li>
+<li><a href="level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="level-one/security.html">أمن الشبكات</a></li>
+<li><a href="level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- عنوان الصفحة -->
+<section class="hero" style="background: linear-gradient(to left, var(--gradient-start), var(--accent-color-1), var(--accent-color-2));">
+<div class="container">
+<h1>الاختبارات التفاعلية</h1>
+<p>اختبر معلوماتك ومهاراتك في مجال الشبكات من خلال مجموعة متنوعة من الاختبارات التفاعلية التي تغطي جميع المستويات والمواضيع.</p>
+<div class="hero-buttons">
+<a class="btn" href="tests/basics-test.html">اختبار الأساسيات</a>
+<a class="btn" href="tests/comprehensive-test.html">الاختبار الشامل</a>
+</div>
+</div>
+</section>
+<!-- محتوى الاختبارات -->
+<section class="container">
+<h2 class="section-title">الاختبارات المتاحة</h2>
+<div class="cards-container">
+<!-- اختبار الأساسيات العام -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-1), var(--accent-color-2));">اختبار الأساسيات</div>
+<img alt="اختبار أساسيات الشبكات العام" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار أساسيات الشبكات العام</h3>
+<p class="card-description">اختبار عام يغطي المفاهيم الأساسية للشبكات، بما في ذلك أنواع الشبكات، ونموذج OSI.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 10 أسئلة</li>
+<li>الوقت المقترح: 15 دقيقة</li>
+<li>درجة النجاح: 70%</li>
+</ul>
+<a class="btn" href="tests/basics-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار طوبولوجيا الشبكات -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-1), var(--accent-color-2));">اختبار الأساسيات</div>
+<img alt="اختبار طوبولوجيا الشبكات" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار طوبولوجيا الشبكات</h3>
+<p class="card-description">اختبر فهمك لأنواع طوبولوجيا الشبكات المختلفة مثل الخطية، النجمية، الحلقية، الشجرية، والشبكية.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 8 أسئلة</li>
+<li>الوقت المقترح: 10 دقائق</li>
+<li>درجة النجاح: 75%</li>
+</ul>
+<a class="btn" href="tests/topology-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار بروتوكولات الشبكات -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-1), var(--accent-color-2));">اختبار الأساسيات</div>
+<img alt="اختبار بروتوكولات الشبكات" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار بروتوكولات الشبكات</h3>
+<p class="card-description">اختبر معرفتك ببروتوكولات الشبكات الأساسية مثل TCP/IP, HTTP, DNS, DHCP.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 12 سؤال</li>
+<li>الوقت المقترح: 20 دقيقة</li>
+<li>درجة النجاح: 70%</li>
+</ul>
+<a class="btn" href="tests/protocols-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار أجهزة الشبكات -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-1), var(--accent-color-2));">اختبار الأساسيات</div>
+<img alt="اختبار أجهزة الشبكات" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار أجهزة الشبكات</h3>
+<p class="card-description">اختبر فهمك لوظائف أجهزة الشبكات الشائعة مثل الراوترات، السويتشات، الهاب، والمودم.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 10 أسئلة</li>
+<li>الوقت المقترح: 15 دقيقة</li>
+<li>درجة النجاح: 70%</li>
+</ul>
+<a class="btn" href="tests/devices-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار المستوى الأول العام -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-2), var(--accent-color-3));">اختبار المستوى الأول</div>
+<img alt="اختبار المستوى الأول العام" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار المستوى الأول العام</h3>
+<p class="card-description">اختبار عام يغطي مفاهيم المستوى الأول، بما في ذلك عنونة IP، والتوجيه، والتبديل، والشبكات اللاسلكية.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 15 سؤال</li>
+<li>الوقت المقترح: 25 دقيقة</li>
+<li>درجة النجاح: 70%</li>
+</ul>
+<a class="btn" href="tests/level-one-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار عنونة IP -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-2), var(--accent-color-3));">اختبار المستوى الأول</div>
+<img alt="اختبار عنونة IP" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار عنونة IP</h3>
+<p class="card-description">اختبر معرفتك بمفاهيم عنونة IPv4 و IPv6، وتقسيم الشبكات (Subnetting).</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 12 سؤال</li>
+<li>الوقت المقترح: 20 دقيقة</li>
+<li>درجة النجاح: 75%</li>
+</ul>
+<a class="btn" href="tests/ip-addressing-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار التوجيه والتبديل -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-2), var(--accent-color-3));">اختبار المستوى الأول</div>
+<img alt="اختبار التوجيه والتبديل" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار التوجيه والتبديل</h3>
+<p class="card-description">اختبر فهمك لمبادئ التوجيه (Routing) والتبديل (Switching) والشبكات المحلية الافتراضية (VLAN).</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 15 سؤال</li>
+<li>الوقت المقترح: 25 دقيقة</li>
+<li>درجة النجاح: 70%</li>
+</ul>
+<a class="btn" href="tests/routing-switching-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار أمن الشبكات (م1) -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-2), var(--accent-color-3));">اختبار المستوى الأول</div>
+<img alt="اختبار أمن الشبكات (م1)" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار أمن الشبكات (م1)</h3>
+<p class="card-description">اختبر معرفتك بمفاهيم أمن الشبكات الأساسية، بما في ذلك NAT و VPN وجدران الحماية البسيطة.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 10 أسئلة</li>
+<li>الوقت المقترح: 15 دقيقة</li>
+<li>درجة النجاح: 70%</li>
+</ul>
+<a class="btn" href="tests/security-l1-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار DHCP و DNS -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-2), var(--accent-color-3));">اختبار المستوى الأول</div>
+<img alt="اختبار DHCP و DNS" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار DHCP و DNS</h3>
+<p class="card-description">اختبر فهمك لبروتوكول DHCP ونظام أسماء النطاقات DNS وكيفية عملهما.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 8 أسئلة</li>
+<li>الوقت المقترح: 10 دقائق</li>
+<li>درجة النجاح: 75%</li>
+</ul>
+<a class="btn" href="tests/dhcp-dns-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار المستوى الثاني العام -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-3), var(--accent-color-1));">اختبار المستوى الثاني</div>
+<img alt="اختبار المستوى الثاني العام" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار المستوى الثاني العام</h3>
+<p class="card-description">اختبار عام يغطي مفاهيم المستوى الثاني، بما في ذلك مايكروتك، تصميم الشبكات، والحوسبة السحابية.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 15 سؤال</li>
+<li>الوقت المقترح: 30 دقيقة</li>
+<li>درجة النجاح: 70%</li>
+</ul>
+<a class="btn" href="tests/level-two-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار مايكروتك -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-3), var(--accent-color-1));">اختبار المستوى الثاني</div>
+<img alt="اختبار مايكروتك" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار مايكروتك</h3>
+<p class="card-description">اختبر معرفتك بإعداد وتكوين أجهزة مايكروتك، بما في ذلك التوجيه والشبكات اللاسلكية و VPN.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 15 سؤال</li>
+<li>الوقت المقترح: 30 دقيقة</li>
+<li>درجة النجاح: 70%</li>
+</ul>
+<a class="btn" href="tests/mikrotik-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار تصميم الشبكات المتقدم -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-3), var(--accent-color-1));">اختبار المستوى الثاني</div>
+<img alt="اختبار تصميم الشبكات المتقدم" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار تصميم الشبكات المتقدم</h3>
+<p class="card-description">اختبر فهمك لمبادئ تصميم شبكات المؤسسات وشبكات الحوسبة السحابية وإنترنت الأشياء.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 12 سؤال</li>
+<li>الوقت المقترح: 25 دقيقة</li>
+<li>درجة النجاح: 70%</li>
+</ul>
+<a class="btn" href="tests/advanced-design-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- اختبار أمن الشبكات المتقدم -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-3), var(--accent-color-1));">اختبار المستوى الثاني</div>
+<img alt="اختبار أمن الشبكات المتقدم" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">اختبار أمن الشبكات المتقدم</h3>
+<p class="card-description">اختبر معرفتك بمفاهيم أمن الشبكات المتقدمة، بما في ذلك التهديدات المتقدمة وتقنيات الحماية.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 15 سؤال</li>
+<li>الوقت المقترح: 30 دقيقة</li>
+<li>درجة النجاح: 75%</li>
+</ul>
+<a class="btn" href="tests/advanced-security-test.html">بدء الاختبار</a>
+</div>
+</div>
+<!-- الاختبار الشامل -->
+<div class="card card-tests">
+<div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-1), var(--accent-color-3));">الاختبار الشامل</div>
+<img alt="الاختبار الشامل" class="card-image" src="images/18207524.png"/>
+<div class="card-content">
+<h3 class="card-title">الاختبار الشامل</h3>
+<p class="card-description">اختبار شامل يغطي جميع المواضيع من الأساسيات إلى المستوى الثاني، لتقييم معرفتك الشاملة بالشبكات.</p>
+<ul style="margin: 1rem 0 1.5rem; padding-right: 1.5rem;">
+<li>عدد الأسئلة: 30 سؤال</li>
+<li>الوقت المقترح: 60 دقيقة</li>
+<li>درجة النجاح: 70%</li>
+</ul>
+<a class="btn" href="tests/comprehensive-test.html">بدء الاختبار</a>
+</div>
+</div>
+</div>
+</section>
+<!-- قسم المصادر الإضافية (اختياري، يمكن إضافته لاحقًا إذا لزم الأمر) -->
+
+    <section class="container">
+        <h2 class="section-title">مصادر إضافية للاختبارات</h2>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-header" style="background: linear-gradient(135deg, var(--accent-color-1), var(--accent-color-3));">نصائح للاختبار</div>
+                <div class="card-content">
+                    <h3 class="card-title">نصائح للتحضير للاختبارات</h3>
+                    <p class="card-description">مجموعة من النصائح لمساعدتك على التحضير الجيد للاختبارات وتحقيق أفضل النتائج.</p>
+                    <a href="#" class="btn">اقرأ النصائح</a>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="index.html">الرئيسية</a></li>
+<li><a href="basics.html">الأساسيات</a></li>
+<li><a href="level-one.html">المستوى الأول</a></li>
+<li><a href="level-two.html">المستوى الثاني</a></li>
+<li><a href="tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

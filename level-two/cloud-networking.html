@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>الحوسبة السحابية وتقنيات الشبكات الحديثة - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس المستوى الثاني</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="mikrotik-intro.html">مقدمة في أجهزة وأنظمة مايكروتك</a></li>
+<li><a href="mikrotik-setup.html">تركيب وإعداد أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-config.html">برمجة وتكوين أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-routing.html">التوجيه المتقدم في مايكروتك</a></li>
+<li><a href="mikrotik-wireless.html">تكوين الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="mikrotik-vpn.html">تكوين VPN في مايكروتك</a></li>
+<li><a href="advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a class="active" href="cloud-networking.html">الحوسبة السحابية وتقنيات الشبكات الحديثة</a></li>
+<li><a href="iot-networking.html">شبكات إنترنت الأشياء (IoT)</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">الحوسبة السحابية وتقنيات الشبكات الحديثة</h1>
+<div class="lesson-content">
+<div class="lesson-section">
+<h2>مقدمة في الحوسبة السحابية وعلاقتها بالشبكات</h2>
+<p>الحوسبة السحابية هي نموذج لتوفير الوصول الشبكي حسب الطلب إلى مجموعة مشتركة من موارد الحوسبة القابلة للتكوين (مثل الشبكات، والخوادم، والتخزين، والتطبيقات، والخدمات) التي يمكن توفيرها وإطلاقها بسرعة بأقل جهد إداري أو تفاعل مع مزود الخدمة. تعتمد الحوسبة السحابية بشكل أساسي على تقنيات الشبكات المتقدمة لتوفير خدماتها بكفاءة وموثوقية عالية.</p>
+<div class="lesson-image">
+<img alt="الحوسبة السحابية" src="images/placeholder.svg"/>
+<p class="image-caption">نموذج الحوسبة السحابية وعلاقتها بالشبكات</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>نماذج خدمات الحوسبة السحابية</h2>
+<p>تقدم الحوسبة السحابية ثلاثة نماذج رئيسية للخدمات:</p>
+<h3>1. البنية التحتية كخدمة (IaaS - Infrastructure as a Service)</h3>
+<p>توفر IaaS موارد الحوسبة الأساسية مثل المعالجة والتخزين والشبكات، حيث يمكن للمستخدمين نشر وتشغيل البرمجيات الاختيارية، بما في ذلك أنظمة التشغيل والتطبيقات.</p>
+<ul>
+<li><strong>أمثلة</strong>: Amazon EC2، Microsoft Azure Virtual Machines، Google Compute Engine</li>
+<li><strong>مكونات الشبكة</strong>: الشبكات الافتراضية، موازنات التحميل، جدران الحماية، عناوين IP العامة</li>
+</ul>
+<h3>2. المنصة كخدمة (PaaS - Platform as a Service)</h3>
+<p>توفر PaaS منصة تتيح للعملاء تطوير وتشغيل ونشر التطبيقات دون تعقيد بناء وصيانة البنية التحتية.</p>
+<ul>
+<li><strong>أمثلة</strong>: Google App Engine، Microsoft Azure App Service، AWS Elastic Beanstalk</li>
+<li><strong>مكونات الشبكة</strong>: خدمات API، بوابات التطبيقات، خدمات الاتصال</li>
+</ul>
+<h3>3. البرمجيات كخدمة (SaaS - Software as a Service)</h3>
+<p>توفر SaaS التطبيقات التي تعمل على البنية التحتية السحابية، ويمكن الوصول إليها من خلال واجهة العميل مثل متصفح الويب.</p>
+<ul>
+<li><strong>أمثلة</strong>: Microsoft 365، Google Workspace، Salesforce</li>
+<li><strong>مكونات الشبكة</strong>: شبكات توصيل المحتوى (CDN)، تأمين الوصول، إدارة الهوية</li>
+</ul>
+<div class="lesson-image">
+<img alt="نماذج خدمات الحوسبة السحابية" src="../images/cloud_service_models_replacement.png"/>
+<p class="image-caption">نماذج خدمات الحوسبة السحابية ومكونات الشبكة المرتبطة بها</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تقنيات الشبكات في بيئات الحوسبة السحابية</h2>
+<h3>1. الشبكات الافتراضية (Virtual Networks)</h3>
+<p>الشبكات الافتراضية هي أساس بنية الشبكات في الحوسبة السحابية، حيث توفر عزلًا منطقيًا بين موارد العملاء المختلفين.</p>
+<ul>
+<li><strong>الشبكات الافتراضية الخاصة (VPC)</strong>: توفر قسمًا معزولًا من السحابة العامة حيث يمكن للعملاء نشر موارد الحوسبة في شبكة افتراضية يتحكمون فيها</li>
+<li><strong>الشبكات المحلية الافتراضية (VLAN)</strong>: تستخدم لتقسيم الشبكة الفيزيائية إلى شبكات منطقية متعددة</li>
+<li><strong>تقنية VXLAN</strong>: توفر توسيعًا للشبكات المحلية الافتراضية عبر شبكات IP</li>
+</ul>
+<h3>2. تقنية SDN (Software-Defined Networking)</h3>
+<p>تقنية SDN تفصل بين مستوى التحكم ومستوى البيانات في أجهزة الشبكة، مما يوفر مرونة وقابلية للبرمجة في إدارة الشبكات.</p>
+<ul>
+<li><strong>المكونات الرئيسية</strong>: وحدة التحكم SDN، واجهات برمجة التطبيقات (API)، أجهزة الشبكة القابلة للبرمجة</li>
+<li><strong>بروتوكول OpenFlow</strong>: بروتوكول اتصال بين وحدة التحكم وأجهزة الشبكة</li>
+<li><strong>تطبيقات SDN</strong>: هندسة الحركة، الأمان، موازنة التحميل</li>
+</ul>
+<h3>3. تقنية NFV (Network Functions Virtualization)</h3>
+<p>تقنية NFV تحول وظائف الشبكة التقليدية من أجهزة مخصصة إلى برمجيات تعمل على خوادم قياسية.</p>
+<ul>
+<li><strong>الوظائف الافتراضية</strong>: جدران الحماية الافتراضية، أنظمة كشف/منع التسلل الافتراضية، موجهات افتراضية</li>
+<li><strong>فوائد NFV</strong>: تقليل التكاليف، زيادة المرونة، تسريع نشر الخدمات</li>
+<li><strong>تحديات NFV</strong>: الأداء، الإدارة، التوافق</li>
+</ul>
+<div class="lesson-image">
+<img alt="تقنيات SDN و NFV" src="../images/sdn_nfv_replacement.png"/>
+<p class="image-caption">تقنيات SDN و NFV في بيئات الحوسبة السحابية</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>الشبكات متعددة السحابات (Multi-Cloud Networking)</h2>
+<p>الشبكات متعددة السحابات تتيح للمؤسسات الاستفادة من خدمات سحابية متعددة من مزودين مختلفين، مع الحفاظ على اتصال آمن وفعال بينها.</p>
+<h3>1. تحديات الشبكات متعددة السحابات</h3>
+<ul>
+<li><strong>التوافق</strong>: اختلاف تقنيات وخدمات الشبكات بين مزودي السحابة</li>
+<li><strong>الأمان</strong>: تأمين البيانات أثناء انتقالها بين السحابات المختلفة</li>
+<li><strong>الأداء</strong>: ضمان أداء متسق عبر بيئات سحابية متعددة</li>
+<li><strong>الإدارة</strong>: إدارة موحدة للشبكات عبر مزودي سحابة متعددين</li>
+</ul>
+<h3>2. حلول الشبكات متعددة السحابات</h3>
+<ul>
+<li><strong>الاتصال المباشر</strong>: خدمات اتصال مباشر مثل AWS Direct Connect، Azure ExpressRoute</li>
+<li><strong>شبكات SD-WAN</strong>: توفير اتصال آمن وفعال بين المواقع المختلفة والسحابات</li>
+<li><strong>خدمات الاتصال السحابي</strong>: مثل Google Cloud Interconnect، Oracle FastConnect</li>
+<li><strong>منصات إدارة متعددة السحابات</strong>: أدوات لإدارة موحدة للشبكات عبر بيئات سحابية متعددة</li>
+</ul>
+<h3>3. أفضل الممارسات للشبكات متعددة السحابات</h3>
+<ul>
+<li><strong>تصميم معماري موحد</strong>: تصميم معماري متسق عبر البيئات السحابية المختلفة</li>
+<li><strong>تجريد الشبكة</strong>: استخدام طبقة تجريد للتعامل مع اختلافات الشبكات بين مزودي السحابة</li>
+<li><strong>أمان متسق</strong>: تطبيق سياسات أمان متسقة عبر جميع البيئات السحابية</li>
+<li><strong>المراقبة الشاملة</strong>: تنفيذ مراقبة شاملة للشبكات عبر جميع البيئات السحابية</li>
+</ul>
+<div class="lesson-image">
+<img alt="الشبكات متعددة السحابات" src="images/placeholder.svg"/>
+<p class="image-caption">معمارية الشبكات متعددة السحابات</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تقنية الحاويات (Containers) وشبكات الحاويات</h2>
+<p>الحاويات هي وحدات برمجية خفيفة تحتوي على التطبيق وجميع تبعياته، مما يسمح بتشغيله بشكل متسق في أي بيئة. تتطلب الحاويات تقنيات شبكات متخصصة لتمكين الاتصال بينها وبين العالم الخارجي.</p>
+<h3>1. أساسيات شبكات الحاويات</h3>
+<ul>
+<li><strong>نماذج الشبكات</strong>: Bridge، Host، Overlay، Macvlan</li>
+<li><strong>تخصيص عناوين IP</strong>: كيفية تخصيص عناوين IP للحاويات</li>
+<li><strong>اكتشاف الخدمات</strong>: آليات اكتشاف الخدمات بين الحاويات</li>
+<li><strong>موازنة التحميل</strong>: توزيع الحركة بين نسخ متعددة من الحاويات</li>
+</ul>
+<h3>2. شبكات Docker</h3>
+<p>Docker هو أحد أشهر منصات الحاويات، ويوفر عدة خيارات للشبكات:</p>
+<ul>
+<li><strong>شبكة Bridge</strong>: الشبكة الافتراضية التي تربط الحاويات ببعضها وبالمضيف</li>
+<li><strong>شبكة Host</strong>: استخدام مساحة الشبكة الخاصة بالمضيف مباشرة</li>
+<li><strong>شبكة Overlay</strong>: تمكين الاتصال بين الحاويات عبر مضيفين مختلفين</li>
+<li><strong>شبكة Macvlan</strong>: تخصيص عناوين MAC فريدة للحاويات</li>
+</ul>
+<h3>3. شبكات Kubernetes</h3>
+<p>Kubernetes هو نظام لإدارة تطبيقات الحاويات، ويوفر نموذجًا متقدمًا للشبكات:</p>
+<ul>
+<li><strong>نموذج الشبكة</strong>: كل Pod يحصل على عنوان IP فريد، ويمكن للـ Pods الاتصال ببعضها البعض دون NAT</li>
+<li><strong>الخدمات (Services)</strong>: توفر نقطة وصول ثابتة لمجموعة من الـ Pods</li>
+<li><strong>سياسات الشبكة (Network Policies)</strong>: تحكم في حركة الشبكة بين الـ Pods</li>
+<li><strong>مكونات CNI (Container Network Interface)</strong>: مثل Calico، Flannel، Weave Net</li>
+</ul>
+<div class="lesson-image">
+<img alt="شبكات الحاويات" src="images/placeholder.svg"/>
+<p class="image-caption">معمارية شبكات الحاويات في Kubernetes</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تقنية Serverless وتأثيرها على الشبكات</h2>
+<p>تقنية Serverless (بدون خادم) هي نموذج حوسبة سحابية يتيح للمطورين بناء وتشغيل التطبيقات دون الحاجة لإدارة البنية التحتية. تؤثر هذه التقنية بشكل كبير على كيفية تصميم وإدارة الشبكات.</p>
+<h3>1. مفهوم Serverless وعلاقته بالشبكات</h3>
+<ul>
+<li><strong>وحدات الوظائف (Functions)</strong>: وحدات صغيرة من الكود تستجيب للأحداث</li>
+<li><strong>الاتصال المؤقت</strong>: الاتصالات الشبكية تكون مؤقتة وحسب الطلب</li>
+<li><strong>التوسع التلقائي</strong>: توسع تلقائي للموارد بناءً على الطلب</li>
+<li><strong>نموذج الدفع حسب الاستخدام</strong>: الدفع فقط عند تنفيذ الكود</li>
+</ul>
+<h3>2. تحديات الشبكات في بيئات Serverless</h3>
+<ul>
+<li><strong>التأخير البارد (Cold Start)</strong>: تأخير في بدء تشغيل الوظائف لأول مرة</li>
+<li><strong>إدارة الاتصالات</strong>: إدارة الاتصالات بين الوظائف والخدمات الأخرى</li>
+<li><strong>الأمان</strong>: تأمين الاتصالات في بيئة متغيرة باستمرار</li>
+<li><strong>المراقبة</strong>: مراقبة أداء الشبكة في بيئة مؤقتة</li>
+</ul>
+<h3>3. حلول وأفضل الممارسات</h3>
+<ul>
+<li><strong>استخدام VPC</strong>: ربط الوظائف بشبكة افتراضية خاصة للوصول الآمن إلى الموارد</li>
+<li><strong>تصميم للتأخير</strong>: تصميم التطبيقات لتحمل التأخير في الاتصالات</li>
+<li><strong>استخدام خدمات الرسائل</strong>: استخدام خدمات الرسائل للاتصال غير المتزامن</li>
+<li><strong>تخزين مؤقت للاتصالات</strong>: استخدام التخزين المؤقت لتقليل الاتصالات المتكررة</li>
+</ul>
+<div class="lesson-image">
+<img alt="شبكات Serverless" src="../images/serverless_networking_replacement.jpeg"/>
+<p class="image-caption">معمارية الشبكات في بيئات Serverless</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>أمان الشبكات في بيئات الحوسبة السحابية</h2>
+<p>أمان الشبكات في بيئات الحوسبة السحابية يتطلب نهجًا مختلفًا عن البيئات التقليدية، نظرًا للطبيعة الديناميكية والموزعة للموارد السحابية.</p>
+<h3>1. تحديات أمان الشبكات السحابية</h3>
+<ul>
+<li><strong>المسؤولية المشتركة</strong>: تقاسم مسؤوليات الأمان بين مزود السحابة والعميل</li>
+<li><strong>الحدود المتغيرة</strong>: حدود الشبكة غير واضحة في البيئات السحابية</li>
+<li><strong>التهديدات الجديدة</strong>: تهديدات خاصة بالبيئات السحابية</li>
+<li><strong>الرؤية المحدودة</strong>: محدودية الرؤية في البنية التحتية الأساسية</li>
+</ul>
+<h3>2. تقنيات وحلول أمان الشبكات السحابية</h3>
+<ul>
+<li><strong>مجموعات الأمان (Security Groups)</strong>: قواعد تحكم في الوصول على مستوى المثيلات</li>
+<li><strong>قوائم التحكم في الوصول (ACLs)</strong>: قواعد تحكم في الوصول على مستوى الشبكة الفرعية</li>
+<li><strong>جدران الحماية السحابية</strong>: خدمات جدران حماية متخصصة للبيئات السحابية</li>
+<li><strong>أنظمة كشف/منع التسلل السحابية</strong>: مراقبة وحماية من التهديدات في الوقت الفعلي</li>
+<li><strong>التشفير</strong>: تشفير البيانات أثناء النقل والتخزين</li>
+<li><strong>الوصول الآمن</strong>: خدمات VPN، الاتصال المباشر</li>
+</ul>
+<h3>3. نموذج الأمان Zero Trust</h3>
+<p>نموذج Zero Trust هو نهج أمني يفترض عدم وجود ثقة افتراضية، سواء داخل أو خارج حدود الشبكة:</p>
+<ul>
+<li><strong>التحقق من الهوية المستمر</strong>: التحقق من هوية المستخدمين والأجهزة باستمرار</li>
+<li><strong>الوصول الأقل امتيازًا</strong>: منح الحد الأدنى من الامتيازات اللازمة</li>
+<li><strong>التقسيم الدقيق</strong>: تقسيم الشبكة إلى أجزاء صغيرة ومعزولة</li>
+<li><strong>المراقبة المستمرة</strong>: مراقبة جميع الأنشطة للكشف عن السلوك غير العادي</li>
+</ul>
+<div class="lesson-image">
+<img alt="أمان الشبكات السحابية" src="images/placeholder.svg"/>
+<p class="image-caption">نموذج أمان الشبكات في بيئات الحوسبة السحابية</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>مستقبل الشبكات في عصر الحوسبة السحابية</h2>
+<p>تتطور تقنيات الشبكات باستمرار لتلبية متطلبات بيئات الحوسبة السحابية المتغيرة. فيما يلي بعض الاتجاهات المستقبلية:</p>
+<h3>1. الشبكات المعرفة بالبرمجيات (SDN) المتقدمة</h3>
+<ul>
+<li><strong>التحكم المركزي</strong>: تحكم مركزي أكثر ذكاءً في الشبكات</li>
+<li><strong>البرمجة التلقائية</strong>: برمجة تلقائية للشبكات بناءً على متطلبات التطبيقات</li>
+<li><strong>التكامل مع الذكاء الاصطناعي</strong>: استخدام الذكاء الاصطناعي لتحسين أداء الشبكات</li>
+</ul>
+<h3>2. الشبكات المعرفة بالقصد (Intent-Based Networking)</h3>
+<ul>
+<li><strong>التعبير عن القصد</strong>: تحديد ما يجب أن تفعله الشبكة، وليس كيف تفعله</li>
+<li><strong>الترجمة التلقائية</strong>: ترجمة القصد إلى تكوينات شبكة</li>
+<li><strong>التحقق المستمر</strong>: التحقق المستمر من أن الشبكة تحقق القصد المطلوب</li>
+</ul>
+<h3>3. الشبكات الذاتية (Autonomous Networks)</h3>
+<ul>
+<li><strong>التكوين الذاتي</strong>: تكوين الشبكة تلقائيًا بناءً على المتطلبات</li>
+<li><strong>التحسين الذاتي</strong>: تحسين أداء الشبكة تلقائيًا</li>
+<li><strong>الإصلاح الذاتي</strong>: اكتشاف وإصلاح مشكلات الشبكة تلقائيًا</li>
+<li><strong>الحماية الذاتية</strong>: اكتشاف ومنع التهديدات الأمنية تلقائيًا</li>
+</ul>
+<h3>4. تكامل الشبكات مع تقنيات الجيل التالي</h3>
+<ul>
+<li><strong>5G وما بعدها</strong>: تكامل الشبكات السحابية مع شبكات 5G وما بعدها</li>
+<li><strong>إنترنت الأشياء (IoT)</strong>: دعم مليارات الأجهزة المتصلة</li>
+<li><strong>الحوسبة الطرفية (Edge Computing)</strong>: نقل المعالجة إلى حافة الشبكة</li>
+<li><strong>الواقع الافتراضي/المعزز</strong>: دعم تطبيقات الواقع الافتراضي والمعزز</li>
+</ul>
+<div class="lesson-image">
+<img alt="مستقبل الشبكات" src="../images/future_networking_replacement.jpeg"/>
+<p class="image-caption">اتجاهات مستقبلية في تقنيات الشبكات السحابية</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>خلاصة</h2>
+<p>الحوسبة السحابية وتقنيات الشبكات الحديثة تمثل تحولًا جذريًا في كيفية تصميم وتنفيذ وإدارة الشبكات. من خلال فهم المفاهيم والتقنيات المختلفة مثل SDN، NFV، شبكات الحاويات، والشبكات متعددة السحابات، يمكن للمتخصصين في مجال الشبكات تصميم وتنفيذ حلول شبكات فعالة وموثوقة وآمنة في بيئات الحوسبة السحابية.</p>
+<p>مع استمرار تطور تقنيات الحوسبة السحابية، ستستمر تقنيات الشبكات في التطور لتلبية المتطلبات المتزايدة للتطبيقات والخدمات السحابية. سيكون فهم هذه التقنيات والاتجاهات المستقبلية أمرًا حاسمًا للنجاح في مجال الشبكات في العصر الرقمي.</p>
+</div>
+<div class="lesson-navigation">
+<a class="btn" href="../level-two.html">العودة إلى المستوى الثاني</a>
+<a class="btn" href="../tests/level-two-test.html">اختبار المستوى الثاني</a>
+</div>
+</div>
+</main></div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

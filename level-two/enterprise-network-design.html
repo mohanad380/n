@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تصميم وتنفيذ الشبكات المؤسسية - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<button aria-label="Toggle sidebar" class="sidebar-toggle"><i class="fas fa-list"></i></button>
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس المستوى الثاني</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="mikrotik-intro.html">مقدمة في أجهزة وأنظمة مايكروتك</a></li>
+<li><a href="mikrotik-setup.html">تركيب وإعداد أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-config.html">برمجة وتكوين أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-routing.html">التوجيه المتقدم في مايكروتك</a></li>
+<li><a href="mikrotik-wireless.html">تكوين الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="mikrotik-vpn.html">تكوين VPN في مايكروتك</a></li>
+<li><a href="advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a class="active" href="enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="cloud-networking.html">الحوسبة السحابية وتقنيات الشبكات الحديثة</a></li>
+<li><a href="iot-networking.html">شبكات إنترنت الأشياء (IoT)</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">تصميم وتنفيذ الشبكات المؤسسية</h1>
+<div class="lesson-content">
+<div class="lesson-section">
+<h2>مقدمة في تصميم الشبكات المؤسسية</h2>
+<p>تصميم الشبكات المؤسسية هو عملية تخطيط وتنفيذ بنية تحتية للشبكات تلبي احتياجات المؤسسات الكبيرة والمتوسطة. يتطلب هذا التصميم فهمًا عميقًا لمتطلبات العمل، والتقنيات المتاحة، وأفضل الممارسات في مجال الشبكات. في هذا الدرس، سنتعرف على المنهجيات والمفاهيم الأساسية في تصميم وتنفيذ الشبكات المؤسسية.</p>
+<div class="lesson-image">
+<img alt="تصميم الشبكات المؤسسية" src="../images/enterprise_network_bus_topology_replacement.png"/>
+<p class="image-caption">نموذج لتصميم شبكة مؤسسية</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>منهجية تصميم الشبكات المؤسسية</h2>
+<p>تتبع عملية تصميم الشبكات المؤسسية منهجية منظمة تضمن تلبية احتياجات المؤسسة وتحقيق أهدافها. تتكون هذه المنهجية من عدة مراحل:</p>
+<h3>1. تحليل المتطلبات</h3>
+<p>المرحلة الأولى في تصميم الشبكة هي فهم متطلبات المؤسسة وأهدافها. تتضمن هذه المرحلة:</p>
+<ul>
+<li><strong>تحديد أهداف العمل</strong>: فهم الأهداف الاستراتيجية للمؤسسة وكيف يمكن للشبكة دعمها</li>
+<li><strong>تحليل التطبيقات</strong>: تحديد التطبيقات التي ستعمل على الشبكة ومتطلباتها</li>
+<li><strong>تقدير حجم المستخدمين</strong>: تحديد عدد المستخدمين الحاليين والمتوقعين في المستقبل</li>
+<li><strong>تحديد متطلبات الأداء</strong>: تحديد معايير الأداء المطلوبة مثل النطاق الترددي والتأخير</li>
+<li><strong>تحديد متطلبات الأمان</strong>: تحديد سياسات وإجراءات الأمان المطلوبة</li>
+<li><strong>تحديد متطلبات التوافر</strong>: تحديد مستوى التوافر المطلوب للشبكة</li>
+</ul>
+<h3>2. تصميم الهيكل العام للشبكة</h3>
+<p>بعد فهم المتطلبات، يتم تصميم الهيكل العام للشبكة. يتضمن ذلك:</p>
+<ul>
+<li><strong>اختيار نموذج التصميم</strong>: مثل نموذج الطبقات الثلاث (Core-Distribution-Access) أو نموذج الطبقتين (Core-Access)</li>
+<li><strong>تحديد الطوبولوجيا</strong>: اختيار طوبولوجيا الشبكة المناسبة</li>
+<li><strong>تقسيم الشبكة</strong>: تقسيم الشبكة إلى مناطق منطقية (VLANs) ومناطق أمنية</li>
+<li><strong>تخطيط عنونة IP</strong>: تصميم مخطط عنونة IP يدعم النمو المستقبلي</li>
+<li><strong>اختيار بروتوكولات التوجيه</strong>: تحديد بروتوكولات التوجيه المناسبة (مثل OSPF، EIGRP، BGP)</li>
+</ul>
+<h3>3. تصميم مكونات الشبكة</h3>
+<p>بعد تحديد الهيكل العام، يتم تصميم مكونات الشبكة المختلفة:</p>
+<ul>
+<li><strong>تصميم طبقة النواة (Core Layer)</strong>: تصميم طبقة النواة التي توفر التوجيه والتبديل عالي السرعة</li>
+<li><strong>تصميم طبقة التوزيع (Distribution Layer)</strong>: تصميم طبقة التوزيع التي توفر التجميع والتوجيه بين الطبقات</li>
+<li><strong>تصميم طبقة الوصول (Access Layer)</strong>: تصميم طبقة الوصول التي توفر اتصال المستخدمين النهائيين</li>
+<li><strong>تصميم الشبكة اللاسلكية</strong>: تصميم البنية التحتية للشبكة اللاسلكية</li>
+<li><strong>تصميم الاتصال بالإنترنت</strong>: تصميم نقاط الاتصال بالإنترنت ومزودي الخدمة</li>
+<li><strong>تصميم الشبكات الافتراضية الخاصة (VPN)</strong>: تصميم حلول VPN للوصول عن بعد</li>
+</ul>
+<h3>4. تصميم الخدمات والأمان</h3>
+<p>بعد تصميم المكونات الأساسية، يتم تصميم الخدمات والأمان:</p>
+<ul>
+<li><strong>تصميم خدمات الشبكة</strong>: مثل DHCP، DNS، NTP</li>
+<li><strong>تصميم إدارة النطاق الترددي وجودة الخدمة (QoS)</strong>: لضمان أداء التطبيقات الحرجة</li>
+<li><strong>تصميم الأمان</strong>: تصميم جدران الحماية، وأنظمة كشف/منع التسلل، والتشفير</li>
+<li><strong>تصميم المراقبة والإدارة</strong>: تصميم أنظمة مراقبة وإدارة الشبكة</li>
+</ul>
+<h3>5. التوثيق والتنفيذ</h3>
+<p>المرحلة الأخيرة تتضمن توثيق التصميم والتخطيط للتنفيذ:</p>
+<ul>
+<li><strong>إعداد وثائق التصميم</strong>: توثيق جميع جوانب تصميم الشبكة</li>
+<li><strong>إعداد خطة التنفيذ</strong>: تحديد مراحل التنفيذ والجدول الزمني</li>
+<li><strong>إعداد خطة الاختبار</strong>: تحديد اختبارات التحقق من صحة التصميم</li>
+<li><strong>إعداد خطة الترحيل</strong>: تحديد كيفية الانتقال من الشبكة الحالية إلى الشبكة الجديدة</li>
+</ul>
+<div class="lesson-image">
+<img alt="منهجية تصميم الشبكات" src="images/placeholder.svg"/>
+<p class="image-caption">منهجية تصميم الشبكات المؤسسية</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>نموذج الطبقات الثلاث (Three-Tier Architecture)</h2>
+<p>نموذج الطبقات الثلاث هو أحد أكثر نماذج تصميم الشبكات المؤسسية شيوعًا. يقسم هذا النموذج الشبكة إلى ثلاث طبقات رئيسية:</p>
+<h3>1. طبقة النواة (Core Layer)</h3>
+<p>طبقة النواة هي العمود الفقري للشبكة، وتوفر التوجيه والتبديل عالي السرعة بين مكونات الشبكة المختلفة. تتميز هذه الطبقة بـ:</p>
+<ul>
+<li><strong>الأداء العالي</strong>: توفير نقل البيانات بسرعات عالية</li>
+<li><strong>التوافر العالي</strong>: تصميم مزدوج لضمان استمرارية الخدمة</li>
+<li><strong>البساطة</strong>: تركيز على وظائف التوجيه والتبديل الأساسية</li>
+<li><strong>قابلية التوسع</strong>: القدرة على دعم النمو المستقبلي</li>
+</ul>
+<h3>2. طبقة التوزيع (Distribution Layer)</h3>
+<p>طبقة التوزيع تربط بين طبقة النواة وطبقة الوصول، وتوفر وظائف متقدمة مثل:</p>
+<ul>
+<li><strong>تجميع الاتصالات</strong>: تجميع اتصالات طبقة الوصول</li>
+<li><strong>تطبيق السياسات</strong>: تطبيق سياسات الأمان وجودة الخدمة</li>
+<li><strong>التوجيه بين الشبكات الفرعية</strong>: توجيه الحركة بين VLANs المختلفة</li>
+<li><strong>تصفية الحزم</strong>: تصفية الحركة غير المرغوب فيها</li>
+<li><strong>التوافر</strong>: توفير مسارات بديلة لطبقة الوصول</li>
+</ul>
+<h3>3. طبقة الوصول (Access Layer)</h3>
+<p>طبقة الوصول هي نقطة اتصال المستخدمين النهائيين والأجهزة بالشبكة. توفر هذه الطبقة:</p>
+<ul>
+<li><strong>اتصال المستخدمين</strong>: توفير منافذ للمستخدمين والأجهزة</li>
+<li><strong>التحكم في الوصول</strong>: تطبيق سياسات التحكم في الوصول</li>
+<li><strong>تقسيم المجالات</strong>: تقسيم الشبكة إلى مجالات تصادم منفصلة</li>
+<li><strong>PoE (Power over Ethernet)</strong>: توفير الطاقة للأجهزة مثل الهواتف IP والكاميرات</li>
+<li><strong>الشبكات المحلية الافتراضية (VLANs)</strong>: تقسيم الشبكة إلى شبكات منطقية</li>
+</ul>
+<div class="lesson-image">
+<img alt="نموذج تصميم الشبكة الهرمي (الطبقات الثلاث)" src="images/placeholder.svg"/>
+<p class="image-caption">نموذج تصميم الشبكة الهرمي (النواة - التوزيع - الوصول)</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تصميم طبقة النواة (Core Layer)</h2>
+<p>طبقة النواة هي قلب الشبكة المؤسسية، وتتطلب تصميمًا دقيقًا لضمان الأداء والتوافر العاليين:</p>
+<h3>اعتبارات تصميم طبقة النواة</h3>
+<ul>
+<li><strong>التوافر العالي</strong>: استخدام تصميم مزدوج مع مسارات متعددة</li>
+<li><strong>الأداء العالي</strong>: اختيار أجهزة توجيه وتبديل عالية الأداء</li>
+<li><strong>البساطة</strong>: تجنب الوظائف المعقدة التي قد تؤثر على الأداء</li>
+<li><strong>قابلية التوسع</strong>: تصميم يدعم النمو المستقبلي</li>
+<li><strong>التوجيه الفعال</strong>: اختيار بروتوكولات توجيه مناسبة (مثل OSPF، IS-IS)</li>
+<li><strong>تقنيات النقل</strong>: استخدام تقنيات مثل MPLS لتحسين الأداء</li>
+</ul>
+<h3>تصميم الاتصال المزدوج (Redundant Design)</h3>
+<p>لضمان التوافر العالي، يتم تصميم طبقة النواة بشكل مزدوج:</p>
+<ul>
+<li><strong>أجهزة مزدوجة</strong>: استخدام جهازين أو أكثر في طبقة النواة</li>
+<li><strong>مسارات متعددة</strong>: توفير مسارات متعددة بين الأجهزة</li>
+<li><strong>تقنيات التجميع</strong>: استخدام تقنيات مثل EtherChannel لتجميع الروابط</li>
+<li><strong>بروتوكولات الشجرة الممتدة (Spanning Tree)</strong>: تكوين STP بشكل صحيح لمنع الحلقات</li>
+<li><strong>بروتوكولات التوافر</strong>: استخدام بروتوكولات مثل HSRP، VRRP، GLBP</li>
+</ul>
+<div class="lesson-image">
+<img alt="تصميم طبقة النواة في الشبكة الهرمية" src="images/placeholder.svg"/>
+<p class="image-caption">مثال على تصميم طبقة النواة (Core Layer)</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تصميم طبقة التوزيع (Distribution Layer)</h2>
+<p>طبقة التوزيع تربط بين طبقة النواة وطبقة الوصول، وتوفر وظائف متقدمة:</p>
+<h3>اعتبارات تصميم طبقة التوزيع</h3>
+<ul>
+<li><strong>التجميع</strong>: تجميع اتصالات طبقة الوصول</li>
+<li><strong>التوافر</strong>: توفير مسارات بديلة لطبقة الوصول</li>
+<li><strong>تطبيق السياسات</strong>: تطبيق سياسات الأمان وجودة الخدمة</li>
+<li><strong>التوجيه بين VLANs</strong>: توفير التوجيه بين الشبكات المحلية الافتراضية</li>
+<li><strong>تصفية الحزم</strong>: تصفية الحركة غير المرغوب فيها</li>
+<li><strong>تقسيم مجالات البث</strong>: تقسيم مجالات البث الكبيرة</li>
+</ul>
+<h3>تصميم الاتصال بين الطبقات</h3>
+<p>يجب تصميم الاتصال بين طبقة التوزيع والطبقات الأخرى بعناية:</p>
+<ul>
+<li><strong>الاتصال بطبقة النواة</strong>: استخدام روابط عالية السرعة ومزدوجة</li>
+<li><strong>الاتصال بطبقة الوصول</strong>: استخدام تصميم مزدوج لضمان التوافر</li>
+<li><strong>تقنيات التجميع</strong>: استخدام EtherChannel لتجميع الروابط</li>
+<li><strong>بروتوكولات التوجيه</strong>: اختيار بروتوكولات توجيه مناسبة</li>
+</ul>
+<div class="lesson-image">
+<img alt="تصميم طبقة التوزيع في الشبكة الهرمية" src="images/placeholder.svg"/>
+<p class="image-caption">مثال على تصميم طبقة التوزيع (Distribution Layer)</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تصميم طبقة الوصول (Access Layer)</h2>
+<p>طبقة الوصول هي نقطة اتصال المستخدمين النهائيين والأجهزة بالشبكة:</p>
+<h3>اعتبارات تصميم طبقة الوصول</h3>
+<ul>
+<li><strong>كثافة المنافذ</strong>: توفير عدد كافٍ من المنافذ للمستخدمين والأجهزة</li>
+<li><strong>PoE (Power over Ethernet)</strong>: دعم الأجهزة التي تتطلب طاقة عبر الإيثرنت</li>
+<li><strong>سرعة المنافذ</strong>: توفير سرعات مناسبة للمستخدمين (1Gbps، 10Gbps)</li>
+<li><strong>الشبكات المحلية الافتراضية (VLANs)</strong>: تقسيم الشبكة إلى شبكات منطقية</li>
+<li><strong>أمان المنافذ</strong>: تطبيق سياسات أمان المنافذ (Port Security)</li>
+<li><strong>التحكم في الوصول</strong>: تطبيق 802.1X للتحكم في الوصول</li>
+<li><strong>جودة الخدمة (QoS)</strong>: تطبيق سياسات QoS على حافة الشبكة</li>
+</ul>
+<h3>تصميم الشبكة اللاسلكية</h3>
+<p>الشبكة اللاسلكية هي جزء مهم من طبقة الوصول في الشبكات الحديثة:</p>
+<ul>
+<li><strong>تغطية الشبكة اللاسلكية</strong>: تصميم لتوفير تغطية شاملة</li>
+<li><strong>كثافة نقاط الوصول</strong>: توفير عدد كافٍ من نقاط الوصول لدعم الكثافة العالية للمستخدمين</li>
+<li><strong>معايير 802.11</strong>: اختيار المعايير المناسبة (802.11n، 802.11ac، 802.11ax)</li>
+<li><strong>أمان الشبكة اللاسلكية</strong>: تطبيق WPA2/WPA3 Enterprise مع 802.1X</li>
+<li><strong>إدارة مركزية</strong>: استخدام وحدات تحكم لاسلكية للإدارة المركزية</li>
+</ul>
+<div class="lesson-image">
+<img alt="تصميم طبقة الوصول في الشبكة الهرمية" src="images/placeholder.svg"/>
+<p class="image-caption">مثال على تصميم طبقة الوصول (Access Layer)</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تصميم الأمان في الشبكات المؤسسية</h2>
+<p>الأمان هو جانب أساسي في تصميم الشبكات المؤسسية:</p>
+<h3>نموذج الدفاع متعدد الطبقات (Defense in Depth)</h3>
+<p>يعتمد تصميم الأمان على نموذج الدفاع متعدد الطبقات:</p>
+<ul>
+<li><strong>أمان المحيط</strong>: جدران الحماية، أنظمة كشف/منع التسلل</li>
+<li><strong>تقسيم الشبكة</strong>: تقسيم الشبكة إلى مناطق أمنية</li>
+<li><strong>أمان الوصول</strong>: التحكم في الوصول، 802.1X</li>
+<li><strong>أمان البيانات</strong>: التشفير، VPN</li>
+<li><strong>أمان التطبيقات</strong>: جدران حماية التطبيقات</li>
+<li><strong>المراقبة والاستجابة</strong>: أنظمة مراقبة الأمان، SIEM</li>
+</ul>
+<h3>تصميم المناطق الأمنية</h3>
+<p>يتم تقسيم الشبكة إلى مناطق أمنية مختلفة:</p>
+<ul>
+<li><strong>منطقة الإنترنت (Internet Zone)</strong>: الاتصال بالإنترنت</li>
+<li><strong>المنطقة المحايدة (DMZ)</strong>: الخدمات المتاحة للإنترنت</li>
+<li><strong>منطقة الشبكة الداخلية (Internal Zone)</strong>: شبكة المستخدمين الداخلية</li>
+<li><strong>منطقة الخدمات (Services Zone)</strong>: خدمات الشبكة الداخلية</li>
+<li><strong>منطقة الإدارة (Management Zone)</strong>: إدارة أجهزة الشبكة</li>
+</ul>
+<div class="lesson-image">
+<img alt="تصميم الأمان في الشبكات" src="images/placeholder.svg"/>
+<p class="image-caption">تصميم المناطق الأمنية في الشبكات المؤسسية</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تصميم خدمات الشبكة</h2>
+<p>خدمات الشبكة هي جزء أساسي من الشبكات المؤسسية:</p>
+<h3>تصميم خدمات DHCP</h3>
+<p>خدمة DHCP توفر عناوين IP تلقائيًا للأجهزة:</p>
+<ul>
+<li><strong>خوادم DHCP المزدوجة</strong>: لضمان التوافر العالي</li>
+<li><strong>نطاقات DHCP</strong>: تصميم نطاقات DHCP لكل VLAN</li>
+<li><strong>خيارات DHCP</strong>: تكوين خيارات DHCP مثل البوابة الافتراضية وخوادم DNS</li>
+<li><strong>DHCP Relay</strong>: تكوين DHCP Relay على الموجهات</li>
+</ul>
+<h3>تصميم خدمات DNS</h3>
+<p>خدمة DNS توفر ترجمة أسماء النطاقات إلى عناوين IP:</p>
+<ul>
+<li><strong>خوادم DNS المزدوجة</strong>: لضمان التوافر العالي</li>
+<li><strong>DNS الداخلي والخارجي</strong>: فصل DNS الداخلي عن الخارجي</li>
+<li><strong>مناطق DNS</strong>: تصميم مناطق DNS للنطاقات الداخلية والخارجية</li>
+<li><strong>DNS التكراري</strong>: تكوين خوادم DNS تكرارية</li>
+</ul>
+<h3>تصميم خدمات NTP</h3>
+<p>خدمة NTP توفر مزامنة الوقت بين أجهزة الشبكة:</p>
+<ul>
+<li><strong>مصادر NTP</strong>: تحديد مصادر NTP موثوقة</li>
+<li><strong>هيكل NTP</strong>: تصميم هيكل هرمي لخدمة NTP</li>
+<li><strong>أمان NTP</strong>: تطبيق إجراءات أمان NTP</li>
+</ul>
+<div class="lesson-image">
+<img alt="تصميم خدمات الشبكة" src="images/placeholder.svg"/>
+<p class="image-caption">تصميم خدمات الشبكة في البيئات المؤسسية</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تصميم إدارة النطاق الترددي وجودة الخدمة (QoS)</h2>
+<p>إدارة النطاق الترددي وجودة الخدمة ضرورية لضمان أداء التطبيقات الحرجة:</p>
+<h3>تصميم جودة الخدمة (QoS)</h3>
+<ul>
+<li><strong>تصنيف الحركة</strong>: تصنيف الحركة حسب نوع التطبيق</li>
+<li><strong>وضع العلامات</strong>: وضع علامات DSCP أو CoS على الحزم</li>
+<li><strong>جدولة الحزم</strong>: استخدام خوارزميات جدولة مثل WFQ، CBWFQ، LLQ</li>
+<li><strong>تشكيل الحركة</strong>: تحديد معدل الحركة لتجنب الازدحام</li>
+<li><strong>تجنب الازدحام</strong>: استخدام تقنيات مثل WRED</li>
+</ul>
+<h3>نموذج QoS من نهاية إلى نهاية</h3>
+<p>يجب تطبيق QoS بشكل متسق عبر الشبكة:</p>
+<ul>
+<li><strong>QoS على طبقة الوصول</strong>: تصنيف ووضع العلامات</li>
+<li><strong>QoS على طبقة التوزيع</strong>: تطبيق سياسات QoS</li>
+<li><strong>QoS على طبقة النواة</strong>: جدولة الحزم وتجنب الازدحام</li>
+<li><strong>QoS على الشبكة اللاسلكية</strong>: تطبيق WMM وسياسات QoS اللاسلكية</li>
+<li><strong>QoS على الاتصال بالإنترنت</strong>: تشكيل الحركة وتحديد الأولويات</li>
+</ul>
+<div class="lesson-image">
+<img alt="تصميم جودة الخدمة" src="images/placeholder.svg"/>
+<p class="image-caption">تصميم جودة الخدمة من نهاية إلى نهاية</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تصميم المراقبة والإدارة</h2>
+<p>المراقبة والإدارة ضرورية للحفاظ على أداء وتوافر الشبكة:</p>
+<h3>تصميم نظام المراقبة</h3>
+<ul>
+<li><strong>مراقبة الأداء</strong>: مراقبة استخدام النطاق الترددي، والتأخير، وفقدان الحزم</li>
+<li><strong>مراقبة التوافر</strong>: مراقبة توافر الأجهزة والخدمات</li>
+<li><strong>مراقبة الأمان</strong>: مراقبة أحداث الأمان والتهديدات</li>
+<li><strong>مراقبة التطبيقات</strong>: مراقبة أداء التطبيقات</li>
+<li><strong>جمع السجلات</strong>: جمع وتحليل سجلات الأجهزة والخدمات</li>
+</ul>
+<h3>تصميم نظام الإدارة</h3>
+<ul>
+<li><strong>إدارة التكوين</strong>: إدارة تكوينات الأجهزة</li>
+<li><strong>إدارة الأداء</strong>: إدارة أداء الشبكة</li>
+<li><strong>إدارة الأعطال</strong>: اكتشاف وتشخيص وإصلاح الأعطال</li>
+<li><strong>إدارة الأمان</strong>: إدارة سياسات وإجراءات الأمان</li>
+<li><strong>إدارة المخزون</strong>: إدارة مخزون الأجهزة والبرامج</li>
+</ul>
+<h3>شبكة الإدارة (Management Network)</h3>
+<p>يجب تصميم شبكة إدارة منفصلة لأمان وفعالية الإدارة:</p>
+<ul>
+<li><strong>VLAN الإدارة</strong>: إنشاء VLAN منفصل للإدارة</li>
+<li><strong>التحكم في الوصول</strong>: تقييد الوصول إلى شبكة الإدارة</li>
+<li><strong>النطاق الترددي المخصص</strong>: تخصيص نطاق ترددي لحركة الإدارة</li>
+<li><strong>الاتصال خارج النطاق</strong>: توفير اتصال خارج النطاق للإدارة في حالة الطوارئ</li>
+</ul>
+<div class="lesson-image">
+<img alt="مراقبة وإدارة الشبكة" src="images/placeholder.svg"/>
+<p class="image-caption">تصميم نظام مراقبة وإدارة الشبكة</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>أفضل الممارسات في تصميم الشبكات المؤسسية</h2>
+<ul>
+<li><strong>التبسيط</strong>: الحفاظ على تصميم بسيط وواضح</li>
+<li><strong>التوحيد القياسي</strong>: استخدام معايير وتكوينات موحدة</li>
+<li><strong>التوثيق</strong>: توثيق جميع جوانب التصميم والتنفيذ</li>
+<li><strong>قابلية التوسع</strong>: تصميم يدعم النمو المستقبلي</li>
+<li><strong>المرونة</strong>: تصميم مرن يمكن تعديله حسب الاحتياجات المتغيرة</li>
+<li><strong>التوافر العالي</strong>: تصميم مزدوج لضمان التوافر العالي</li>
+<li><strong>الأمان</strong>: دمج الأمان في جميع جوانب التصميم</li>
+<li><strong>قابلية الإدارة</strong>: تصميم يسهل إدارته ومراقبته</li>
+<li><strong>الاختبار</strong>: اختبار التصميم قبل التنفيذ</li>
+<li><strong>التحقق من الصحة</strong>: التحقق من صحة التصميم بعد التنفيذ</li>
+</ul>
+</div>
+<div class="lesson-section">
+<h2>خلاصة</h2>
+<p>تصميم الشبكات المؤسسية هو عملية معقدة تتطلب فهمًا عميقًا لمتطلبات العمل، والتقنيات المتاحة، وأفضل الممارسات في مجال الشبكات. من خلال اتباع منهجية منظمة واستخدام نماذج تصميم مثبتة مثل نموذج الطبقات الثلاث، يمكن تصميم شبكات مؤسسية فعالة وموثوقة وآمنة وقابلة للتوسع.</p>
+<p>في الدرس القادم، سنتعرف على تقنيات متقدمة في توجيه وتبديل الشبكات المؤسسية.</p>
+</div>
+<div class="lesson-navigation">
+<a class="btn" href="../level-two.html">العودة إلى المستوى الثاني</a>
+<a class="btn" href="../tests/level-two-test.html">اختبار المستوى الثاني</a>
+</div>
+</div>
+</main></div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

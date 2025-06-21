@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>بروتوكولات الشبكات - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس الأساسيات</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="intro.html">مقدمة في الشبكات</a></li>
+<li><a href="types.html">أنواع الشبكات</a></li>
+<li><a href="topology.html">طوبولوجيا الشبكات</a></li>
+<li><a class="active" href="protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="devices.html">أجهزة الشبكات</a></li>
+<li><a href="osi.html">نموذج OSI</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">بروتوكولات الشبكات</h1>
+<div class="lesson-content">
+<h2>ما هي بروتوكولات الشبكات؟</h2>
+<p>بروتوكولات الشبكات (Network Protocols) هي مجموعة من القواعد والمعايير التي تحكم عملية الاتصال وتبادل البيانات بين الأجهزة في الشبكة. تعمل هذه البروتوكولات كلغة مشتركة تسمح للأجهزة المختلفة بالتواصل وفهم بعضها البعض، بغض النظر عن نوع الجهاز أو نظام التشغيل.</p>
+<p>تحدد البروتوكولات كيفية تنسيق البيانات وإرسالها واستقبالها والتحقق منها، وكذلك كيفية التعامل مع الأخطاء التي قد تحدث أثناء عملية الاتصال.</p>
+<img alt="نظرة عامة على بروتوكولات الشبكات" src="../images/بروتوكولات-الشبكات-Network-Protocols-1024x576.png"/>
+<h2>أهمية بروتوكولات الشبكات</h2>
+<p>تلعب بروتوكولات الشبكات دورًا حيويًا في عمل الشبكات والإنترنت، وتتجلى أهميتها في النقاط التالية:</p>
+<ul>
+<li><strong>التوافقية:</strong> تضمن إمكانية تواصل الأجهزة المختلفة مع بعضها البعض.</li>
+<li><strong>التنظيم:</strong> تنظم عملية تبادل البيانات وتمنع التصادم والفوضى.</li>
+<li><strong>الموثوقية:</strong> تضمن وصول البيانات بشكل صحيح وكامل.</li>
+<li><strong>الأمان:</strong> توفر آليات لحماية البيانات أثناء نقلها.</li>
+<li><strong>الكفاءة:</strong> تحسن استخدام موارد الشبكة وتقلل من الازدحام.</li>
+</ul>
+<h2>تصنيف بروتوكولات الشبكات</h2>
+<p>يمكن تصنيف بروتوكولات الشبكات بعدة طرق، منها:</p>
+<h3>1. حسب الوظيفة</h3>
+<ul>
+<li><strong>بروتوكولات الاتصال (Communication Protocols):</strong> تحدد كيفية إنشاء الاتصال والحفاظ عليه وإنهائه.</li>
+<li><strong>بروتوكولات التوجيه (Routing Protocols):</strong> تحدد كيفية توجيه البيانات عبر الشبكة.</li>
+<li><strong>بروتوكولات الأمان (Security Protocols):</strong> توفر آليات لتشفير البيانات والتحقق من الهوية.</li>
+<li><strong>بروتوكولات إدارة الشبكة (Network Management Protocols):</strong> تستخدم لمراقبة وإدارة أجهزة الشبكة.</li>
+</ul>
+<h3>2. حسب طبقة الشبكة</h3>
+<p>يمكن تصنيف البروتوكولات حسب طبقة الشبكة التي تعمل فيها وفقًا لنموذج OSI أو نموذج TCP/IP:</p>
+<ul>
+    <img alt="نموذج TCP/IP" src="../images/tcp_ip_model.png"/>
+<li><strong>بروتوكولات طبقة التطبيق (Application Layer):</strong> مثل HTTP و FTP و SMTP.</li>
+<li><strong>بروتوكولات طبقة النقل (Transport Layer):</strong> مثل TCP و UDP.</li>
+<li><strong>بروتوكولات طبقة الشبكة (Network Layer):</strong> مثل IP و ICMP.</li>
+<li><strong>بروتوكولات طبقة الوصلة (Data Link Layer):</strong> مثل Ethernet و PPP.</li>
+</ul>
+<h2>أهم بروتوكولات الشبكات</h2>
+    <img alt="نموذج TCP/IP" src="../images/hq720.jpg"/>
+<p>فيما يلي شرح لأهم بروتوكولات الشبكات المستخدمة حاليًا:</p>
+<h3>1. بروتوكول TCP/IP (Transmission Control Protocol/Internet Protocol)</h3>
+<p>يعتبر TCP/IP مجموعة من البروتوكولات التي تشكل الأساس لشبكة الإنترنت. يتكون من بروتوكولين رئيسيين:</p>
+<h4>بروتوكول TCP (Transmission Control Protocol)</h4>
+<p>يعمل في طبقة النقل ويوفر اتصالًا موثوقًا وموجهًا للاتصال بين الأجهزة. يقوم بتقسيم البيانات إلى حزم، وإرسالها، والتأكد من وصولها بشكل صحيح، وإعادة ترتيبها عند الاستقبال.</p>
+<h4>بروتوكول IP (Internet Protocol)</h4>
+<p>يعمل في طبقة الشبكة ويوفر آلية لتوجيه الحزم عبر الشبكة. يقوم بتعيين عناوين IP للأجهزة وتحديد المسار الأفضل لنقل البيانات.</p>
+<p>تستخدم مجموعة TCP/IP أيضًا بروتوكولات أخرى مثل:</p>
+<ul>
+<li><strong>UDP (User Datagram Protocol):</strong> بروتوكول نقل غير موثوق وغير موجه للاتصال، ولكنه أسرع من TCP.</li>
+<li><strong>ICMP (Internet Control Message Protocol):</strong> يستخدم لإرسال رسائل التحكم والخطأ.</li>
+<li><strong>ARP (Address Resolution Protocol):</strong> يستخدم لترجمة عناوين IP إلى عناوين MAC.</li>
+</ul>
+<img alt="نموذج TCP/IP" src="../images/tcp-ip-intro.svg"/>
+<h3>2. بروتوكول HTTP/HTTPS (Hypertext Transfer Protocol)</h3>
+<p>يعمل في طبقة التطبيق ويستخدم لنقل صفحات الويب والوسائط المتعددة عبر الإنترنت.</p>
+<ul>
+<li><strong>HTTP:</strong> البروتوكول الأساسي لنقل صفحات الويب.</li>
+<li><strong>HTTPS:</strong> نسخة آمنة من HTTP تستخدم التشفير لحماية البيانات.</li>
+</ul>
+<h3>3. بروتوكول FTP (File Transfer Protocol)</h3>
+<p>يعمل في طبقة التطبيق ويستخدم لنقل الملفات بين الأجهزة عبر الشبكة. يوفر آليات للتحكم في الوصول والتحقق من الهوية.</p>
+<h3>4. بروتوكول SMTP (Simple Mail Transfer Protocol)</h3>
+<p>يعمل في طبقة التطبيق ويستخدم لإرسال رسائل البريد الإلكتروني. يعمل جنبًا إلى جنب مع بروتوكولات أخرى مثل POP3 و IMAP لاستقبال البريد الإلكتروني.</p>
+<h3>5. بروتوكول DNS (Domain Name System)</h3>
+<p>يعمل في طبقة التطبيق ويستخدم لترجمة أسماء النطاقات (مثل www.example.com) إلى عناوين IP. يعتبر من أهم البروتوكولات التي تسهل استخدام الإنترنت.</p>
+<h3>6. بروتوكول DHCP (Dynamic Host Configuration Protocol)</h3>
+<p>يعمل في طبقة التطبيق ويستخدم لتعيين عناوين IP وإعدادات الشبكة الأخرى للأجهزة بشكل تلقائي.</p>
+<h3>7. بروتوكول SSH (Secure Shell)</h3>
+<p>يعمل في طبقة التطبيق ويوفر اتصالًا آمنًا للوصول إلى الأجهزة البعيدة والتحكم فيها.</p>
+<h3>8. بروتوكول Telnet</h3>
+<p>يعمل في طبقة التطبيق ويستخدم للوصول إلى الأجهزة البعيدة والتحكم فيها، ولكنه غير آمن لأنه لا يستخدم التشفير.</p>
+<h3>9. بروتوكول SNMP (Simple Network Management Protocol)</h3>
+<p>يعمل في طبقة التطبيق ويستخدم لمراقبة وإدارة أجهزة الشبكة مثل الراوترات والسويتشات.</p>
+<h3>10. بروتوكول Ethernet</h3>
+<p>يعمل في طبقة الوصلة ويحدد كيفية تنسيق البيانات وإرسالها عبر الشبكات المحلية السلكية.</p>
+<h3>11. بروتوكول Wi-Fi (IEEE 802.11)</h3>
+<p>يعمل في طبقة الوصلة ويحدد كيفية تنسيق البيانات وإرسالها عبر الشبكات المحلية اللاسلكية.</p>
+<h3>12. بروتوكول Bluetooth</h3>
+<p>يستخدم للاتصال قصير المدى بين الأجهزة، ويعمل في طبقة الوصلة.</p>
+<img alt="البروتوكولات الشائعة" src="../images/TYPES-OF-INTERNET-PROTOCOL-1024x576.png"/>
+<h2>كيفية عمل البروتوكولات معًا</h2>
+<p>تعمل بروتوكولات الشبكات معًا في تناغم لتوفير خدمات الاتصال. على سبيل المثال، عندما تزور موقع ويب:</p>
+<ol>
+<li>يستخدم بروتوكول DNS لترجمة اسم الموقع إلى عنوان IP.</li>
+<li>يستخدم بروتوكول TCP لإنشاء اتصال موثوق مع الخادم.</li>
+<li>يستخدم بروتوكول IP لتوجيه البيانات عبر الشبكة.</li>
+<li>يستخدم بروتوكول HTTP لطلب صفحة الويب واستلامها.</li>
+<li>تستخدم بروتوكولات الطبقة السفلية مثل Ethernet أو Wi-Fi لنقل البيانات فعليًا.</li>
+</ol>
+<h2>تطور بروتوكولات الشبكات</h2>
+<p>تتطور بروتوكولات الشبكات باستمرار لتلبية الاحتياجات المتزايدة للاتصالات الحديثة:</p>
+<ul>
+<li><strong>IPv6:</strong> تم تطويره ليحل محل IPv4 ويوفر عددًا أكبر من عناوين IP.</li>
+<li><strong>HTTP/2 و HTTP/3:</strong> إصدارات محسنة من HTTP توفر أداءً أفضل وكفاءة أعلى.</li>
+<li><strong>TLS (Transport Layer Security):</strong> بروتوكول تشفير متطور يستخدم في HTTPS.</li>
+<li><strong>5G:</strong> الجيل الخامس من بروتوكولات الاتصالات اللاسلكية للهواتف المحمولة.</li>
+</ul>
+<h2>تحديات وقضايا بروتوكولات الشبكات</h2>
+<p>تواجه بروتوكولات الشبكات عدة تحديات وقضايا:</p>
+<ul>
+<li><strong>الأمان:</strong> العديد من البروتوكولات القديمة لم تصمم مع وضع الأمان في الاعتبار.</li>
+<li><strong>قابلية التوسع:</strong> بعض البروتوكولات تواجه صعوبات في التعامل مع الحجم المتزايد للإنترنت.</li>
+<li><strong>التوافقية:</strong> ضمان توافق الإصدارات الجديدة مع الإصدارات القديمة.</li>
+<li><strong>الأداء:</strong> تحسين الأداء مع الحفاظ على الموثوقية والأمان.</li>
+</ul>
+<h2>خلاصة</h2>
+<p>تعتبر بروتوكولات الشبكات العمود الفقري للاتصالات الحديثة، فهي تمكن الأجهزة المختلفة من التواصل وتبادل البيانات بشكل موثوق وآمن. فهم هذه البروتوكولات وكيفية عملها معًا يعد أمرًا أساسيًا لأي شخص يعمل في مجال تكنولوجيا المعلومات والشبكات.</p>
+<p>مع استمرار تطور التكنولوجيا، ستستمر بروتوكولات الشبكات في التطور أيضًا لتلبية الاحتياجات المتزايدة للاتصالات الرقمية وإنترنت الأشياء والتقنيات الناشئة الأخرى.</p>
+</div>
+<div class="lesson-navigation">
+<a class="prev-lesson" href="topology.html">الدرس السابق: طوبولوجيا الشبكات</a>
+<a class="next-lesson" href="devices.html">الدرس التالي: أجهزة الشبكات</a>
+</div>
+</main>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

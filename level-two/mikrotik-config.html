@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>برمجة وتكوين أجهزة مايكروتك - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<button aria-label="Toggle sidebar" class="sidebar-toggle"><i class="fas fa-list"></i></button>
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس المستوى الثاني</h3>
+<nav class="sidebar-nav" >
+<ul>
+<li><a href="mikrotik-intro.html">مقدمة في أجهزة وأنظمة مايكروتك</a></li>
+<li><a href="mikrotik-setup.html">تركيب وإعداد أجهزة مايكروتك</a></li>
+<li><a class="active" href="mikrotik-config.html">برمجة وتكوين أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-routing.html">التوجيه المتقدم في مايكروتك</a></li>
+<li><a href="mikrotik-wireless.html">تكوين الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="mikrotik-vpn.html">تكوين VPN في مايكروتك</a></li>
+<li><a href="advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="cloud-networking.html">الحوسبة السحابية وتقنيات الشبكات الحديثة</a></li>
+<li><a href="iot-networking.html">شبكات إنترنت الأشياء (IoT)</a></li>
+</ul>
+</nav >
+</aside >
+<main class="main-content">
+<h1 class="lesson-title">برمجة وتكوين أجهزة مايكروتك</h1>
+<div class="lesson-content" >
+<h2>مقدمة</h2>
+<p>بعد أن تعرفنا في الدروس السابقة على أجهزة وأنظمة مايكروتك وكيفية تركيبها وإعدادها، سنتعمق في هذا الدرس في كيفية برمجة وتكوين أجهزة مايكروتك لتنفيذ وظائف متقدمة. سنتعلم كيفية استخدام واجهات الإدارة المختلفة لتكوين التوجيه، والتبديل، وإدارة النطاق الترددي، والشبكات الافتراضية، وخدمات الشبكة المختلفة.</p>
+<p>سنركز في هذا الدرس على الجوانب العملية لبرمجة وتكوين أجهزة مايكروتك، مع تقديم أمثلة وسيناريوهات واقعية لمساعدتك على فهم كيفية تطبيق المفاهيم النظرية في بيئات الشبكات الحقيقية.</p>
+<h2>واجهات الإدارة وأساسيات البرمجة</h2>
+<p>قبل أن نتعمق في تكوين وظائف محددة، دعنا نراجع واجهات الإدارة المختلفة المتاحة في أجهزة مايكروتك وأساسيات برمجة RouterOS.</p>
+<h3>1. واجهة سطر الأوامر (CLI)</h3>
+<p>واجهة سطر الأوامر (CLI) هي الواجهة الأكثر قوة ومرونة لبرمجة وتكوين أجهزة مايكروتك. تتميز CLI بهيكل هرمي يشبه نظام الملفات، حيث يتم تنظيم الأوامر في مستويات مختلفة.</p>
+<h4>أساسيات CLI:</h4>
+<ul>
+<li><strong>التنقل بين المستويات:</strong> استخدم الأمر <code>/</code> للانتقال إلى المستوى الجذر، واستخدم اسم المستوى للانتقال إلى مستوى معين (مثل <code>/ip</code>).</li>
+<li><strong>عرض الأوامر المتاحة:</strong> استخدم مفتاح Tab أو الأمر <code>?</code> لعرض الأوامر المتاحة في المستوى الحالي.</li>
+<li><strong>عرض المساعدة:</strong> استخدم الأمر <code>help</code> أو <code>?</code> بعد أمر معين للحصول على معلومات حول استخدامه.</li>
+<li><strong>إضافة عنصر:</strong> استخدم الأمر <code>add</code> لإضافة عنصر جديد (مثل <code>/ip address add</code>).</li>
+<li><strong>تعديل عنصر:</strong> استخدم الأمر <code>set</code> لتعديل عنصر موجود (مثل <code>/ip address set</code>).</li>
+<li><strong>حذف عنصر:</strong> استخدم الأمر <code>remove</code> لحذف عنصر (مثل <code>/ip address remove</code>).</li>
+<li><strong>عرض العناصر:</strong> استخدم الأمر <code>print</code> لعرض العناصر (مثل <code>/ip address print</code>).</li>
+</ul>
+<h4>مثال على استخدام CLI:</h4>
+<pre>
+# الانتقال إلى المستوى الجذر
+/
+
+# إضافة عنوان IP إلى واجهة ether1
+/ip address add address=192.168.1.1/24 interface=ether1
+
+# عرض جميع عناوين IP
+/ip address print
+
+# تعديل عنوان IP (باستخدام الرقم من نتيجة الأمر print)
+/ip address set 0 address=192.168.1.2/24
+
+# حذف عنوان IP
+/ip address remove 0
+                </pre>
+<h3>2. واجهة WinBox</h3>
+<p>WinBox هي واجهة رسومية سهلة الاستخدام لإدارة أجهزة مايكروتك. توفر WinBox وصولاً إلى جميع ميزات RouterOS تقريبًا من خلال واجهة رسومية بديهية.</p>
+<h4>أساسيات WinBox:</h4>
+<ul>
+<li><strong>القائمة الرئيسية:</strong> تحتوي على جميع الفئات الرئيسية للإعدادات (مثل IP، Interfaces، Wireless، وما إلى ذلك).</li>
+<li><strong>القوائم الفرعية:</strong> تظهر عند النقر على فئة رئيسية، وتحتوي على إعدادات أكثر تحديدًا.</li>
+<li><strong>نوافذ الإعدادات:</strong> تظهر عند النقر على عنصر في قائمة فرعية، وتحتوي على نماذج لتكوين الإعدادات.</li>
+<li><strong>أزرار الإجراءات:</strong> تظهر في أسفل نوافذ الإعدادات، وتسمح بإضافة وتعديل وحذف العناصر.</li>
+</ul>
+<img alt="واجهة WinBox من مايكروتك" src="../images/mikrotik_winbox_loader.png"/>
+<h3>3. واجهة الويب (WebFig)</h3>
+<p>واجهة الويب (WebFig) هي واجهة إدارة تعتمد على المتصفح، توفر وصولاً سهلاً إلى معظم ميزات RouterOS. تشبه WebFig واجهة WinBox في التنظيم والوظائف.</p>
+<h3>4. نصوص البرمجة (Scripts)</h3>
+<p>يدعم RouterOS نصوص البرمجة، مما يسمح بأتمتة المهام المتكررة وتنفيذ إجراءات معقدة. يمكن كتابة النصوص البرمجية باستخدام لغة نصوص RouterOS الخاصة.</p>
+<h4>أساسيات نصوص البرمجة:</h4>
+<ul>
+<li><strong>إنشاء نص برمجي:</strong> استخدم الأمر <code>/system script add</code> لإنشاء نص برمجي جديد.</li>
+<li><strong>تشغيل نص برمجي:</strong> استخدم الأمر <code>/system script run</code> لتشغيل نص برمجي.</li>
+<li><strong>المتغيرات:</strong> استخدم <code>:local</code> لتعريف متغير محلي و<code>:global</code> لتعريف متغير عالمي.</li>
+<li><strong>الشروط:</strong> استخدم <code>:if</code> و<code>:else</code> للتحكم في تنفيذ الكود بناءً على شروط.</li>
+<li><strong>الحلقات:</strong> استخدم <code>:for</code> و<code>:while</code> لتنفيذ كود متكرر.</li>
+</ul>
+<h4>مثال على نص برمجي بسيط:</h4>
+<pre>
+# إنشاء نص برمجي لإعادة تشغيل الجهاز إذا كان غير قادر على الوصول إلى عنوان IP محدد
+/system script add name=ping-restart source={
+    :local pingTarget 8.8.8.8
+    :local pingCount 5
+    :local pingSuccessful [:ping $pingTarget count=$pingCount]
+    
+    :if ($pingSuccessful = 0) do={
+        :log warning "Unable to reach $pingTarget, restarting device"
+        /system reboot
+    } else={
+        :log info "Successfully pinged $pingTarget ($pingSuccessful/$pingCount successful)"
+    }
+}
+
+# تشغيل النص البرمجي
+/system script run ping-restart
+                </pre>
+<h2>تكوين التوجيه (Routing)</h2>
+<p>التوجيه هو عملية توجيه حزم البيانات من مصدر إلى وجهة عبر شبكة أو عدة شبكات. يدعم RouterOS مجموعة متنوعة من بروتوكولات وتقنيات التوجيه.</p>
+<h3>1. التوجيه الثابت (Static Routing)</h3>
+<p>التوجيه الثابت هو أبسط شكل من أشكال التوجيه، حيث يتم تكوين مسارات ثابتة يدويًا. يعتبر التوجيه الثابت مناسبًا للشبكات الصغيرة والبسيطة.</p>
+<h4>كيفية تكوين التوجيه الثابت:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# إضافة مسار ثابت
+/ip route add dst-address=10.0.0.0/24 gateway=192.168.1.254
+
+# عرض جميع المسارات
+/ip route print
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "IP" ثم "Routes"، وانقر على زر "+" لإضافة مسار جديد. أدخل عنوان الوجهة (Dst. Address) والبوابة (Gateway)، ثم انقر على "OK".</li>
+</ul>
+<h3>2. بروتوكول معلومات التوجيه (RIP)</h3>
+<p>بروتوكول معلومات التوجيه (RIP) هو بروتوكول توجيه ديناميكي يستخدم خوارزمية المسار الأقصر بناءً على عدد القفزات (hop count). يعتبر RIP مناسبًا للشبكات الصغيرة والمتوسطة.</p>
+<h4>كيفية تكوين RIP:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# تمكين RIP
+/routing rip set enabled=yes
+
+# إضافة شبكة
+/routing rip network add network=192.168.1.0/24
+
+# عرض إعدادات RIP
+/routing rip print
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "Routing" ثم "RIP". في علامة التبويب "Settings"، قم بتمكين RIP. ثم انتقل إلى علامة التبويب "Networks"، وانقر على زر "+" لإضافة شبكة جديدة.</li>
+</ul>
+<h3>3. بروتوكول أولاً المسار الأقصر (OSPF)</h3>
+<p>بروتوكول أولاً المسار الأقصر (OSPF) هو بروتوكول توجيه ديناميكي يستخدم خوارزمية حالة الرابط (link-state). يعتبر OSPF أكثر تقدمًا من RIP ومناسبًا للشبكات المتوسطة والكبيرة.</p>
+<h4>كيفية تكوين OSPF:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# تكوين معرف الموجه
+/routing ospf instance set 0 router-id=10.0.0.1
+
+# إضافة منطقة
+/routing ospf area add name=backbone area-id=0.0.0.0
+
+# إضافة شبكة
+/routing ospf network add network=192.168.1.0/24 area=backbone
+
+# عرض إعدادات OSPF
+/routing ospf print
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "Routing" ثم "OSPF". في علامة التبويب "Instances"، قم بتكوين معرف الموجه. ثم انتقل إلى علامة التبويب "Areas" لإضافة منطقة، وعلامة التبويب "Networks" لإضافة شبكة.</li>
+</ul>
+<h3>4. بروتوكول بوابة الحدود (BGP)</h3>
+<p>بروتوكول بوابة الحدود (BGP) هو بروتوكول توجيه خارجي يستخدم لتبادل معلومات التوجيه بين الأنظمة المستقلة (AS). يعتبر BGP أساسيًا لتوجيه الإنترنت ومناسبًا للشبكات الكبيرة ومزودي خدمة الإنترنت.</p>
+<h4>كيفية تكوين BGP:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# تكوين النظام المستقل المحلي
+/routing bgp instance set default as=65001
+
+# إضافة جار
+/routing bgp peer add name=peer1 remote-address=10.0.0.2 remote-as=65002
+
+# إضافة شبكة
+/routing bgp network add network=192.168.1.0/24
+
+# عرض إعدادات BGP
+/routing bgp print
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "Routing" ثم "BGP". في علامة التبويب "Instances"، قم بتكوين النظام المستقل المحلي. ثم انتقل إلى علامة التبويب "Peers" لإضافة جار، وعلامة التبويب "Networks" لإضافة شبكة.</li>
+</ul>
+<h2>تكوين التبديل (Switching)</h2>
+<p>التبديل هو عملية توجيه حزم البيانات بين الأجهزة في نفس الشبكة المحلية. يدعم RouterOS ميزات تبديل متقدمة، خاصة في أجهزة سلسلة CRS.</p>
+<h3>1. الشبكات المحلية الافتراضية (VLANs)</h3>
+<p>الشبكات المحلية الافتراضية (VLANs) هي تقنية تسمح بتقسيم شبكة محلية فعلية إلى عدة شبكات منطقية. تساعد VLANs في تحسين أداء الشبكة وأمانها وإدارتها.</p>
+<h4>كيفية تكوين VLANs:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# إضافة واجهة VLAN
+/interface vlan add name=vlan10 vlan-id=10 interface=ether1
+
+# إضافة عنوان IP إلى واجهة VLAN
+/ip address add address=192.168.10.1/24 interface=vlan10
+
+# تكوين منافذ المبدل (في أجهزة CRS)
+/interface ethernet switch vlan add ports=ether2,ether3 vlan-id=10
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "Interfaces"، وانقر على زر "+" واختر "VLAN" لإضافة واجهة VLAN جديدة. أدخل اسم الواجهة، ومعرف VLAN، والواجهة الأصلية، ثم انقر على "OK". ثم انتقل إلى قائمة "IP" ثم "Addresses" لإضافة عنوان IP إلى واجهة VLAN.</li>
+</ul>
+<h3>2. بروتوكول شجرة الامتداد (STP/RSTP)</h3>
+<p>بروتوكول شجرة الامتداد (STP) وبروتوكول شجرة الامتداد السريع (RSTP) هي بروتوكولات تستخدم لمنع حلقات التبديل في الشبكات المحلية. تساعد هذه البروتوكولات في ضمان استقرار الشبكة وتوفير مسارات بديلة في حالة فشل الرابط.</p>
+<h4>كيفية تكوين STP/RSTP:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# تمكين RSTP على مستوى الجهاز
+/interface bridge add name=bridge1 protocol-mode=rstp
+
+# إضافة منافذ إلى الجسر
+/interface bridge port add bridge=bridge1 interface=ether1
+/interface bridge port add bridge=bridge1 interface=ether2
+
+# تكوين أولوية الجسر
+/interface bridge set bridge1 priority=0x8000
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "Bridge"، وانقر على زر "+" لإضافة جسر جديد. اختر وضع البروتوكول (RSTP)، ثم انقر على "OK". ثم انتقل إلى علامة التبويب "Ports" لإضافة منافذ إلى الجسر.</li>
+</ul>
+<h3>3. التحكم في الوصول استنادًا إلى المنفذ (Port-based Access Control)</h3>
+<p>التحكم في الوصول استنادًا إلى المنفذ هو تقنية تسمح بتقييد الوصول إلى الشبكة بناءً على المنفذ الفعلي الذي يتصل به الجهاز. يمكن استخدام هذه التقنية لتحسين أمان الشبكة.</p>
+<h4>كيفية تكوين التحكم في الوصول استنادًا إلى المنفذ:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# تعطيل منفذ
+/interface ethernet disable ether3
+
+# تقييد سرعة المنفذ
+/interface ethernet set ether3 speed=10M
+
+# تكوين قواعد الجدار الناري للتحكم في الوصول
+/ip firewall filter add chain=forward in-interface=ether3 action=drop
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "Interfaces"، وحدد المنفذ الذي تريد التحكم فيه. انقر على زر "Disable" لتعطيل المنفذ، أو استخدم خصائص المنفذ لتقييد السرعة أو وضع الاتصال.</li>
+</ul>
+<h2>تكوين الشبكات اللاسلكية (Wireless)</h2>
+<p>الشبكات اللاسلكية هي شبكات تستخدم موجات الراديو لنقل البيانات بدلاً من الكابلات. يدعم RouterOS مجموعة واسعة من ميزات الشبكات اللاسلكية، بما في ذلك نقاط الوصول، ووضع العميل، والجسور اللاسلكية.</p>
+<h3>1. تكوين نقطة وصول (Access Point)</h3>
+<p>نقطة الوصول هي جهاز يسمح للأجهزة اللاسلكية بالاتصال بشبكة سلكية. يمكن تكوين أجهزة مايكروتك كنقاط وصول لاسلكية.</p>
+<h4>كيفية تكوين نقطة وصول:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# تكوين ملف تعريف الأمان
+/interface wireless security-profiles
+add name=profile1 mode=dynamic-keys authentication-types=wpa2-psk \
+    wpa2-pre-shared-key=password123
+
+# تكوين الواجهة اللاسلكية
+/interface wireless
+set wlan1 mode=ap-bridge ssid=MyNetwork frequency=2412 band=2ghz-b/g/n \
+    security-profile=profile1 disabled=no
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "Wireless" ثم "Security Profiles"، وانقر على زر "+" لإضافة ملف تعريف أمان جديد. أدخل اسم الملف، واختر وضع الأمان ونوع المصادقة، وأدخل كلمة المرور، ثم انقر على "OK". ثم انتقل إلى قائمة "Wireless" ثم "Interfaces"، وحدد الواجهة اللاسلكية. اختر وضع "ap bridge"، وأدخل SSID والتردد والنطاق وملف تعريف الأمان، ثم انقر على "OK".</li>
+</ul>
+<h3>2. تكوين وضع العميل (Client Mode)</h3>
+<p>وضع العميل يسمح لجهاز مايكروتك بالاتصال بنقطة وصول لاسلكية كعميل. يمكن استخدام هذا الوضع لتوصيل شبكتين سلكيتين عبر رابط لاسلكي.</p>
+<h4>كيفية تكوين وضع العميل:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# تكوين ملف تعريف الأمان
+/interface wireless security-profiles
+add name=profile1 mode=dynamic-keys authentication-types=wpa2-psk \
+    wpa2-pre-shared-key=password123
+
+# تكوين الواجهة اللاسلكية
+/interface wireless
+set wlan1 mode=station-bridge ssid=MyNetwork frequency=2412 band=2ghz-b/g/n \
+    security-profile=profile1 disabled=no
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "Wireless" ثم "Security Profiles"، وانقر على زر "+" لإضافة ملف تعريف أمان جديد. أدخل اسم الملف، واختر وضع الأمان ونوع المصادقة، وأدخل كلمة المرور، ثم انقر على "OK". ثم انتقل إلى قائمة "Wireless" ثم "Interfaces"، وحدد الواجهة اللاسلكية. اختر وضع "station bridge"، وأدخل SSID والتردد والنطاق وملف تعريف الأمان، ثم انقر على "OK".</li>
+</ul>
+<h3>3. تكوين جسر لاسلكي (Wireless Bridge)</h3>
+<p>الجسر اللاسلكي هو رابط لاسلكي بين نقطتين، يستخدم لتوصيل شبكتين سلكيتين عبر مسافة. يمكن تكوين أجهزة مايكروتك كجسور لاسلكية.</p>
+<h4>كيفية تكوين جسر لاسلكي:</h4>
+<ul>
+<li><strong>عبر CLI (الجانب الأول - نقطة الوصول):</strong>
+<pre>
+# تكوين ملف تعريف الأمان
+/interface wireless security-profiles
+add name=bridge-profile mode=dynamic-keys authentication-types=wpa2-psk \
+    wpa2-pre-shared-key=bridge-password
+
+# تكوين الواجهة اللاسلكية
+/interface wireless
+set wlan1 mode=bridge ssid=BridgeLink frequency=5180 band=5ghz-a/n/ac \
+    security-profile=bridge-profile disabled=no
+                        </pre>
+</li>
+<li><strong>عبر CLI (الجانب الثاني - العميل):</strong>
+<pre>
+# تكوين ملف تعريف الأمان
+/interface wireless security-profiles
+add name=bridge-profile mode=dynamic-keys authentication-types=wpa2-psk \
+    wpa2-pre-shared-key=bridge-password
+
+# تكوين الواجهة اللاسلكية
+/interface wireless
+set wlan1 mode=station-bridge ssid=BridgeLink frequency=5180 band=5ghz-a/n/ac \
+    security-profile=bridge-profile disabled=no
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> اتبع نفس الخطوات المذكورة في تكوين نقطة الوصول ووضع العميل، ولكن استخدم وضع "bridge" للجانب الأول و"station bridge" للجانب الثاني.</li>
+</ul>
+<img alt="جسر لاسلكي من مايكروتك" src="../images/mikrotik_wireless_config_illustration.webp"/>
+<h2>إدارة النطاق الترددي (Bandwidth Management)</h2>
+<p>إدارة النطاق الترددي هي عملية التحكم في كيفية استخدام النطاق الترددي المتاح في الشبكة. يوفر RouterOS أدوات قوية لإدارة النطاق الترددي، مما يسمح بتحديد أولويات حركة المرور وتقييد سرعات التنزيل والتحميل.</p>
+<h3>1. صفوف الانتظار البسيطة (Simple Queues)</h3>
+<p>صفوف الانتظار البسيطة هي الطريقة الأبسط لإدارة النطاق الترددي في RouterOS. تسمح بتقييد سرعات التنزيل والتحميل لعناوين IP أو نطاقات محددة.</p>
+<h4>كيفية تكوين صفوف الانتظار البسيطة:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# إضافة صف انتظار بسيط
+/queue simple add name=client1 target=192.168.1.10/32 max-limit=5M/10M
+
+# عرض جميع صفوف الانتظار البسيطة
+/queue simple print
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "Queues" ثم "Simple Queues"، وانقر على زر "+" لإضافة صف انتظار جديد. أدخل اسم الصف، وعنوان الهدف، وحدود السرعة (التحميل/التنزيل)، ثم انقر على "OK".</li>
+</ul>
+<h3>2. شجرة صفوف الانتظار (Queue Trees)</h3>
+<p>شجرة صفوف الانتظار هي طريقة أكثر تقدمًا لإدارة النطاق الترددي في RouterOS. تسمح بإنشاء هيكل هرمي من صفوف الانتظار، مما يوفر تحكمًا أكثر دقة في كيفية توزيع النطاق الترددي.</p>
+<h4>كيفية تكوين شجرة صفوف الانتظار:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# إنشاء علامات حركة المرور
+/ip firewall mangle add chain=forward action=mark-packet \
+    new-packet-mark=web-traffic protocol=tcp dst-port=80,443
+/ip firewall mangle add chain=forward action=mark-packet \
+    new-packet-mark=voip-traffic protocol=udp dst-port=5060
+
+# إضافة صفوف انتظار
+/queue tree add name=total parent=global-out max-limit=20M
+/queue tree add name=web parent=total packet-mark=web-traffic limit-at=5M max-limit=10M priority=5
+/queue tree add name=voip parent=total packet-mark=voip-traffic limit-at=2M max-limit=5M priority=1
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> أولاً، انتقل إلى قائمة "IP" ثم "Firewall" ثم "Mangle" لإنشاء علامات حركة المرور. ثم انتقل إلى قائمة "Queues" ثم "Queue Trees"، وانقر على زر "+" لإضافة صف انتظار جديد. أدخل اسم الصف، والأصل، وعلامة الحزمة، وحدود السرعة، والأولوية، ثم انقر على "OK".</li>
+</ul>
+<h3>3. صفوف الانتظار لكل اتصال (PCQ)</h3>
+<p>صفوف الانتظار لكل اتصال (PCQ) هي تقنية متقدمة لإدارة النطاق الترددي في RouterOS. تسمح بتوزيع النطاق الترددي بالتساوي بين المستخدمين أو الاتصالات، مما يمنع المستخدمين الفرديين من استهلاك جميع الموارد المتاحة.</p>
+<h4>كيفية تكوين PCQ:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# إنشاء نوع PCQ
+/queue type add name=pcq-download kind=pcq pcq-classifier=dst-address \
+    pcq-rate=1M pcq-limit=50
+
+# إنشاء نوع PCQ آخر
+/queue type add name=pcq-upload kind=pcq pcq-classifier=src-address \
+    pcq-rate=512k pcq-limit=50
+
+# إضافة صف انتظار بسيط باستخدام أنواع PCQ
+/queue simple add name=pcq-queue target=192.168.1.0/24 \
+    queue=pcq-upload/pcq-download
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "Queues" ثم "Queue Types"، وانقر على زر "+" لإضافة نوع صف انتظار جديد. اختر نوع "pcq"، وأدخل اسم النوع، ومصنف PCQ، ومعدل PCQ، وحد PCQ، ثم انقر على "OK". ثم انتقل إلى قائمة "Queues" ثم "Simple Queues"، وانقر على زر "+" لإضافة صف انتظار جديد. أدخل اسم الصف، وعنوان الهدف، واختر أنواع PCQ التي أنشأتها، ثم انقر على "OK".</li>
+</ul>
+<h2>تكوين الجدار الناري وتصفية حزم البيانات (Firewall and Packet Filtering)</h2>
+<p>الجدار الناري هو نظام أمان يراقب ويتحكم في حركة المرور الواردة والصادرة بناءً على قواعد محددة مسبقًا. يوفر RouterOS جدارًا ناريًا قويًا مع ميزات متقدمة لتصفية حزم البيانات.</p>
+<h3>1. قواعد تصفية الجدار الناري الأساسية</h3>
+<p>قواعد تصفية الجدار الناري الأساسية تسمح بالتحكم في حركة المرور بناءً على معايير مثل عناوين IP والمنافذ والبروتوكولات.</p>
+<h4>كيفية تكوين قواعد تصفية الجدار الناري الأساسية:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# السماح بالاتصالات الحالية والمرتبطة
+/ip firewall filter add chain=input connection-state=established,related action=accept
+
+# السماح بحركة المرور من الشبكة المحلية
+/ip firewall filter add chain=input src-address=192.168.1.0/24 action=accept
+
+# السماح بخدمات محددة
+/ip firewall filter add chain=input protocol=tcp dst-port=22 action=accept comment="Allow SSH"
+/ip firewall filter add chain=input protocol=tcp dst-port=80 action=accept comment="Allow HTTP"
+
+# حظر جميع حركة المرور الأخرى
+/ip firewall filter add chain=input action=drop comment="Drop everything else"
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "IP" ثم "Firewall" ثم "Filter Rules"، وانقر على زر "+" لإضافة قاعدة جديدة. اختر السلسلة (Chain)، وأدخل معايير التصفية، واختر الإجراء، ثم انقر على "OK".</li>
+</ul>
+<h3>2. تصفية طبقة التطبيق (Layer 7 Filtering)</h3>
+<p>تصفية طبقة التطبيق هي تقنية متقدمة تسمح بتصفية حركة المرور بناءً على محتوى الحزم، وليس فقط على معلومات الرأس. يمكن استخدام هذه التقنية لتصفية تطبيقات أو بروتوكولات محددة.</p>
+<h4>كيفية تكوين تصفية طبقة التطبيق:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# إنشاء نمط طبقة 7
+/ip firewall layer7-protocol add name=http regexp="^.+(GET|POST|HEAD) .+ HTTP/1.1\\r\\n"
+
+# إضافة قاعدة تصفية
+/ip firewall filter add chain=forward layer7-protocol=http action=accept comment="Allow HTTP"
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "IP" ثم "Firewall" ثم "Layer7 Protocols"، وانقر على زر "+" لإضافة نمط جديد. أدخل اسم النمط والتعبير العادي، ثم انقر على "OK". ثم انتقل إلى قائمة "IP" ثم "Firewall" ثم "Filter Rules"، وانقر على زر "+" لإضافة قاعدة جديدة. اختر السلسلة (Chain)، وحدد نمط طبقة 7، واختر الإجراء، ثم انقر على "OK".</li>
+</ul>
+<h3>3. الحماية من هجمات DDoS</h3>
+<p>هجمات حجب الخدمة الموزعة (DDoS) هي هجمات تهدف إلى جعل الخدمة أو الموقع غير متاح عن طريق إغراقه بحركة مرور زائفة. يوفر RouterOS عدة آليات للحماية من هجمات DDoS.</p>
+<h4>كيفية تكوين الحماية من هجمات DDoS:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# الحماية من هجمات SYN flood
+/ip firewall filter add chain=input protocol=tcp tcp-flags=syn connection-state=new \
+    limit=50,5:packet action=accept comment="Allow new TCP connections with limit"
+/ip firewall filter add chain=input protocol=tcp tcp-flags=syn connection-state=new \
+    action=drop comment="Drop new TCP connections if limit reached"
+
+# الحماية من هجمات ICMP flood
+/ip firewall filter add chain=input protocol=icmp limit=50,5:packet action=accept \
+    comment="Allow limited ICMP"
+/ip firewall filter add chain=input protocol=icmp action=drop \
+    comment="Drop ICMP if limit reached"
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "IP" ثم "Firewall" ثم "Filter Rules"، وانقر على زر "+" لإضافة قاعدة جديدة. اختر السلسلة (Chain)، وأدخل معايير التصفية، وحدد حدود معدل الحزم، واختر الإجراء، ثم انقر على "OK".</li>
+</ul>
+<h2>تكوين خدمات الشبكة (Network Services)</h2>
+<p>خدمات الشبكة هي برامج تقدم وظائف محددة للأجهزة في الشبكة. يوفر RouterOS مجموعة متنوعة من خدمات الشبكة، بما في ذلك DHCP، وDNS، وNTP، وغيرها.</p>
+<h3>1. خادم DHCP</h3>
+<p>بروتوكول تكوين المضيف الديناميكي (DHCP) هو بروتوكول شبكة يستخدم لتعيين عناوين IP وإعدادات شبكة أخرى للأجهزة تلقائيًا. يمكن تكوين RouterOS كخادم DHCP.</p>
+<h4>كيفية تكوين خادم DHCP:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# إنشاء نطاق DHCP
+/ip pool add name=dhcp-pool ranges=192.168.1.100-192.168.1.200
+
+# إنشاء خادم DHCP
+/ip dhcp-server add name=dhcp1 interface=ether1 address-pool=dhcp-pool disabled=no
+
+# تكوين شبكة DHCP
+/ip dhcp-server network add address=192.168.1.0/24 gateway=192.168.1.1 dns-server=8.8.8.8
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "IP" ثم "Pool"، وانقر على زر "+" لإضافة نطاق جديد. أدخل اسم النطاق ونطاق العناوين، ثم انقر على "OK". ثم انتقل إلى قائمة "IP" ثم "DHCP Server"، وانقر على زر "+" لإضافة خادم جديد. أدخل اسم الخادم، والواجهة، ونطاق العناوين، ثم انقر على "OK". ثم انتقل إلى علامة التبويب "Networks"، وانقر على زر "+" لإضافة شبكة جديدة. أدخل عنوان الشبكة، والبوابة، وخادم DNS، ثم انقر على "OK".</li>
+</ul>
+<h3>2. خادم DNS</h3>
+<p>نظام أسماء النطاقات (DNS) هو نظام يترجم أسماء النطاقات إلى عناوين IP. يمكن تكوين RouterOS كخادم DNS.</p>
+<h4>كيفية تكوين خادم DNS:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# تكوين خادم DNS
+/ip dns set allow-remote-requests=yes servers=8.8.8.8,8.8.4.4
+
+# إضافة سجل ثابت
+/ip dns static add name=myserver.local address=192.168.1.10
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "IP" ثم "DNS"، وحدد خيار "Allow Remote Requests"، وأدخل عناوين خوادم DNS، ثم انقر على "Apply". ثم انتقل إلى علامة التبويب "Static"، وانقر على زر "+" لإضافة سجل ثابت. أدخل اسم النطاق وعنوان IP، ثم انقر على "OK".</li>
+</ul>
+<h3>3. خادم NTP</h3>
+<p>بروتوكول وقت الشبكة (NTP) هو بروتوكول يستخدم لمزامنة الساعات بين أجهزة الكمبيوتر. يمكن تكوين RouterOS كخادم NTP.</p>
+<h4>كيفية تكوين خادم NTP:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# تكوين عميل NTP
+/system ntp client set enabled=yes primary-ntp=pool.ntp.org secondary-ntp=time.google.com
+
+# تكوين خادم NTP
+/system ntp server set enabled=yes
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "System" ثم "SNTP Client"، وحدد خيار "Enabled"، وأدخل عناوين خوادم NTP، ثم انقر على "Apply". ثم انتقل إلى قائمة "System" ثم "SNTP Server"، وحدد خيار "Enabled"، ثم انقر على "Apply".</li>
+</ul>
+<h2>تكوين الشبكات الخاصة الافتراضية (VPN)</h2>
+<p>الشبكات الخاصة الافتراضية (VPN) هي تقنية تسمح بإنشاء اتصال آمن عبر شبكة عامة مثل الإنترنت. يدعم RouterOS مجموعة متنوعة من تقنيات VPN.</p>
+<h3>1. تكوين خادم PPTP</h3>
+<p>بروتوكول النفق من نقطة إلى نقطة (PPTP) هو بروتوكول VPN قديم ولكنه لا يزال شائعًا بسبب سهولة الإعداد والتوافق مع معظم أنظمة التشغيل.</p>
+<h4>كيفية تكوين خادم PPTP:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# إنشاء نطاق عناوين للعملاء
+/ip pool add name=pptp-pool ranges=10.0.0.100-10.0.0.200
+
+# تكوين ملف تعريف PPTP
+/ppp profile add name=pptp-profile local-address=10.0.0.1 remote-address=pptp-pool
+
+# تمكين خادم PPTP
+/interface pptp-server server set enabled=yes default-profile=pptp-profile
+
+# إضافة مستخدم
+/ppp secret add name=user1 password=password1 service=pptp profile=pptp-profile
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "IP" ثم "Pool"، وانقر على زر "+" لإضافة نطاق جديد. أدخل اسم النطاق ونطاق العناوين، ثم انقر على "OK". ثم انتقل إلى قائمة "PPP" ثم "Profiles"، وانقر على زر "+" لإضافة ملف تعريف جديد. أدخل اسم الملف، والعنوان المحلي، والعنوان البعيد، ثم انقر على "OK". ثم انتقل إلى قائمة "PPP" ثم "Interface" ثم "PPTP Server"، وحدد خيار "Enabled"، واختر ملف التعريف الافتراضي، ثم انقر على "Apply". ثم انتقل إلى قائمة "PPP" ثم "Secrets"، وانقر على زر "+" لإضافة مستخدم جديد. أدخل اسم المستخدم، وكلمة المرور، والخدمة، وملف التعريف، ثم انقر على "OK".</li>
+</ul>
+<h3>2. تكوين خادم L2TP/IPsec</h3>
+<p>بروتوكول النفق من الطبقة 2 (L2TP) مع بروتوكول أمان الإنترنت (IPsec) هو بروتوكول VPN أكثر أمانًا من PPTP. يوفر تشفيرًا قويًا ومصادقة للاتصالات.</p>
+<h4>كيفية تكوين خادم L2TP/IPsec:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# إنشاء نطاق عناوين للعملاء
+/ip pool add name=l2tp-pool ranges=10.0.0.100-10.0.0.200
+
+# تكوين ملف تعريف L2TP
+/ppp profile add name=l2tp-profile local-address=10.0.0.1 remote-address=l2tp-pool
+
+# تمكين خادم L2TP
+/interface l2tp-server server set enabled=yes default-profile=l2tp-profile
+
+# تكوين IPsec
+/ip ipsec proposal set [ find default=yes ] auth-algorithms=sha1 enc-algorithms=aes-128-cbc
+/ip ipsec peer add address=0.0.0.0/0 exchange-mode=main-l2tp
+/ip ipsec identity add peer=default secret=ipsec-password
+
+# إضافة مستخدم
+/ppp secret add name=user1 password=password1 service=l2tp profile=l2tp-profile
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> اتبع نفس الخطوات المذكورة في تكوين خادم PPTP، ولكن استخدم "L2TP Server" بدلاً من "PPTP Server". ثم انتقل إلى قائمة "IP" ثم "IPsec" ثم "Proposals"، وقم بتعديل الاقتراح الافتراضي. ثم انتقل إلى علامة التبويب "Peers"، وانقر على زر "+" لإضافة نظير جديد. أدخل العنوان ووضع التبادل، ثم انقر على "OK". ثم انتقل إلى علامة التبويب "Identities"، وانقر على زر "+" لإضافة هوية جديدة. اختر النظير وأدخل كلمة السر، ثم انقر على "OK".</li>
+</ul>
+<h3>3. تكوين خادم OpenVPN</h3>
+<p>OpenVPN هو بروتوكول VPN مفتوح المصدر يوفر أمانًا قويًا ومرونة في التكوين. يعتبر OpenVPN خيارًا جيدًا للاتصالات الآمنة عبر الإنترنت.</p>
+<h4>كيفية تكوين خادم OpenVPN:</h4>
+<ul>
+<li><strong>عبر CLI:</strong>
+<pre>
+# إنشاء شهادة CA
+/certificate add name=ca-template common-name=CA days-valid=3650 key-usage=key-cert-sign,crl-sign
+/certificate sign ca-template name=ca-certificate
+
+# إنشاء شهادة الخادم
+/certificate add name=server-template common-name=Server days-valid=3650
+/certificate sign server-template name=server-certificate ca=ca-certificate
+
+# إنشاء نطاق عناوين للعملاء
+/ip pool add name=ovpn-pool ranges=10.0.0.100-10.0.0.200
+
+# تكوين ملف تعريف OpenVPN
+/ppp profile add name=ovpn-profile local-address=10.0.0.1 remote-address=ovpn-pool
+
+# تكوين خادم OpenVPN
+/interface ovpn-server server set enabled=yes certificate=server-certificate \
+    default-profile=ovpn-profile auth=sha1 cipher=aes128
+
+# إضافة مستخدم
+/ppp secret add name=user1 password=password1 service=ovpn profile=ovpn-profile
+                        </pre>
+</li>
+<li><strong>عبر WinBox:</strong> انتقل إلى قائمة "System" ثم "Certificates"، وانقر على زر "+" لإضافة شهادة جديدة. أدخل اسم القالب والاسم الشائع وفترة الصلاحية واستخدام المفتاح، ثم انقر على "OK". ثم حدد الشهادة وانقر على زر "Sign" لتوقيعها. كرر هذه الخطوات لإنشاء شهادة الخادم. ثم اتبع نفس الخطوات المذكورة في تكوين خادم PPTP، ولكن استخدم "OpenVPN Server" بدلاً من "PPTP Server".</li>
+</ul>
+<h2>سيناريوهات تطبيقية</h2>
+<p>في هذا القسم، سنستعرض بعض السيناريوهات التطبيقية لاستخدام أجهزة مايكروتك في بيئات الشبكات الحقيقية.</p>
+<h3>1. إعداد شبكة منزلية أو مكتب صغير</h3>
+<p>في هذا السيناريو، سنقوم بإعداد جهاز مايكروتك كموجه لشبكة منزلية أو مكتب صغير، مع توفير اتصال إنترنت، وشبكة لاسلكية، وخدمات أساسية.</p>
+<h4>خطوات الإعداد:</h4>
+<ol>
+<li><strong>تكوين الاتصال بالإنترنت:</strong>
+<pre>
+# تكوين عميل DHCP للاتصال بمزود خدمة الإنترنت
+/ip dhcp-client add interface=ether1 disabled=no
+
+# أو تكوين عنوان IP ثابت
+/ip address add address=203.0.113.2/24 interface=ether1
+/ip route add gateway=203.0.113.1
+                        </pre>
+</li>
+<li><strong>تكوين الشبكة المحلية:</strong>
+<pre>
+# إضافة عنوان IP للشبكة المحلية
+/ip address add address=192.168.1.1/24 interface=ether2
+
+# تكوين خادم DHCP
+/ip pool add name=dhcp-pool ranges=192.168.1.100-192.168.1.200
+/ip dhcp-server add name=dhcp1 interface=ether2 address-pool=dhcp-pool disabled=no
+/ip dhcp-server network add address=192.168.1.0/24 gateway=192.168.1.1 dns-server=8.8.8.8
+                        </pre>
+</li>
+<li><strong>تكوين الشبكة اللاسلكية:</strong>
+<pre>
+# تكوين ملف تعريف الأمان
+/interface wireless security-profiles
+add name=home-profile mode=dynamic-keys authentication-types=wpa2-psk \
+    wpa2-pre-shared-key=strong-password
+
+# تكوين الواجهة اللاسلكية
+/interface wireless
+set wlan1 mode=ap-bridge ssid=HomeNetwork frequency=auto band=2ghz-b/g/n \
+    security-profile=home-profile disabled=no
+                        </pre>
+</li>
+<li><strong>تكوين NAT:</strong>
+<pre>
+# تكوين NAT لمشاركة الاتصال بالإنترنت
+/ip firewall nat add chain=srcnat action=masquerade out-interface=ether1
+                        </pre>
+</li>
+<li><strong>تكوين الجدار الناري:</strong>
+<pre>
+# تكوين قواعد الجدار الناري الأساسية
+/ip firewall filter add chain=input connection-state=established,related action=accept
+/ip firewall filter add chain=input protocol=icmp action=accept
+/ip firewall filter add chain=input src-address=192.168.1.0/24 action=accept
+/ip firewall filter add chain=input action=drop
+                        </pre>
+</li>
+</ol>
+<h3>2. إعداد شبكة مكتب متوسط مع VLANs</h3>
+<p>في هذا السيناريو، سنقوم بإعداد جهاز مايكروتك لشبكة مكتب متوسط، مع استخدام VLANs لفصل أقسام مختلفة من الشبكة.</p>
+<h4>خطوات الإعداد:</h4>
+<ol>
+<li><strong>تكوين الاتصال بالإنترنت:</strong>
+<pre>
+# تكوين عنوان IP ثابت للاتصال بمزود خدمة الإنترنت
+/ip address add address=203.0.113.2/24 interface=ether1
+/ip route add gateway=203.0.113.1
+                        </pre>
+</li>
+<li><strong>تكوين الجسر الرئيسي:</strong>
+<pre>
+# إنشاء جسر رئيسي
+/interface bridge add name=bridge1 protocol-mode=rstp
+/interface bridge port add bridge=bridge1 interface=ether2
+/interface bridge port add bridge=bridge1 interface=ether3
+/interface bridge port add bridge=bridge1 interface=ether4
+/interface bridge port add bridge=bridge1 interface=ether5
+                        </pre>
+</li>
+<li><strong>تكوين VLANs:</strong>
+<pre>
+# إنشاء واجهات VLAN
+/interface vlan add name=vlan10-admin vlan-id=10 interface=bridge1
+/interface vlan add name=vlan20-sales vlan-id=20 interface=bridge1
+/interface vlan add name=vlan30-dev vlan-id=30 interface=bridge1
+
+# إضافة عناوين IP للشبكات المختلفة
+/ip address add address=192.168.10.1/24 interface=vlan10-admin
+/ip address add address=192.168.20.1/24 interface=vlan20-sales
+/ip address add address=192.168.30.1/24 interface=vlan30-dev
+                        </pre>
+</li>
+<li><strong>تكوين خوادم DHCP:</strong>
+<pre>
+# إنشاء نطاقات DHCP
+/ip pool add name=admin-pool ranges=192.168.10.100-192.168.10.200
+/ip pool add name=sales-pool ranges=192.168.20.100-192.168.20.200
+/ip pool add name=dev-pool ranges=192.168.30.100-192.168.30.200
+
+# تكوين خوادم DHCP
+/ip dhcp-server add name=admin-dhcp interface=vlan10-admin address-pool=admin-pool disabled=no
+/ip dhcp-server add name=sales-dhcp interface=vlan20-sales address-pool=sales-pool disabled=no
+/ip dhcp-server add name=dev-dhcp interface=vlan30-dev address-pool=dev-pool disabled=no
+
+# تكوين شبكات DHCP
+/ip dhcp-server network add address=192.168.10.0/24 gateway=192.168.10.1 dns-server=8.8.8.8
+/ip dhcp-server network add address=192.168.20.0/24 gateway=192.168.20.1 dns-server=8.8.8.8
+/ip dhcp-server network add address=192.168.30.0/24 gateway=192.168.30.1 dns-server=8.8.8.8
+                        </pre>
+</li>
+<li><strong>تكوين NAT:</strong>
+<pre>
+# تكوين NAT لمشاركة الاتصال بالإنترنت
+/ip firewall nat add chain=srcnat action=masquerade out-interface=ether1
+                        </pre>
+</li>
+<li><strong>تكوين الجدار الناري:</strong>
+<pre>
+# تكوين قواعد الجدار الناري الأساسية
+/ip firewall filter add chain=input connection-state=established,related action=accept
+/ip firewall filter add chain=input protocol=icmp action=accept
+/ip firewall filter add chain=input src-address=192.168.10.0/24 action=accept
+/ip firewall filter add chain=input src-address=192.168.20.0/24 action=accept
+/ip firewall filter add chain=input src-address=192.168.30.0/24 action=accept
+/ip firewall filter add chain=input action=drop
+
+# تقييد الوصول بين VLANs
+/ip firewall filter add chain=forward src-address=192.168.20.0/24 dst-address=192.168.30.0/24 action=drop
+/ip firewall filter add chain=forward src-address=192.168.30.0/24 dst-address=192.168.20.0/24 action=drop
+                        </pre>
+</li>
+</ol>
+<h3>3. إعداد رابط نقطة إلى نقطة لاسلكي</h3>
+<p>في هذا السيناريو، سنقوم بإعداد رابط نقطة إلى نقطة لاسلكي باستخدام أجهزة مايكروتك، لتوصيل موقعين متباعدين.</p>
+<h4>خطوات الإعداد (الجانب الأول - نقطة الوصول):</h4>
+<ol>
+<li><strong>تكوين ملف تعريف الأمان:</strong>
+<pre>
+# تكوين ملف تعريف الأمان
+/interface wireless security-profiles
+add name=bridge-profile mode=dynamic-keys authentication-types=wpa2-psk \
+    wpa2-pre-shared-key=strong-bridge-password
+                        </pre>
+</li>
+<li><strong>تكوين الواجهة اللاسلكية:</strong>
+<pre>
+# تكوين الواجهة اللاسلكية
+/interface wireless
+set wlan1 mode=bridge ssid=P2P-Link frequency=5180 band=5ghz-a/n/ac \
+    security-profile=bridge-profile disabled=no
+                        </pre>
+</li>
+<li><strong>تكوين الشبكة:</strong>
+<pre>
+# إضافة عنوان IP
+/ip address add address=172.16.0.1/30 interface=wlan1
+
+# تكوين الجسر (إذا كنت تريد توصيل الشبكة المحلية)
+/interface bridge add name=bridge1
+/interface bridge port add bridge=bridge1 interface=ether1
+/interface bridge port add bridge=bridge1 interface=wlan1
+                        </pre>
+</li>
+</ol>
+<h4>خطوات الإعداد (الجانب الثاني - العميل):</h4>
+<ol>
+<li><strong>تكوين ملف تعريف الأمان:</strong>
+<pre>
+# تكوين ملف تعريف الأمان
+/interface wireless security-profiles
+add name=bridge-profile mode=dynamic-keys authentication-types=wpa2-psk \
+    wpa2-pre-shared-key=strong-bridge-password
+                        </pre>
+</li>
+<li><strong>تكوين الواجهة اللاسلكية:</strong>
+<pre>
+# تكوين الواجهة اللاسلكية
+/interface wireless
+set wlan1 mode=station-bridge ssid=P2P-Link frequency=5180 band=5ghz-a/n/ac \
+    security-profile=bridge-profile disabled=no
+                        </pre>
+</li>
+<li><strong>تكوين الشبكة:</strong>
+<pre>
+# إضافة عنوان IP
+/ip address add address=172.16.0.2/30 interface=wlan1
+
+# تكوين الجسر (إذا كنت تريد توصيل الشبكة المحلية)
+/interface bridge add name=bridge1
+/interface bridge port add bridge=bridge1 interface=ether1
+/interface bridge port add bridge=bridge1 interface=wlan1
+                        </pre>
+</li>
+</ol>
+<h2>خلاصة</h2>
+<p>في هذا الدرس، تعلمنا كيفية برمجة وتكوين أجهزة مايكروتك لتنفيذ وظائف متقدمة. تناولنا واجهات الإدارة المختلفة وأساسيات البرمجة، وكيفية تكوين التوجيه، والتبديل، والشبكات اللاسلكية، وإدارة النطاق الترددي، والجدار الناري، وخدمات الشبكة، والشبكات الخاصة الافتراضية. كما استعرضنا بعض السيناريوهات التطبيقية لاستخدام أجهزة مايكروتك في بيئات الشبكات الحقيقية.</p>
+<p>تذكر أن أجهزة مايكروتك توفر مجموعة واسعة من الميزات والوظائف، ويمكن تكوينها بطرق مختلفة لتلبية احتياجات مختلف بيئات الشبكات. مع الممارسة والتجربة، ستتمكن من استغلال إمكانيات أجهزة مايكروتك بشكل كامل وبناء شبكات موثوقة وآمنة وفعالة.</p>
+<p>نأمل أن تكون هذه السلسلة من الدروس قد ساعدتك على فهم أجهزة وأنظمة مايكروتك وكيفية استخدامها في بيئات الشبكات المختلفة. استمر في التعلم والتجربة، وستصبح خبيرًا في استخدام أجهزة مايكروتك في وقت قصير.</p>
+</div>
+<div class="lesson-navigation">
+<a class="prev-lesson" href="mikrotik-setup.html">الدرس السابق: تركيب وإعداد أجهزة مايكروتك</a>
+<a class="next-lesson" href="../level-two.html">العودة إلى المستوى الثاني</a>
+</div>
+</main>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>طوبولوجيا الشبكات - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس الأساسيات</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="intro.html">مقدمة في الشبكات</a></li>
+<li><a href="types.html">أنواع الشبكات</a></li>
+<li><a class="active" href="topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="devices.html">أجهزة الشبكات</a></li>
+<li><a href="osi.html">نموذج OSI</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">طوبولوجيا الشبكات</h1>
+<div class="lesson-content">
+<h2>ما هي طوبولوجيا الشبكات؟</h2>
+<p>طوبولوجيا الشبكة (Network Topology) هي الطريقة التي يتم بها ترتيب وتوصيل أجهزة الشبكة مع بعضها البعض. تحدد الطوبولوجيا الهيكل المادي والمنطقي للشبكة، وتؤثر بشكل كبير على أدائها وموثوقيتها وقابليتها للتوسع.</p>
+<p>يمكن تقسيم طوبولوجيا الشبكات إلى نوعين رئيسيين:</p>
+<ul>
+<li><strong>الطوبولوجيا المادية (Physical Topology):</strong> تصف كيفية توصيل الأجهزة فعليًا باستخدام الكابلات أو الوسائط اللاسلكية.</li>
+<li><strong>الطوبولوجيا المنطقية (Logical Topology):</strong> تصف كيفية تدفق البيانات عبر الشبكة، بغض النظر عن التوصيلات المادية.</li>
+</ul>
+<img alt="نظرة عامة على طوبولوجيا الشبكات" src="../images/NetworkTopologies.svg.png"/>
+<h2>أنواع طوبولوجيا الشبكات</h2>
+<p>هناك عدة أنواع رئيسية لطوبولوجيا الشبكات، ولكل منها مميزاتها وعيوبها:</p>
+<h3>1. الطوبولوجيا الخطية (Bus Topology)</h3>
+<p>في هذا النوع، يتم توصيل جميع أجهزة الشبكة على خط رئيسي واحد (ناقل). تنتقل البيانات على طول هذا الخط، وتستقبلها جميع الأجهزة، لكن يستجيب لها فقط الجهاز المقصود.</p>
+<h4>مميزات الطوبولوجيا الخطية:</h4>
+<ul>
+<li>سهلة التركيب والتنفيذ.</li>
+<li>تكلفة منخفضة (تحتاج إلى كمية أقل من الكابلات).</li>
+<li>مناسبة للشبكات الصغيرة.</li>
+<li>سهولة إضافة أجهزة جديدة.</li>
+</ul>
+<h4>عيوب الطوبولوجيا الخطية:</h4>
+<ul>
+<li>إذا انقطع الكابل الرئيسي، تتوقف الشبكة بأكملها.</li>
+<li>صعوبة تحديد المشكلات في الشبكة.</li>
+<li>أداء الشبكة ينخفض مع زيادة عدد الأجهزة.</li>
+<li>محدودية طول الكابل الرئيسي.</li>
+</ul>
+<img alt="الطوبولوجيا الخطية" src="../images/bus.webp"/>
+<h3>2. الطوبولوجيا النجمية (Star Topology)</h3>
+<p>في هذا النوع، يتم توصيل جميع أجهزة الشبكة بجهاز مركزي (عادة ما يكون سويتش أو هاب). تمر جميع البيانات عبر هذا الجهاز المركزي، الذي يقوم بتوجيهها إلى الوجهة المقصودة.</p>
+<h4>مميزات الطوبولوجيا النجمية:</h4>
+<ul>
+<li>إذا فشل أحد الكابلات، فإن ذلك يؤثر فقط على الجهاز المتصل به.</li>
+<li>سهولة إضافة أو إزالة أجهزة دون التأثير على باقي الشبكة.</li>
+<li>سهولة اكتشاف وإصلاح المشكلات.</li>
+<li>أداء أفضل مقارنة بالطوبولوجيا الخطية.</li>
+</ul>
+<h4>عيوب الطوبولوجيا النجمية:</h4>
+<ul>
+<li>تكلفة أعلى (تحتاج إلى كمية أكبر من الكابلات).</li>
+<li>إذا فشل الجهاز المركزي، تتوقف الشبكة بأكملها.</li>
+<li>تعتمد بشكل كبير على الجهاز المركزي.</li>
+</ul>
+<img alt="الطوبولوجيا النجمية" src="../images/star.webp"/>
+<h3>3. الطوبولوجيا الحلقية (Ring Topology)</h3>
+<p>في هذا النوع، يتم توصيل كل جهاز بجهازين آخرين، مكونًا حلقة مغلقة. تنتقل البيانات في اتجاه واحد حول الحلقة، من جهاز إلى آخر، حتى تصل إلى الجهاز المقصود.</p>
+<h4>مميزات الطوبولوجيا الحلقية:</h4>
+<ul>
+<li>توزيع متساوٍ للبيانات بين جميع الأجهزة.</li>
+<li>أداء ثابت حتى مع زيادة حركة البيانات.</li>
+<li>لا تحتاج إلى جهاز مركزي.</li>
+</ul>
+<h4>عيوب الطوبولوجيا الحلقية:</h4>
+<ul>
+<li>إذا فشل أي جهاز أو كابل، تتوقف الشبكة بأكملها (إلا في حالة الحلقة المزدوجة).</li>
+<li>صعوبة إضافة أو إزالة أجهزة (يجب قطع الحلقة).</li>
+<li>صعوبة تحديد المشكلات.</li>
+</ul>
+<img alt="الطوبولوجيا الحلقية" src="../images/ring.jpg"/>
+<h3>4. الطوبولوجيا الشجرية (Tree Topology)</h3>
+<p>هي امتداد للطوبولوجيا النجمية، حيث يتم توصيل عدة شبكات نجمية معًا في هيكل هرمي يشبه الشجرة. يوجد جهاز مركزي رئيسي (الجذر)، وتتفرع منه أجهزة مركزية فرعية.</p>
+<h4>مميزات الطوبولوجيا الشجرية:</h4>
+<ul>
+<li>مناسبة للشبكات الكبيرة والمتوسعة.</li>
+<li>سهولة إدارة وتنظيم الشبكة في مجموعات.</li>
+<li>إذا فشل أحد الأجهزة المركزية الفرعية، فإن ذلك يؤثر فقط على الفرع المتصل به.</li>
+</ul>
+<h4>عيوب الطوبولوجيا الشجرية:</h4>
+<ul>
+<li>تكلفة عالية (تحتاج إلى كمية كبيرة من الكابلات والأجهزة المركزية).</li>
+<li>إذا فشل الجهاز المركزي الرئيسي، تتوقف الشبكة بأكملها.</li>
+<li>تعقيد في التصميم والتنفيذ.</li>
+</ul>
+<img alt="الطوبولوجيا الشجرية" src="../images/tree.webp"/>
+<h3>5. الطوبولوجيا الشبكية (Mesh Topology)</h3>
+<p>في هذا النوع، يتم توصيل كل جهاز مباشرة بجميع الأجهزة الأخرى في الشبكة، مما يوفر مسارات متعددة للبيانات.</p>
+<h4>مميزات الطوبولوجيا الشبكية:</h4>
+<ul>
+<li>موثوقية عالية جدًا (إذا فشل مسار واحد، يمكن للبيانات استخدام مسار بديل).</li>
+<li>خصوصية وأمان عاليين (البيانات تنتقل مباشرة بين الأجهزة).</li>
+<li>لا توجد نقطة فشل واحدة.</li>
+</ul>
+<h4>عيوب الطوبولوجيا الشبكية:</h4>
+<ul>
+<li>تكلفة عالية جدًا (تحتاج إلى عدد كبير من الكابلات والمنافذ).</li>
+<li>تعقيد في التصميم والتنفيذ والإدارة.</li>
+<li>غير عملية للشبكات الكبيرة.</li>
+</ul>
+<p>هناك نوعان من الطوبولوجيا الشبكية:</p>
+<ul>
+<li><strong>الطوبولوجيا الشبكية الكاملة (Full Mesh):</strong> كل جهاز متصل مباشرة بجميع الأجهزة الأخرى.</li>
+<li><strong>الطوبولوجيا الشبكية الجزئية (Partial Mesh):</strong> بعض الأجهزة متصلة مباشرة ببعضها البعض، والبعض الآخر متصل بعدد محدود من الأجهزة.</li>
+</ul>
+<img alt="الطوبولوجيا الشبكية" src="../images/R.png"/>
+<h3>6. الطوبولوجيا الهجينة (Hybrid Topology)</h3>
+<p>هي مزيج من نوعين أو أكثر من الطوبولوجيات السابقة. على سبيل المثال، يمكن الجمع بين الطوبولوجيا النجمية والطوبولوجيا الحلقية لتكوين طوبولوجيا هجينة.</p>
+<h4>مميزات الطوبولوجيا الهجينة:</h4>
+<ul>
+<li>مرونة في التصميم والتنفيذ.</li>
+<li>يمكن الاستفادة من مميزات كل نوع من الطوبولوجيات.</li>
+<li>مناسبة للشبكات الكبيرة والمعقدة.</li>
+</ul>
+<h4>عيوب الطوبولوجيا الهجينة:</h4>
+<ul>
+<li>تعقيد في التصميم والتنفيذ والإدارة.</li>
+<li>تكلفة عالية.</li>
+<li>تحتاج إلى خبرة ومعرفة بجميع أنواع الطوبولوجيات.</li>
+</ul>
+<img alt="الطوبولوجيا الهجينة" src="../images/ChatGPT Image 19 مايو 2025، 06_06_59 م.png"/>
+<h2>اختيار الطوبولوجيا المناسبة</h2>
+<p>يعتمد اختيار الطوبولوجيا المناسبة على عدة عوامل، منها:</p>
+<ul>
+<li><strong>حجم الشبكة:</strong> عدد الأجهزة المتصلة.</li>
+<li><strong>الميزانية:</strong> التكلفة المتاحة للإنشاء والصيانة.</li>
+<li><strong>الموثوقية المطلوبة:</strong> مدى تحمل الشبكة للأعطال.</li>
+<li><strong>قابلية التوسع:</strong> إمكانية إضافة أجهزة جديدة في المستقبل.</li>
+<li><strong>البيئة المادية:</strong> المساحة المتاحة ونوع المبنى.</li>
+<li><strong>نوع التطبيقات:</strong> متطلبات التطبيقات التي ستعمل على الشبكة.</li>
+</ul>
+<h3>مقارنة بين أنواع الطوبولوجيات</h3>
+<table border="1" style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+<tr>
+<th style="padding: 10px; text-align: center;">الطوبولوجيا</th>
+<th style="padding: 10px; text-align: center;">التكلفة</th>
+<th style="padding: 10px; text-align: center;">الموثوقية</th>
+<th style="padding: 10px; text-align: center;">قابلية التوسع</th>
+<th style="padding: 10px; text-align: center;">سهولة الإدارة</th>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">الخطية</td>
+<td style="padding: 10px; text-align: center;">منخفضة</td>
+<td style="padding: 10px; text-align: center;">منخفضة</td>
+<td style="padding: 10px; text-align: center;">متوسطة</td>
+<td style="padding: 10px; text-align: center;">منخفضة</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">النجمية</td>
+<td style="padding: 10px; text-align: center;">متوسطة</td>
+<td style="padding: 10px; text-align: center;">متوسطة</td>
+<td style="padding: 10px; text-align: center;">عالية</td>
+<td style="padding: 10px; text-align: center;">عالية</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">الحلقية</td>
+<td style="padding: 10px; text-align: center;">متوسطة</td>
+<td style="padding: 10px; text-align: center;">متوسطة</td>
+<td style="padding: 10px; text-align: center;">منخفضة</td>
+<td style="padding: 10px; text-align: center;">متوسطة</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">الشجرية</td>
+<td style="padding: 10px; text-align: center;">عالية</td>
+<td style="padding: 10px; text-align: center;">عالية</td>
+<td style="padding: 10px; text-align: center;">عالية</td>
+<td style="padding: 10px; text-align: center;">متوسطة</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">الشبكية</td>
+<td style="padding: 10px; text-align: center;">عالية جدًا</td>
+<td style="padding: 10px; text-align: center;">عالية جدًا</td>
+<td style="padding: 10px; text-align: center;">منخفضة</td>
+<td style="padding: 10px; text-align: center;">منخفضة</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">الهجينة</td>
+<td style="padding: 10px; text-align: center;">متغيرة</td>
+<td style="padding: 10px; text-align: center;">متغيرة</td>
+<td style="padding: 10px; text-align: center;">عالية</td>
+<td style="padding: 10px; text-align: center;">منخفضة</td>
+</tr>
+</table>
+<h2>خلاصة</h2>
+<p>تعد طوبولوجيا الشبكة من العوامل الأساسية التي تؤثر على أداء وموثوقية وتكلفة الشبكة. يجب اختيار الطوبولوجيا المناسبة بناءً على احتياجات المؤسسة والميزانية المتاحة والبيئة المادية. في الواقع العملي، غالبًا ما تستخدم الطوبولوجيا الهجينة في الشبكات الكبيرة والمعقدة، حيث يمكن الاستفادة من مميزات كل نوع من الطوبولوجيات.</p>
+</div>
+<div class="lesson-navigation">
+<a class="prev-lesson" href="types.html">الدرس السابق: أنواع الشبكات</a>
+<a class="next-lesson" href="protocols.html">الدرس التالي: بروتوكولات الشبكات</a>
+</div>
+</main>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

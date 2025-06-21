@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>نموذج OSI - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس الأساسيات</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="intro.html">مقدمة في الشبكات</a></li>
+<li><a href="types.html">أنواع الشبكات</a></li>
+<li><a href="topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="devices.html">أجهزة الشبكات</a></li>
+<li><a class="active" href="osi.html">نموذج OSI</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">نموذج OSI</h1>
+<div class="lesson-content">
+<h2>ما هو نموذج OSI؟</h2>
+<img alt="نظرة عامة على نموذج OSI" src="../images/slide40-l.jpg"/>
+<p>نموذج OSI (Open Systems Interconnection) هو إطار مرجعي يصف كيفية تواصل أنظمة الشبكات المختلفة مع بعضها البعض. تم تطوير هذا النموذج من قبل المنظمة الدولية للمعايير (ISO) في عام 1984، ويعتبر أساسًا نظريًا مهمًا لفهم كيفية عمل الشبكات.</p>
+<p>يقسم نموذج OSI عملية الاتصال بين الأجهزة إلى سبع طبقات متميزة، حيث تؤدي كل طبقة وظيفة محددة وتقدم خدمات للطبقة التي تعلوها. هذا التقسيم يسهل فهم وتصميم وتنفيذ بروتوكولات الشبكات، ويساعد في تحديد وإصلاح المشكلات.</p>
+<img alt="نظرة عامة على نموذج OSI" src="../images/slide5-l.jpg"/>
+<h2>أهمية نموذج OSI</h2>
+<p>على الرغم من أن نموذج OSI لم يتم تطبيقه بشكل كامل في الشبكات الحديثة (التي تستخدم غالبًا نموذج TCP/IP)، إلا أنه يظل أداة تعليمية وتحليلية مهمة للأسباب التالية:</p>
+<ul>
+<li><strong>التبسيط:</strong> يبسط عملية الاتصال المعقدة إلى مكونات أصغر وأكثر قابلية للفهم.</li>
+<li><strong>المعيارية:</strong> يسمح بتطوير وتحديث كل طبقة بشكل مستقل عن الطبقات الأخرى.</li>
+<li><strong>التوافقية:</strong> يسهل التوافق بين الأنظمة المختلفة من خلال تحديد واجهات قياسية بين الطبقات.</li>
+<li><strong>تحديد المشكلات:</strong> يساعد في تحديد وعزل المشكلات في الشبكة بدقة أكبر.</li>
+<li><strong>التعليم:</strong> يوفر إطارًا مفاهيميًا لتعليم وفهم مبادئ الشبكات.</li>
+</ul>
+<h2>طبقات نموذج OSI</h2>
+<p>يتكون نموذج OSI من سبع طبقات، مرتبة من الأسفل (الأقرب إلى الأجهزة المادية) إلى الأعلى (الأقرب إلى المستخدم والتطبيقات):</p>
+<h3>1. الطبقة الفيزيائية (Physical Layer)</h3>
+<p>هي الطبقة الأدنى في نموذج OSI، وتتعامل مع نقل البتات الخام (0 و 1) عبر وسائط الاتصال المادية.</p>
+<h4>وظائف الطبقة الفيزيائية:</h4>
+<ul>
+<li>تحديد الخصائص الفيزيائية لوسائط الاتصال (الكابلات، الموصلات، إلخ).</li>
+<li>تحديد طريقة تمثيل البتات (الجهد الكهربائي، الإشارات الضوئية، إلخ).</li>
+<li>تحديد معدل نقل البيانات.</li>
+<li>تحديد طريقة المزامنة بين المرسل والمستقبل.</li>
+<li>تحديد طريقة الإرسال (أحادي الاتجاه، ثنائي الاتجاه، إلخ).</li>
+</ul>
+<h4>أمثلة على معايير وأجهزة الطبقة الفيزيائية:</h4>
+<ul>
+<li>معايير الكابلات: كابلات الإيثرنت (Cat5, Cat6)، الألياف البصرية.</li>
+<li>المعايير اللاسلكية: IEEE 802.11 (Wi-Fi)، بلوتوث.</li>
+<li>الأجهزة: المكررات (Repeaters)، المحولات (Hubs)، بطاقات الشبكة (NICs).</li>
+</ul>
+<h3>2. طبقة وصلة البيانات (Data Link Layer)</h3>
+<p>توفر هذه الطبقة وسيلة لنقل البيانات بين الأجهزة المتصلة مباشرة، وتتعامل مع الأخطاء التي قد تحدث في الطبقة الفيزيائية.</p>
+<h4>وظائف طبقة وصلة البيانات:</h4>
+<ul>
+<li>تأطير البيانات (Framing): تقسيم البيانات إلى إطارات (Frames).</li>
+<li>العنونة الفيزيائية: استخدام عناوين MAC للتعرف على الأجهزة.</li>
+<li>التحكم في الوصول إلى الوسط (MAC): تنظيم الوصول إلى وسائط الاتصال المشتركة.</li>
+<li>اكتشاف الأخطاء وتصحيحها: استخدام تقنيات مثل CRC للتحقق من سلامة البيانات.</li>
+<li>التحكم في التدفق: ضمان عدم إغراق المستقبل بالبيانات.</li>
+</ul>
+<p>تنقسم طبقة وصلة البيانات إلى طبقتين فرعيتين:</p>
+<ul>
+<li><strong>طبقة التحكم في الوصول إلى الوسط (MAC):</strong> تتعامل مع العنونة الفيزيائية والوصول إلى الوسط.</li>
+<li><strong>طبقة التحكم في الوصلة المنطقية (LLC):</strong> توفر واجهة للطبقة العليا (طبقة الشبكة) وتتعامل مع التحكم في الأخطاء والتدفق.</li>
+</ul>
+<h4>أمثلة على بروتوكولات وأجهزة طبقة وصلة البيانات:</h4>
+<ul>
+<li>البروتوكولات: Ethernet، PPP، HDLC.</li>
+<li>الأجهزة: المحولات (Switches)، الجسور (Bridges).</li>
+</ul>
+<img alt="طبقة وصلة البيانات" src="../images/placeholder.svg"/>
+<h3>3. طبقة الشبكة (Network Layer)</h3>
+<p>توفر هذه الطبقة وسيلة لنقل البيانات بين الأجهزة في شبكات مختلفة، وتتعامل مع توجيه البيانات عبر الشبكات المتعددة.</p>
+<h4>وظائف طبقة الشبكة:</h4>
+<ul>
+<li>العنونة المنطقية: استخدام عناوين IP للتعرف على الأجهزة والشبكات.</li>
+<li>التوجيه (Routing): تحديد المسار الأفضل للبيانات من المصدر إلى الوجهة.</li>
+<li>تقسيم وإعادة تجميع الحزم: تقسيم البيانات إلى حزم أصغر إذا لزم الأمر.</li>
+<li>التحكم في الازدحام: منع تدهور أداء الشبكة بسبب الحمل الزائد.</li>
+<li>جودة الخدمة (QoS): ضمان مستوى معين من الأداء للتطبيقات المختلفة.</li>
+</ul>
+<h4>أمثلة على بروتوكولات وأجهزة طبقة الشبكة:</h4>
+<ul>
+<li>البروتوكولات: IP (IPv4, IPv6)، ICMP، OSPF، RIP، BGP.</li>
+<li>الأجهزة: الموجهات (Routers).</li>
+</ul>
+<h3>4. طبقة النقل (Transport Layer)</h3>
+<p>توفر هذه الطبقة نقل البيانات بين التطبيقات على الأجهزة المختلفة، وتضمن وصول البيانات بشكل صحيح وكامل.</p>
+<h4>وظائف طبقة النقل:</h4>
+<ul>
+<li>تقسيم وإعادة تجميع الرسائل: تقسيم رسائل التطبيقات إلى قطع أصغر (Segments).</li>
+<li>التحكم في الاتصال: إنشاء وإنهاء الاتصالات بين التطبيقات.</li>
+<li>التحكم في التدفق: ضمان عدم إغراق المستقبل بالبيانات.</li>
+<li>التحكم في الأخطاء: اكتشاف وتصحيح الأخطاء، وإعادة إرسال البيانات المفقودة.</li>
+<li>تعدد الإرسال (Multiplexing): السماح بعدة تطبيقات باستخدام خدمات الشبكة في نفس الوقت.</li>
+</ul>
+<h4>أنواع خدمات طبقة النقل:</h4>
+<ul>
+<li><strong>خدمة موثوقة موجهة للاتصال (Connection-Oriented):</strong> مثل TCP، توفر اتصالًا موثوقًا مع التحقق من وصول البيانات وترتيبها.</li>
+<li><strong>خدمة غير موثوقة غير موجهة للاتصال (Connectionless):</strong> مثل UDP، توفر نقلًا سريعًا للبيانات دون ضمان الوصول أو الترتيب.</li>
+</ul>
+<h4>أمثلة على بروتوكولات طبقة النقل:</h4>
+<ul>
+<li>TCP (Transmission Control Protocol)</li>
+<li>UDP (User Datagram Protocol)</li>
+<li>SCTP (Stream Control Transmission Protocol)</li>
+</ul>
+<img alt="طبقة النقل" src="images/placeholder.svg"/>
+<h3>5. طبقة الجلسة (Session Layer)</h3>
+<p>توفر هذه الطبقة آلية لإنشاء وإدارة وإنهاء الجلسات بين التطبيقات.</p>
+<h4>وظائف طبقة الجلسة:</h4>
+<ul>
+<li>إنشاء وإنهاء الجلسات بين التطبيقات.</li>
+<li>إدارة الحوار (Dialog Control): تحديد من يمكنه الإرسال ومتى.</li>
+<li>المزامنة (Synchronization): وضع نقاط تفتيش (Checkpoints) لاستئناف نقل البيانات في حالة الفشل.</li>
+</ul>
+<h4>أمثلة على بروتوكولات طبقة الجلسة:</h4>
+<ul>
+<li>NetBIOS</li>
+<li>RPC (Remote Procedure Call)</li>
+<li>SIP (Session Initiation Protocol)</li>
+</ul>
+<h3>6. طبقة العرض (Presentation Layer)</h3>
+<p>تتعامل هذه الطبقة مع تنسيق وترميز البيانات لضمان إمكانية قراءتها من قبل طبقة التطبيق.</p>
+<h4>وظائف طبقة العرض:</h4>
+<ul>
+<li>الترجمة: تحويل البيانات بين تنسيقات مختلفة.</li>
+<li>الضغط: تقليل حجم البيانات لتوفير عرض النطاق الترددي.</li>
+<li>التشفير: حماية البيانات من الوصول غير المصرح به.</li>
+</ul>
+<h4>أمثلة على معايير وبروتوكولات طبقة العرض:</h4>
+<ul>
+<li>JPEG، GIF، PNG (تنسيقات الصور)</li>
+<li>MPEG، H.264 (تنسيقات الفيديو)</li>
+<li>SSL/TLS (التشفير)</li>
+<li>ASCII، Unicode (ترميز النصوص)</li>
+</ul>
+<h3>7. طبقة التطبيق (Application Layer)</h3>
+<p>هي الطبقة العليا في نموذج OSI، وتوفر واجهة بين تطبيقات المستخدم وخدمات الشبكة.</p>
+<h4>وظائف طبقة التطبيق:</h4>
+<ul>
+<li>توفير خدمات الشبكة للتطبيقات.</li>
+<li>تحديد الموارد المتاحة وشركاء الاتصال.</li>
+<li>مزامنة الاتصال بين التطبيقات.</li>
+</ul>
+<h4>أمثلة على بروتوكولات طبقة التطبيق:</h4>
+<ul>
+<li>HTTP/HTTPS (تصفح الويب)</li>
+<li>FTP (نقل الملفات)</li>
+<li>SMTP، POP3، IMAP (البريد الإلكتروني)</li>
+<li>DNS (نظام أسماء النطاقات)</li>
+<li>Telnet، SSH (الوصول عن بعد)</li>
+</ul>
+
+<h2>كيفية عمل نموذج OSI</h2>
+<img alt="سير البياتات  " src="../images/0_8ZE4pULdjxhHcXxB.gif"/>
+<p>عندما ترسل بيانات من جهاز إلى آخر عبر الشبكة، تمر هذه البيانات عبر جميع طبقات نموذج OSI في الجهاز المرسل، ثم تمر عبر نفس الطبقات بترتيب عكسي في الجهاز المستقبل:</p>
+<h3>عملية الإرسال (من الأعلى إلى الأسفل):</h3>
+<ol>
+<li><strong>طبقة التطبيق:</strong> تنشئ البيانات وتمررها إلى الطبقة التالية.</li>
+<li><strong>طبقة العرض:</strong> تنسق البيانات وتضغطها وتشفرها إذا لزم الأمر.</li>
+<li><strong>طبقة الجلسة:</strong> تنشئ وتدير الجلسة مع الجهاز المستقبل.</li>
+<li><strong>طبقة النقل:</strong> تقسم البيانات إلى قطع وتضيف معلومات التحكم.</li>
+<li><strong>طبقة الشبكة:</strong> تضيف عناوين IP وتحدد المسار إلى الوجهة.</li>
+<li><strong>طبقة وصلة البيانات:</strong> تضيف عناوين MAC وتنظم الوصول إلى الوسط.</li>
+<li><strong>الطبقة الفيزيائية:</strong> تحول البيانات إلى إشارات وترسلها عبر وسائط الاتصال.</li>
+</ol>
+<h3>عملية الاستقبال (من الأسفل إلى الأعلى):</h3>
+<ol>
+<li><strong>الطبقة الفيزيائية:</strong> تستقبل الإشارات وتحولها إلى بيانات رقمية.</li>
+<li><strong>طبقة وصلة البيانات:</strong> تتحقق من الأخطاء وتزيل معلومات الإطار.</li>
+<li><strong>طبقة الشبكة:</strong> تتحقق من عنوان IP وتزيل معلومات التوجيه.</li>
+<li><strong>طبقة النقل:</strong> تعيد تجميع القطع وتتحقق من اكتمالها.</li>
+<li><strong>طبقة الجلسة:</strong> تتحقق من معلومات الجلسة وتديرها.</li>
+<li><strong>طبقة العرض:</strong> تفك التشفير وتفك الضغط وتترجم البيانات.</li>
+<li><strong>طبقة التطبيق:</strong> تسلم البيانات إلى التطبيق المناسب.</li>
+</ol>
+<p>في كل طبقة، تتم إضافة معلومات التحكم (Header) إلى البيانات أثناء الإرسال، وتتم إزالتها أثناء الاستقبال. هذه العملية تسمى التغليف (Encapsulation) وفك التغليف (Decapsulation).</p>
+<img alt="عملية التغليف في نموذج OSI" src="../images/osi-data-encapsulation.png"/>
+<h2>نموذج OSI مقابل نموذج TCP/IP</h2>
+<p>نموذج TCP/IP هو النموذج المستخدم فعليًا في الإنترنت والشبكات الحديثة، ويتكون من أربع طبقات بدلاً من سبع طبقات في نموذج OSI.</p>
+<h3>مقارنة بين النموذجين:</h3>
+<img alt="مقارنة  " src="../images/5a875871-62ec-442a-aa2d-0708b271f04d_osi-model-vs-tcpip-model.png"/>
+<table border="1" style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+<tr>
+<th style="padding: 10px; text-align: center;">نموذج OSI</th>
+<th style="padding: 10px; text-align: center;">نموذج TCP/IP</th>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">7. طبقة التطبيق</td>
+<td rowspan="3" style="padding: 10px; text-align: center;">4. طبقة التطبيق</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">6. طبقة العرض</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">5. طبقة الجلسة</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">4. طبقة النقل</td>
+<td style="padding: 10px; text-align: center;">3. طبقة النقل</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">3. طبقة الشبكة</td>
+<td style="padding: 10px; text-align: center;">2. طبقة الإنترنت</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">2. طبقة وصلة البيانات</td>
+<td rowspan="2" style="padding: 10px; text-align: center;">1. طبقة الوصول إلى الشبكة</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">1. الطبقة الفيزيائية</td>
+</tr>
+</table>
+<h3>الاختلافات الرئيسية:</h3>
+
+<ul>
+<li>نموذج OSI هو نموذج نظري، بينما نموذج TCP/IP هو نموذج عملي تم تطبيقه فعليًا.</li>
+<li>نموذج OSI يفصل وظائف الشبكة بشكل أكثر دقة، بينما نموذج TCP/IP يجمع بعض الوظائف في طبقات أقل.</li>
+<li>نموذج TCP/IP يركز على التوافقية بين الأنظمة المختلفة، بينما نموذج OSI يركز على الفصل الواضح بين الوظائف.</li>
+</ul>
+<h2>استخدامات نموذج OSI في حل مشكلات الشبكات</h2>
+<p>يعتبر نموذج OSI أداة قيمة في تشخيص وحل مشكلات الشبكات، حيث يمكن استخدامه لتحديد الطبقة التي تحدث فيها المشكلة:</p>
+<h3>أمثلة على مشكلات في كل طبقة:</h3>
+<ul>
+<li><strong>الطبقة الفيزيائية:</strong> كابل مقطوع، جهاز غير متصل، تداخل في الإشارات.</li>
+<li><strong>طبقة وصلة البيانات:</strong> أخطاء في عناوين MAC، تصادم في البيانات، إطارات تالفة.</li>
+<li><strong>طبقة الشبكة:</strong> أخطاء في عناوين IP، مشكلات في التوجيه، حزم مفقودة.</li>
+<li><strong>طبقة النقل:</strong> منافذ مغلقة، اتصالات مرفوضة، تأخير في الاستجابة.</li>
+<li><strong>طبقة الجلسة:</strong> فشل في إنشاء الجلسة، انقطاع الجلسة.</li>
+<li><strong>طبقة العرض:</strong> مشكلات في التشفير أو الضغط، عدم توافق التنسيقات.</li>
+<li><strong>طبقة التطبيق:</strong> أخطاء في البروتوكولات، مشكلات في التطبيقات.</li>
+</ul>
+<h3>نهج التشخيص من الأسفل إلى الأعلى:</h3>
+<p>عند مواجهة مشكلة في الشبكة، يمكن استخدام نهج التشخيص من الأسفل إلى الأعلى، حيث يتم التحقق من كل طبقة بدءًا من الطبقة الفيزيائية وصعودًا إلى طبقة التطبيق:</p>
+<ol>
+<li>التحقق من الاتصال الفيزيائي (الكابلات، المؤشرات الضوئية).</li>
+<li>التحقق من عناوين MAC وإعدادات طبقة وصلة البيانات.</li>
+<li>التحقق من عناوين IP وإعدادات التوجيه.</li>
+<li>التحقق من اتصالات TCP/UDP والمنافذ.</li>
+<li>التحقق من جلسات التطبيقات وإعداداتها.</li>
+<li>التحقق من تنسيقات البيانات وإعدادات التشفير.</li>
+<li>التحقق من إعدادات وسلوك التطبيقات.</li>
+</ol>
+<h2>خلاصة</h2>
+<p>نموذج OSI هو إطار مرجعي مهم لفهم كيفية عمل الشبكات وبروتوكولاتها. على الرغم من أنه لم يتم تطبيقه بشكل كامل في الشبكات الحديثة، إلا أنه يظل أداة تعليمية وتحليلية قيمة لمهندسي ومسؤولي الشبكات.</p>
+<p>يساعد فهم طبقات نموذج OSI ووظائفها في تصميم وتنفيذ وصيانة الشبكات بشكل أفضل، وفي تشخيص وحل المشكلات بشكل أكثر فعالية. كما يوفر لغة مشتركة للتواصل بين المتخصصين في مجال الشبكات.</p>
+</div>
+<div class="lesson-navigation">
+<a class="prev-lesson" href="devices.html">الدرس السابق: أجهزة الشبكات</a>
+<a class="next-lesson" href="../basics.html">العودة إلى قائمة الدروس</a>
+</div>
+</main>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

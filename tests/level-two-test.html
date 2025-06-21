@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>اختبار المستوى الثاني العام - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* نفس أنماط CSS الموجودة في basics-test.html */
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        .question h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .options li {
+            margin-bottom: 10px;
+        }
+        
+        .options label {
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .options label:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .options input[type="radio"] {
+            margin-left: 10px;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4169E1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #3151b5;
+        }
+        
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background-color: #4169E1;
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.3s;
+        }
+    </style>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الصفحة -->
+<div class="container page-container">
+<h1 class="page-title">اختبار المستوى الثاني العام</h1>
+<div class="page-description">
+<p>هذا الاختبار يغطي المفاهيم المتقدمة التي تم تناولها في المستوى الثاني، بما في ذلك أجهزة مايكروتك، تصميم الشبكات المتقدم، أمن الشبكات المتقدم، الحوسبة السحابية، وشبكات إنترنت الأشياء (IoT). يتكون الاختبار من 15 سؤال.</p>
+<p>اختر الإجابة الصحيحة لكل سؤال، ثم انقر على زر "إرسال الإجابات" في نهاية الاختبار لمعرفة نتيجتك.</p>
+</div>
+<div class="progress-container">
+<div class="progress-bar" id="progress"></div>
+</div>
+<div class="quiz-container">
+<form id="quiz-form">
+<div class="question" id="q1">
+<h3>1. ما هو نظام التشغيل المستخدم في أجهزة مايكروتك؟</h3>
+<ul class="options">
+<li><label><input name="q1" required="" type="radio" value="a"/> Cisco IOS</label></li>
+<li><label><input name="q1" type="radio" value="b"/> Junos OS</label></li>
+<li><label><input name="q1" type="radio" value="c"/> RouterOS</label></li>
+<li><label><input name="q1" type="radio" value="d"/> Windows Server</label></li>
+</ul>
+<div class="result" id="result1"></div>
+</div>
+<div class="question" id="q2">
+<h3>2. أي أداة تستخدم عادة لإدارة أجهزة مايكروتك بواجهة رسومية؟</h3>
+<ul class="options">
+<li><label><input name="q2" required="" type="radio" value="a"/> WebFig</label></li>
+<li><label><input name="q2" type="radio" value="b"/> WinBox</label></li>
+<li><label><input name="q2" type="radio" value="c"/> SSH</label></li>
+<li><label><input name="q2" type="radio" value="d"/> Telnet</label></li>
+</ul>
+<div class="result" id="result2"></div>
+</div>
+<div class="question" id="q3">
+<h3>3. ما هو مفهوم "جدار الحماية ذو الحالة" (Stateful Firewall)؟</h3>
+<ul class="options">
+<li><label><input name="q3" required="" type="radio" value="a"/> جدار حماية يفحص كل حزمة بشكل منفصل دون النظر للحالة.</label></li>
+<li><label><input name="q3" type="radio" value="b"/> جدار حماية يتتبع حالة الاتصالات النشطة ويسمح فقط للحزم المرتبطة باتصال معروف بالمرور.</label></li>
+<li><label><input name="q3" type="radio" value="c"/> جدار حماية يعمل فقط على طبقة التطبيق.</label></li>
+<li><label><input name="q3" type="radio" value="d"/> جدار حماية مخصص للشبكات اللاسلكية.</label></li>
+</ul>
+<div class="result" id="result3"></div>
+</div>
+<div class="question" id="q4">
+<h3>4. أي من البروتوكولات التالية يستخدم عادة لإنشاء شبكات VPN آمنة؟</h3>
+<ul class="options">
+<li><label><input name="q4" required="" type="radio" value="a"/> HTTP</label></li>
+<li><label><input name="q4" type="radio" value="b"/> SNMP</label></li>
+<li><label><input name="q4" type="radio" value="c"/> IPsec</label></li>
+<li><label><input name="q4" type="radio" value="d"/> ARP</label></li>
+</ul>
+<div class="result" id="result4"></div>
+</div>
+<div class="question" id="q5">
+<h3>5. ما هو نموذج الخدمة السحابية الذي يوفر بنية تحتية للحوسبة (مثل الخوادم الافتراضية والتخزين والشبكات)؟</h3>
+<ul class="options">
+<li><label><input name="q5" required="" type="radio" value="a"/> SaaS (Software as a Service)</label></li>
+<li><label><input name="q5" type="radio" value="b"/> PaaS (Platform as a Service)</label></li>
+<li><label><input name="q5" type="radio" value="c"/> IaaS (Infrastructure as a Service)</label></li>
+<li><label><input name="q5" type="radio" value="d"/> FaaS (Function as a Service)</label></li>
+</ul>
+<div class="result" id="result5"></div>
+</div>
+<div class="question" id="q6">
+<h3>6. ما هو التحدي الأمني الرئيسي في شبكات إنترنت الأشياء (IoT)؟</h3>
+<ul class="options">
+<li><label><input name="q6" required="" type="radio" value="a"/> سرعة الاتصال البطيئة.</label></li>
+<li><label><input name="q6" type="radio" value="b"/> قلة عدد الأجهزة المتصلة.</label></li>
+<li><label><input name="q6" type="radio" value="c"/> ضعف الإمكانيات الأمنية المدمجة في العديد من أجهزة IoT.</label></li>
+<li><label><input name="q6" type="radio" value="d"/> التكلفة العالية للأجهزة.</label></li>
+</ul>
+<div class="result" id="result6"></div>
+</div>
+<div class="question" id="q7">
+<h3>7. في تصميم الشبكات الهرمي (Hierarchical Network Design)، ما هي الطبقة المسؤولة عن توصيل المستخدمين النهائيين بالشبكة؟</h3>
+<ul class="options">
+<li><label><input name="q7" required="" type="radio" value="a"/> الطبقة الأساسية (Core Layer)</label></li>
+<li><label><input name="q7" type="radio" value="b"/> طبقة التوزيع (Distribution Layer)</label></li>
+<li><label><input name="q7" type="radio" value="c"/> طبقة الوصول (Access Layer)</label></li>
+<li><label><input name="q7" type="radio" value="d"/> طبقة البيانات (Data Layer)</label></li>
+</ul>
+<div class="result" id="result7"></div>
+</div>
+<div class="question" id="q8">
+<h3>8. ما هو بروتوكول التوجيه الخارجي (Exterior Gateway Protocol - EGP) الأكثر استخدامًا على الإنترنت لتبادل معلومات التوجيه بين الأنظمة المستقلة (Autonomous Systems)؟</h3>
+<ul class="options">
+<li><label><input name="q8" required="" type="radio" value="a"/> OSPF</label></li>
+<li><label><input name="q8" type="radio" value="b"/> EIGRP</label></li>
+<li><label><input name="q8" type="radio" value="c"/> RIP</label></li>
+<li><label><input name="q8" type="radio" value="d"/> BGP (Border Gateway Protocol)</label></li>
+</ul>
+<div class="result" id="result8"></div>
+</div>
+<div class="question" id="q9">
+<h3>9. ما هو نظام كشف التسلل (Intrusion Detection System - IDS)؟</h3>
+<ul class="options">
+<li><label><input name="q9" required="" type="radio" value="a"/> نظام يمنع الهجمات بشكل فعال.</label></li>
+<li><label><input name="q9" type="radio" value="b"/> نظام يراقب حركة مرور الشبكة أو أنشطة النظام بحثًا عن علامات نشاط ضار أو غير مصرح به ويقوم بالإبلاغ عنه.</label></li>
+<li><label><input name="q9" type="radio" value="c"/> نظام يقوم بتشفير جميع بيانات الشبكة.</label></li>
+<li><label><input name="q9" type="radio" value="d"/> نظام يدير عناوين IP.</label></li>
+</ul>
+<div class="result" id="result9"></div>
+</div>
+<div class="question" id="q10">
+<h3>10. ما هو الفرق الرئيسي بين IDS و IPS (Intrusion Prevention System)؟</h3>
+<ul class="options">
+<li><label><input name="q10" required="" type="radio" value="a"/> لا يوجد فرق، هما نفس الشيء.</label></li>
+<li><label><input name="q10" type="radio" value="b"/> IDS يكتشف فقط، بينما IPS يمكنه اكتشاف الهجمات واتخاذ إجراءات لمنعها.</label></li>
+<li><label><input name="q10" type="radio" value="c"/> IPS يكتشف فقط، بينما IDS يمكنه منع الهجمات.</label></li>
+<li><label><input name="q10" type="radio" value="d"/> IDS يستخدم في الشبكات السلكية فقط، و IPS في اللاسلكية.</label></li>
+</ul>
+<div class="result" id="result10"></div>
+</div>
+<div class="question" id="q11">
+<h3>11. ما هو مفهوم "الشبكة المعرفة بالبرمجيات" (Software-Defined Networking - SDN)؟</h3>
+<ul class="options">
+<li><label><input name="q11" required="" type="radio" value="a"/> نوع جديد من كابلات الشبكة.</label></li>
+<li><label><input name="q11" type="radio" value="b"/> نهج لإدارة الشبكات يفصل بين مستوى التحكم (Control Plane) ومستوى البيانات (Data Plane).</label></li>
+<li><label><input name="q11" type="radio" value="c"/> بروتوكول لتأمين الشبكات اللاسلكية.</label></li>
+<li><label><input name="q11" type="radio" value="d"/> خدمة حوسبة سحابية.</label></li>
+</ul>
+<div class="result" id="result11"></div>
+</div>
+<div class="question" id="q12">
+<h3>12. أي من التقنيات التالية تستخدم لتوفير التكرار (Redundancy) للبوابة الافتراضية في الشبكة؟</h3>
+<ul class="options">
+<li><label><input name="q12" required="" type="radio" value="a"/> STP (Spanning Tree Protocol)</label></li>
+<li><label><input name="q12" type="radio" value="b"/> VLAN (Virtual Local Area Network)</label></li>
+<li><label><input name="q12" type="radio" value="c"/> FHRP (First Hop Redundancy Protocol) مثل HSRP أو VRRP</label></li>
+<li><label><input name="q12" type="radio" value="d"/> NAT (Network Address Translation)</label></li>
+</ul>
+<div class="result" id="result12"></div>
+</div>
+<div class="question" id="q13">
+<h3>13. ما هو بروتوكول MQTT المستخدم بشكل شائع في تطبيقات إنترنت الأشياء (IoT)؟</h3>
+<ul class="options">
+<li><label><input name="q13" required="" type="radio" value="a"/> بروتوكول لنقل الملفات الكبيرة.</label></li>
+<li><label><input name="q13" type="radio" value="b"/> بروتوكول توجيه للشبكات الواسعة.</label></li>
+<li><label><input name="q13" type="radio" value="c"/> بروتوكول مراسلة خفيف الوزن يعتمد على نموذج النشر/الاشتراك (Publish/Subscribe).</label></li>
+<li><label><input name="q13" type="radio" value="d"/> بروتوكول لتأمين الاتصالات.</label></li>
+</ul>
+<div class="result" id="result13"></div>
+</div>
+<div class="question" id="q14">
+<h3>14. ما هو مفهوم "Quality of Service" (QoS) في الشبكات؟</h3>
+<ul class="options">
+<li><label><input name="q14" required="" type="radio" value="a"/> قياس سرعة الإنترنت الإجمالية.</label></li>
+<li><label><input name="q14" type="radio" value="b"/> مجموعة من التقنيات التي تهدف إلى إدارة موارد الشبكة لضمان مستوى معين من الأداء لتطبيقات معينة.</label></li>
+<li><label><input name="q14" type="radio" value="c"/> طريقة لتشفير البيانات.</label></li>
+<li><label><input name="q14" type="radio" value="d"/> بروتوكول لتخصيص عناوين IP.</label></li>
+</ul>
+<div class="result" id="result14"></div>
+</div>
+<div class="question" id="q15">
+<h3>15. في مايكروتك، ما هي وظيفة قائمة "Firewall Mangle"؟</h3>
+<ul class="options">
+<li><label><input name="q15" required="" type="radio" value="a"/> حظر أو السماح بحركة المرور بناءً على القواعد.</label></li>
+<li><label><input name="q15" type="radio" value="b"/> ترجمة عناوين الشبكة (NAT).</label></li>
+<li><label><input name="q15" type="radio" value="c"/> تعديل حزم البيانات (مثل تعليم الحزم لـ QoS) قبل اتخاذ قرار التوجيه أو التصفية.</label></li>
+<li><label><input name="q15" type="radio" value="d"/> إدارة اتصالات VPN.</label></li>
+</ul>
+<div class="result" id="result15"></div>
+</div>
+<button class="submit-btn" type="submit">إرسال الإجابات</button>
+</form>
+<div class="result" id="final-result"></div>
+</div>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script>
+        const quizForm = document.getElementById('quiz-form');
+        const finalResult = document.getElementById('final-result');
+        const progressBar = document.getElementById('progress');
+        const questions = document.querySelectorAll(".question");
+        const totalQuestions = questions.length;
+
+        const correctAnswers = {
+            q1: 'c', // MikroTik OS
+            q2: 'b', // WinBox for GUI management
+            q3: 'b', // Stateful firewall definition
+            q4: 'c', // IPsec for VPNs
+            q5: 'c', // IaaS definition
+            q6: 'c', // IoT security challenge
+            q7: 'c', // Access layer connects end users
+            q8: 'd', // BGP is the main EGP
+            q9: 'b', // IDS definition
+            q10:'b', // IDS vs IPS
+            q11:'b', // SDN definition
+            q12:'c', // FHRP for gateway redundancy
+            q13:'c', // MQTT definition
+            q14:'b', // QoS definition
+            q15:'c'  // Firewall Mangle function
+        };
+
+        let answeredQuestions = 0;
+
+        // Update progress bar on answer selection
+        questions.forEach((question, index) => {
+            const radios = question.querySelectorAll('input[type="radio"]');
+            radios.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    // Check if this question was already counted
+                    if (!question.dataset.answered) {
+                        answeredQuestions++;
+                        question.dataset.answered = 'true';
+                        updateProgressBar();
+                    }
+                });
+            });
+        });
+
+        function updateProgressBar() {
+            const progressPercentage = (answeredQuestions / totalQuestions) * 100;
+            progressBar.style.width = progressPercentage + '%';
+        }
+
+        quizForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let score = 0;
+            const formData = new FormData(quizForm);
+            
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionId = 'q'	+ i;
+                const selectedAnswer = formData.get(questionId);
+                const resultDiv = document.getElementById('result'+ i);
+                const questionDiv = document.getElementById(questionId);
+                const labels = questionDiv.querySelectorAll('label');
+
+                // Reset previous styles
+                labels.forEach(label => {
+                    label.style.border = 'none';
+                    label.style.fontWeight = 'normal';
+                });
+                resultDiv.style.display = 'none'; // Hide previous result
+
+                if (selectedAnswer) {
+                    const correctAnswer = correctAnswers[questionId];
+                    const selectedLabel = questionDiv.querySelector(`input[value="${selectedAnswer}"]`).closest('label');
+                    const correctLabel = questionDiv.querySelector(`input[value="${correctAnswer}"]`).closest('label');
+
+                    if (selectedAnswer === correctAnswer) {
+                        score++;
+                        resultDiv.textContent = 'إجابة صحيحة!';
+                        resultDiv.className = 'result correct';
+                        selectedLabel.style.border = '2px solid #28a745'; // Green border for correct
+                        selectedLabel.style.fontWeight = 'bold';
+                    } else {
+                        resultDiv.innerHTML = `إجابة خاطئة. <span class="feedback">الإجابة الصحيحة هي الخيار الذي يبدأ بـ: ${correctLabel.innerText.split('\n')[0]}</span>`;
+                        resultDiv.className = 'result incorrect';
+                        selectedLabel.style.border = '2px solid #dc3545'; // Red border for incorrect
+                        correctLabel.style.border = '2px solid #28a74'; // Highlight correct answer
+                        correctLabel.style.fontWeight = 'bold';
+                    }
+                    resultDiv.style.display = 'block';
+                } else {
+                    // Handle unanswered questions if needed, though \'required\' attribute should prevent this
+                    resultDiv.textContent = 'لم يتم الإجابة على هذا السؤال.';
+                    resultDiv.className = 'result incorrect'
+                    resultDiv.style.display = 'block';
+                }
+            }
+            
+            const percentage = (score / totalQuestions) * 100;
+            finalResult.innerHTML = `<h2>نتيجتك النهائية: ${score} من ${totalQuestions} (${percentage.toFixed(1)}%)</h2>`;
+            if (percentage >= 70) { // Success threshold for this test
+                finalResult.className = 'result correct';
+                finalResult.innerHTML += '<p>ممتاز! لقد اجتزت الاختبار بنجاح.</p>';
+            } else {
+                finalResult.className = 'result incorrect';
+                finalResult.innerHTML += '<p>تحتاج إلى مراجعة المادة. حاول مرة أخرى!</p>';
+            }
+            finalResult.style.display = 'block';
+
+            // Scroll to the final result
+            finalResult.scrollIntoView({ behavior: 'smooth'});
+        });
+
+        // Initial progress bar update (usually 0%)
+        updateProgressBar();
+    </script>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

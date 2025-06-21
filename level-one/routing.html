@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>أساسيات التوجيه - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس المستوى الأول</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="ip-addressing.html">عنونة IP وتقسيم الشبكات</a></li>
+<li><a class="active" href="routing.html">أساسيات التوجيه</a></li>
+<li><a href="switching.html">أساسيات التبديل</a></li>
+<li><a href="vlan.html">الشبكات المحلية الافتراضية</a></li>
+<li><a href="wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="security.html">أساسيات أمان الشبكات</a></li>
+<li><a href="nat.html">ترجمة عناوين الشبكة</a></li>
+<li><a href="dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="dns.html">نظام أسماء النطاقات</a></li>
+<li><a href="troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="vpn.html">الشبكات الخاصة الافتراضية</a></li>
+<li><a href="monitoring.html">مراقبة الشبكات وإدارتها</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">أساسيات التوجيه</h1>
+<div class="lesson-content">
+<h2>مقدمة في التوجيه</h2>
+<p>التوجيه (Routing) هو عملية تحديد المسار الأفضل لنقل البيانات من المصدر إلى الوجهة عبر شبكة من الشبكات المترابطة. يعتبر التوجيه من العمليات الأساسية التي تمكن الاتصال بين الشبكات المختلفة، وبدونه لا يمكن للبيانات أن تنتقل بين الشبكات المنفصلة.</p>
+<p>يتم تنفيذ عملية التوجيه بواسطة أجهزة متخصصة تسمى الموجهات (Routers)، والتي تعمل في طبقة الشبكة (الطبقة الثالثة) من نموذج OSI. تستخدم الموجهات معلومات العنونة المنطقية (عناوين IP) لاتخاذ قرارات التوجيه.</p>
+<img alt="مفهوم التوجيه" src="../images/wifi-router.jpg"/>
+<p class="image-caption">رسم توضيحي لعملية التوجيه وكيفية انتقال البيانات بين الشبكات المختلفة عبر الموجهات.</p>
+<h2>كيف يعمل التوجيه؟</h2>
+<p>عندما تريد إرسال بيانات من جهاز في شبكة إلى جهاز في شبكة أخرى، تمر هذه البيانات عبر عدة خطوات:</p>
+<ol>
+<li><strong>تحديد الوجهة:</strong> يتم تحديد عنوان IP للجهاز الوجهة.</li>
+<li><strong>تحديد ما إذا كانت الوجهة في نفس الشبكة:</strong> يقارن الجهاز المصدر عنوان IP الخاص به وعنوان IP للوجهة باستخدام قناع الشبكة الفرعية.</li>
+<li><strong>إرسال البيانات:</strong>
+<ul>
+<li>إذا كانت الوجهة في نفس الشبكة، يتم إرسال البيانات مباشرة إلى الجهاز الوجهة.</li>
+<li>إذا كانت الوجهة في شبكة مختلفة، يتم إرسال البيانات إلى البوابة الافتراضية (Default Gateway)، وهي عادة ما تكون موجه.</li>
+</ul>
+</li>
+<li><strong>التوجيه:</strong> يستلم الموجه البيانات ويتخذ قرارًا بشأن المسار الأفضل للوصول إلى الوجهة، بناءً على جدول التوجيه الخاص به.</li>
+<li><strong>التسليم:</strong> تستمر البيانات في الانتقال من موجه إلى آخر حتى تصل إلى الشبكة التي تحتوي على الجهاز الوجهة، ثم يتم تسليمها إلى الجهاز الوجهة.</li>
+</ol>
+<h2>جدول التوجيه (Routing Table)</h2>
+<p>جدول التوجيه هو قاعدة بيانات تحتفظ بها الموجهات وأنظمة التشغيل، وتحتوي على معلومات حول كيفية الوصول إلى الشبكات المختلفة. يستخدم الموجه جدول التوجيه لاتخاذ قرارات بشأن المسار الأفضل لإرسال البيانات.</p>
+<p>يحتوي جدول التوجيه عادة على المعلومات التالية:</p>
+<ul>
+<li><strong>عنوان الشبكة الوجهة (Destination Network):</strong> عنوان الشبكة التي يمكن الوصول إليها.</li>
+<li><strong>قناع الشبكة الفرعية (Subnet Mask):</strong> يحدد أي جزء من عنوان IP يمثل معرف الشبكة.</li>
+<li><strong>البوابة التالية (Next Hop):</strong> عنوان IP للموجه التالي في المسار إلى الوجهة.</li>
+<li><strong>الواجهة (Interface):</strong> الواجهة التي سيتم إرسال البيانات من خلالها.</li>
+<li><strong>المقياس (Metric):</strong> قيمة تستخدم لتحديد المسار الأفضل عندما يكون هناك أكثر من مسار إلى نفس الوجهة.</li>
+</ul>
+<p>مثال على جدول توجيه بسيط:</p>
+<table class="lesson-table" style="width: 100%; margin: 20px 0;">
+<tr>
+<th style="padding: 10px; text-align: center;">الشبكة الوجهة</th>
+<th style="padding: 10px; text-align: center;">قناع الشبكة</th>
+<th style="padding: 10px; text-align: center;">البوابة التالية</th>
+<th style="padding: 10px; text-align: center;">الواجهة</th>
+<th style="padding: 10px; text-align: center;">المقياس</th>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">192.168.1.0</td>
+<td style="padding: 10px; text-align: center;">255.255.255.0</td>
+<td style="padding: 10px; text-align: center;">متصل مباشرة</td>
+<td style="padding: 10px; text-align: center;">Eth0</td>
+<td style="padding: 10px; text-align: center;">0</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">192.168.2.0</td>
+<td style="padding: 10px; text-align: center;">255.255.255.0</td>
+<td style="padding: 10px; text-align: center;">192.168.1.254</td>
+<td style="padding: 10px; text-align: center;">Eth0</td>
+<td style="padding: 10px; text-align: center;">1</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">0.0.0.0</td>
+<td style="padding: 10px; text-align: center;">0.0.0.0</td>
+<td style="padding: 10px; text-align: center;">192.168.1.1</td>
+<td style="padding: 10px; text-align: center;">Eth0</td>
+<td style="padding: 10px; text-align: center;">1</td>
+</tr>
+</table>
+<p>في هذا المثال:</p>
+<ul>
+<li>السطر الأول يشير إلى أن الشبكة 192.168.1.0/24 متصلة مباشرة بالموجه عبر الواجهة Eth0.</li>
+<li>السطر الثاني يشير إلى أن الشبكة 192.168.2.0/24 يمكن الوصول إليها عبر البوابة 192.168.1.254.</li>
+<li>السطر الثالث يمثل المسار الافتراضي (Default Route)، والذي يستخدم عندما لا يوجد مسار محدد للوجهة. في هذه الحالة، سيتم إرسال جميع البيانات التي لا تتطابق مع المسارات الأخرى إلى البوابة 192.168.1.1.</li>
+</ul>
+<h2>أنواع التوجيه</h2>
+<p>هناك نوعان رئيسيان من التوجيه:</p>
+<h3>1. التوجيه الثابت (Static Routing)</h3>
+<p>في التوجيه الثابت، يقوم مسؤول الشبكة بإدخال مسارات محددة يدويًا في جدول التوجيه. هذه المسارات لا تتغير إلا إذا قام المسؤول بتغييرها يدويًا.</p>
+<h4>مميزات التوجيه الثابت:</h4>
+<ul>
+<li>أمان أعلى، حيث لا يتم تبادل معلومات التوجيه بين الموجهات.</li>
+<li>استخدام أقل لموارد الموجه (CPU وذاكرة).</li>
+<li>لا يستهلك عرض النطاق الترددي للشبكة.</li>
+<li>سهولة التنفيذ في الشبكات الصغيرة.</li>
+</ul>
+<h4>عيوب التوجيه الثابت:</h4>
+<ul>
+<li>صعوبة الإدارة في الشبكات الكبيرة.</li>
+<li>عدم القدرة على التكيف تلقائيًا مع التغييرات في الشبكة.</li>
+<li>يتطلب تدخلًا يدويًا لإصلاح المسارات في حالة فشل الاتصال.</li>
+</ul>
+<h4>مثال على تكوين مسار ثابت في موجه سيسكو:</h4>
+<pre>
+Router(config)# ip route 192.168.2.0 255.255.255.0 192.168.1.254
+                </pre>
+<h3>2. التوجيه الديناميكي (Dynamic Routing)</h3>
+<p>في التوجيه الديناميكي، تتبادل الموجهات معلومات التوجيه فيما بينها باستخدام بروتوكولات التوجيه. تقوم هذه البروتوكولات بتحديث جداول التوجيه تلقائيًا استجابة للتغييرات في الشبكة.</p>
+<h4>مميزات التوجيه الديناميكي:</h4>
+<ul>
+<li>القدرة على التكيف تلقائيًا مع التغييرات في الشبكة.</li>
+<li>سهولة الإدارة في الشبكات الكبيرة.</li>
+<li>القدرة على اختيار المسار الأفضل بناءً على عدة عوامل (مثل السرعة والتأخير).</li>
+<li>القدرة على التعافي تلقائيًا من فشل الاتصال.</li>
+</ul>
+<h4>عيوب التوجيه الديناميكي:</h4>
+<ul>
+<li>استخدام أكبر لموارد الموجه.</li>
+<li>استهلاك عرض النطاق الترددي للشبكة لتبادل معلومات التوجيه.</li>
+<li>أمان أقل، حيث يمكن اعتراض أو تزوير معلومات التوجيه.</li>
+<li>تعقيد أكبر في التنفيذ والتكوين.</li>
+</ul>
+<h2>بروتوكولات التوجيه الديناميكي</h2>
+<p>بروتوكولات التوجيه الديناميكي هي مجموعة من القواعد والمعايير التي تستخدمها الموجهات لتبادل معلومات التوجيه وبناء جداول التوجيه. يمكن تصنيف هذه البروتوكولات بعدة طرق:</p>
+<h3>1. حسب النطاق (Scope)</h3>
+<ul>
+<li><strong>بروتوكولات التوجيه الداخلية (Interior Gateway Protocols - IGP):</strong> تستخدم داخل نظام مستقل واحد (Autonomous System)، مثل شبكة مؤسسة واحدة. أمثلة: RIP، OSPF، EIGRP.</li>
+<li><strong>بروتوكولات التوجيه الخارجية (Exterior Gateway Protocols - EGP):</strong> تستخدم بين الأنظمة المستقلة المختلفة، مثل مزودي خدمة الإنترنت. أمثلة: BGP.</li>
+</ul>
+<h3>2. حسب الخوارزمية (Algorithm)</h3>
+<ul>
+<li><strong>بروتوكولات حالة الوصلة (Link-State Protocols):</strong> تبني خريطة كاملة للشبكة وتحسب المسار الأفضل باستخدام خوارزمية أقصر مسار. أمثلة: OSPF، IS-IS.</li>
+<li><strong>بروتوكولات متجه المسافة (Distance-Vector Protocols):</strong> تعتمد على معلومات المسافة والاتجاه من الموجهات المجاورة. أمثلة: RIP، EIGRP (هجين).</li>
+</ul>
+<h3>3. حسب فئة التوجيه (Routing Class)</h3>
+<ul>
+<li><strong>بروتوكولات التوجيه الفئوي (Classful Routing Protocols):</strong> لا ترسل معلومات قناع الشبكة الفرعية في تحديثات التوجيه، وتفترض استخدام أقنعة الشبكة الافتراضية. أمثلة: RIPv1.</li>
+<li><strong>بروتوكولات التوجيه اللافئوي (Classless Routing Protocols):</strong> ترسل معلومات قناع الشبكة الفرعية في تحديثات التوجيه، مما يسمح بدعم CIDR وتقسيم الشبكات. أمثلة: RIPv2، OSPF، EIGRP، BGP.</li>
+</ul>
+<h2>بروتوكولات التوجيه الشائعة</h2>
+<p>فيما يلي شرح مفصل لبعض بروتوكولات التوجيه الشائعة:</p>
+<h3>1. بروتوكول معلومات التوجيه (Routing Information Protocol - RIP)</h3>
+<p>RIP هو بروتوكول متجه المسافة بسيط وقديم، يستخدم عدد القفزات (Hop Count) كمقياس وحيد لاختيار المسار الأفضل. الحد الأقصى لعدد القفزات هو 15، مما يجعل RIP غير مناسب للشبكات الكبيرة.</p>
+<h4>خصائص RIP:</h4>
+<ul>
+<li>يرسل تحديثات كاملة لجدول التوجيه كل 30 ثانية.</li>
+<li>يستخدم خوارزمية Bellman-Ford لحساب المسارات.</li>
+<li>يستخدم آليات مثل تقسيم الأفق (Split Horizon) وكبت الانعكاس (Poison Reverse) لمنع حلقات التوجيه.</li>
+<li>يوجد إصداران: RIPv1 (فئوي) و RIPv2 (لافئوي).</li>
+</ul>
+<h4>مثال على تكوين RIP في موجه سيسكو:</h4>
+<pre>
+Router(config)# router rip
+Router(config-router)# version 2
+Router(config-router)# network 192.168.1.0
+Router(config-router)# network 192.168.2.0
+                </pre>
+<h3>2. بروتوكول أولاً أقصر مسار مفتوح (Open Shortest Path First - OSPF)</h3>
+<p>OSPF هو بروتوكول حالة الوصلة متقدم، يستخدم خوارزمية Dijkstra لحساب المسار الأفضل. يعتبر OSPF أكثر كفاءة وقابلية للتوسع من RIP، ويستخدم على نطاق واسع في الشبكات المتوسطة والكبيرة.</p>
+<h4>خصائص OSPF:</h4>
+<ul>
+<li>يبني قاعدة بيانات حالة الوصلة (Link-State Database) تحتوي على خريطة كاملة للشبكة.</li>
+<li>يرسل تحديثات فقط عند حدوث تغيير في الشبكة، بدلاً من إرسال تحديثات دورية.</li>
+<li>يستخدم مفهوم المناطق (Areas) لتقليل حجم قاعدة البيانات وتحسين الأداء.</li>
+<li>يدعم تقسيم الشبكات وأقنعة الشبكة الفرعية ذات الطول المتغير (VLSM).</li>
+<li>يستخدم بروتوكول Hello لاكتشاف الموجهات المجاورة والتحقق من حالة الاتصال.</li>
+</ul>
+<h4>مثال على تكوين OSPF في موجه سيسكو:</h4>
+<pre>
+Router(config)# router ospf 1
+Router(config-router)# network 192.168.1.0 0.0.0.255 area 0
+Router(config-router)# network 192.168.2.0 0.0.0.255 area 0
+                </pre>
+<h3>3. بروتوكول التوجيه المحسن للبوابة الداخلية (Enhanced Interior Gateway Routing Protocol - EIGRP)</h3>
+<p>EIGRP هو بروتوكول توجيه متقدم طورته شركة سيسكو، ويعتبر هجينًا بين بروتوكولات متجه المسافة وبروتوكولات حالة الوصلة. يستخدم خوارزمية DUAL (Diffusing Update Algorithm) لحساب المسارات.</p>
+<h4>خصائص EIGRP:</h4>
+<ul>
+<li>يستخدم مقياسًا مركبًا يعتمد على عرض النطاق الترددي والتأخير والاعتمادية وتحميل الوصلة.</li>
+<li>يرسل تحديثات فقط عند حدوث تغيير في الشبكة.</li>
+<li>يحتفظ بمسارات بديلة (Feasible Successors) للتعافي السريع من فشل الاتصال.</li>
+<li>يدعم تقسيم الشبكات وأقنعة الشبكة الفرعية ذات الطول المتغير.</li>
+<li>يستخدم بروتوكول Hello للتحقق من حالة الاتصال مع الموجهات المجاورة.</li>
+</ul>
+<h4>مثال على تكوين EIGRP في موجه سيسكو:</h4>
+<pre>
+Router(config)# router eigrp 100
+Router(config-router)# network 192.168.1.0 0.0.0.255
+Router(config-router)# network 192.168.2.0 0.0.0.255
+                </pre>
+<h3>4. بروتوكول البوابة الحدودية (Border Gateway Protocol - BGP)</h3>
+<p>BGP هو بروتوكول التوجيه الخارجي الرئيسي المستخدم في الإنترنت. يعتبر BGP بروتوكول مسار متجه (Path-Vector Protocol)، حيث يحتفظ بمعلومات عن المسار الكامل إلى الوجهة.</p>
+<h4>خصائص BGP:</h4>
+<ul>
+<li>يستخدم لتبادل معلومات التوجيه بين الأنظمة المستقلة (مثل مزودي خدمة الإنترنت).</li>
+<li>يعتمد على سياسات التوجيه بدلاً من المقاييس التقنية البحتة.</li>
+<li>يستخدم اتصالات TCP موثوقة (المنفذ 179) لتبادل معلومات التوجيه.</li>
+<li>يدعم تجميع المسارات (Route Aggregation) لتقليل حجم جداول التوجيه.</li>
+<li>يستخدم صفات المسار (Path Attributes) لاتخاذ قرارات التوجيه.</li>
+</ul>
+<h4>مثال على تكوين BGP في موجه سيسكو:</h4>
+<pre>
+Router(config)# router bgp 65000
+Router(config-router)# neighbor 192.168.1.2 remote-as 65001
+Router(config-router)# network 192.168.2.0 mask 255.255.255.0
+                </pre>
+<h2>مقارنة بين بروتوكولات التوجيه</h2>
+<table border="1" style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+<tr>
+<th style="padding: 10px; text-align: center;">الخاصية</th>
+<th style="padding: 10px; text-align: center;">RIP</th>
+<th style="padding: 10px; text-align: center;">OSPF</th>
+<th style="padding: 10px; text-align: center;">EIGRP</th>
+<th style="padding: 10px; text-align: center;">BGP</th>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">النوع</td>
+<td style="padding: 10px; text-align: center;">متجه المسافة</td>
+<td style="padding: 10px; text-align: center;">حالة الوصلة</td>
+<td style="padding: 10px; text-align: center;">هجين</td>
+<td style="padding: 10px; text-align: center;">مسار متجه</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">المقياس</td>
+<td style="padding: 10px; text-align: center;">عدد القفزات</td>
+<td style="padding: 10px; text-align: center;">التكلفة (عرض النطاق)</td>
+<td style="padding: 10px; text-align: center;">مركب</td>
+<td style="padding: 10px; text-align: center;">سياسات التوجيه</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">وقت التقارب</td>
+<td style="padding: 10px; text-align: center;">بطيء</td>
+<td style="padding: 10px; text-align: center;">متوسط</td>
+<td style="padding: 10px; text-align: center;">سريع</td>
+<td style="padding: 10px; text-align: center;">بطيء جدًا</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">قابلية التوسع</td>
+<td style="padding: 10px; text-align: center;">منخفضة</td>
+<td style="padding: 10px; text-align: center;">عالية</td>
+<td style="padding: 10px; text-align: center;">عالية</td>
+<td style="padding: 10px; text-align: center;">عالية جدًا</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">استخدام الموارد</td>
+<td style="padding: 10px; text-align: center;">منخفض</td>
+<td style="padding: 10px; text-align: center;">متوسط</td>
+<td style="padding: 10px; text-align: center;">متوسط</td>
+<td style="padding: 10px; text-align: center;">عالي</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">دعم VLSM</td>
+<td style="padding: 10px; text-align: center;">RIPv2 فقط</td>
+<td style="padding: 10px; text-align: center;">نعم</td>
+<td style="padding: 10px; text-align: center;">نعم</td>
+<td style="padding: 10px; text-align: center;">نعم</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">الاستخدام النموذجي</td>
+<td style="padding: 10px; text-align: center;">شبكات صغيرة</td>
+<td style="padding: 10px; text-align: center;">شبكات متوسطة وكبيرة</td>
+<td style="padding: 10px; text-align: center;">شبكات متوسطة وكبيرة</td>
+<td style="padding: 10px; text-align: center;">الإنترنت ومزودي الخدمة</td>
+</tr>
+</table>
+<h2>مفاهيم متقدمة في التوجيه</h2>
+<h3>1. التوجيه متعدد المسارات (Multipath Routing)</h3>
+<p>التوجيه متعدد المسارات هو تقنية تسمح باستخدام عدة مسارات في نفس الوقت للوصول إلى نفس الوجهة. يمكن أن يساعد ذلك في تحسين الأداء وتوزيع الحمل وزيادة الموثوقية.</p>
+<h4>أنواع التوجيه متعدد المسارات:</h4>
+<ul>
+<li><strong>التوجيه متعدد المسارات المتساوية التكلفة (Equal-Cost Multipath - ECMP):</strong> يستخدم عدة مسارات لها نفس المقياس.</li>
+<li><strong>التوجيه متعدد المسارات غير المتساوية التكلفة (Unequal-Cost Multipath):</strong> يستخدم مسارات ذات مقاييس مختلفة، وهو مدعوم في EIGRP.</li>
+</ul>
+<h3>2. إعادة توزيع المسارات (Route Redistribution)</h3>
+<p>إعادة توزيع المسارات هي عملية نقل معلومات التوجيه من بروتوكول توجيه إلى آخر. يمكن استخدام هذه التقنية عندما تستخدم الشبكة أكثر من بروتوكول توجيه.</p>
+<h4>مثال على إعادة توزيع المسارات في موجه سيسكو:</h4>
+<pre>
+Router(config)# router ospf 1
+Router(config-router)# redistribute rip subnets
+Router(config-router)# exit
+Router(config)# router rip
+Router(config-router)# redistribute ospf 1 metric 3
+                </pre>
+<h3>3. التوجيه المستند إلى السياسات (Policy-Based Routing - PBR)</h3>
+<p>التوجيه المستند إلى السياسات هو تقنية تسمح باتخاذ قرارات التوجيه بناءً على عوامل أخرى غير عنوان الوجهة، مثل نوع البروتوكول أو حجم الحزمة أو عنوان المصدر.</p>
+<h4>مثال على التوجيه المستند إلى السياسات في موجه سيسكو:</h4>
+<pre>
+Router(config)# access-list 101 permit ip 192.168.1.0 0.0.0.255 any
+Router(config)# route-map PBR permit 10
+Router(config-route-map)# match ip address 101
+Router(config-route-map)# set ip next-hop 10.0.0.1
+Router(config-route-map)# exit
+Router(config)# interface FastEthernet0/0
+Router(config-if)# ip policy route-map PBR
+                </pre>
+<h3>4. التوجيه الافتراضي (Default Routing)</h3>
+<p>التوجيه الافتراضي هو تقنية تستخدم لتوجيه البيانات إلى موجه افتراضي عندما لا يوجد مسار محدد للوجهة في جدول التوجيه. يستخدم المسار الافتراضي عنوان شبكة 0.0.0.0 وقناع شبكة 0.0.0.0.</p>
+<h4>مثال على تكوين مسار افتراضي في موجه سيسكو:</h4>
+<pre>
+Router(config)# ip route 0.0.0.0 0.0.0.0 192.168.1.1
+                </pre>
+<h2>تطبيقات عملية للتوجيه</h2>
+<h3>1. تكوين شبكة صغيرة</h3>
+<p>لنفترض أن لدينا شبكة صغيرة تتكون من موجهين وثلاث شبكات:</p>
+<ul>
+<li>الشبكة A: 192.168.1.0/24 (متصلة بالموجه 1)</li>
+<li>الشبكة B: 192.168.2.0/24 (متصلة بالموجه 2)</li>
+<li>الشبكة C: 10.0.0.0/30 (تربط بين الموجهين)</li>
+</ul>
+<p>تكوين الموجه 1:</p>
+<pre>
+Router1(config)# interface FastEthernet0/0
+Router1(config-if)# ip address 192.168.1.1 255.255.255.0
+Router1(config-if)# no shutdown
+Router1(config-if)# exit
+Router1(config)# interface Serial0/0
+Router1(config-if)# ip address 10.0.0.1 255.255.255.252
+Router1(config-if)# no shutdown
+Router1(config-if)# exit
+Router1(config)# ip route 192.168.2.0 255.255.255.0 10.0.0.2
+                </pre>
+<p>تكوين الموجه 2:</p>
+<pre>
+Router2(config)# interface FastEthernet0/0
+Router2(config-if)# ip address 192.168.2.1 255.255.255.0
+Router2(config-if)# no shutdown
+Router2(config-if)# exit
+Router2(config)# interface Serial0/0
+Router2(config-if)# ip address 10.0.0.2 255.255.255.252
+Router2(config-if)# no shutdown
+Router2(config-if)# exit
+Router2(config)# ip route 192.168.1.0 255.255.255.0 10.0.0.1
+                </pre>
+<h3>2. تكوين OSPF في شبكة متوسطة</h3>
+<p>لنفترض أن لدينا شبكة متوسطة تتكون من ثلاثة موجهات وأربع شبكات:</p>
+<ul>
+<li>الشبكة A: 192.168.1.0/24 (متصلة بالموجه 1)</li>
+<li>الشبكة B: 192.168.2.0/24 (متصلة بالموجه 2)</li>
+<li>الشبكة C: 192.168.3.0/24 (متصلة بالموجه 3)</li>
+<li>الشبكة D: 10.0.0.0/24 (تربط بين الموجهات الثلاثة)</li>
+</ul>
+<p>تكوين OSPF على الموجهات الثلاثة:</p>
+<pre>
+Router1(config)# router ospf 1
+Router1(config-router)# network 192.168.1.0 0.0.0.255 area 0
+Router1(config-router)# network 10.0.0.0 0.0.0.255 area 0
+
+Router2(config)# router ospf 1
+Router2(config-router)# network 192.168.2.0 0.0.0.255 area 0
+Router2(config-router)# network 10.0.0.0 0.0.0.255 area 0
+
+Router3(config)# router ospf 1
+Router3(config-router)# network 192.168.3.0 0.0.0.255 area 0
+Router3(config-router)# network 10.0.0.0 0.0.0.255 area 0
+                </pre>
+<h2>أدوات التوجيه وأوامر التشخيص</h2>
+<p>هناك العديد من الأوامر والأدوات التي يمكن استخدامها لتشخيص مشكلات التوجيه وفحص حالة الشبكة:</p>
+<h3>1. أوامر عرض جدول التوجيه</h3>
+<ul>
+<li><strong>show ip route:</strong> يعرض جدول التوجيه الكامل.</li>
+<li><strong>show ip route [protocol]:</strong> يعرض المسارات التي تم تعلمها من بروتوكول معين.</li>
+<li><strong>show ip route [network]:</strong> يعرض معلومات مفصلة عن مسار محدد.</li>
+</ul>
+<h3>2. أوامر فحص بروتوكولات التوجيه</h3>
+<ul>
+<li><strong>show ip protocols:</strong> يعرض معلومات عن بروتوكولات التوجيه النشطة.</li>
+<li><strong>show ip ospf neighbor:</strong> يعرض معلومات عن جيران OSPF.</li>
+<li><strong>show ip eigrp neighbors:</strong> يعرض معلومات عن جيران EIGRP.</li>
+<li><strong>show ip bgp summary:</strong> يعرض ملخصًا عن جلسات BGP.</li>
+</ul>
+<h3>3. أوامر اختبار الاتصال</h3>
+<ul>
+<li><strong>ping:</strong> يختبر الاتصال الأساسي مع جهاز آخر.</li>
+<li><strong>traceroute:</strong> يعرض المسار الذي تسلكه البيانات للوصول إلى الوجهة.</li>
+<li><strong>telnet:</strong> يختبر الاتصال على منفذ محدد.</li>
+</ul>
+<h3>4. أدوات تحليل الشبكة</h3>
+<ul>
+<li><strong>Wireshark:</strong> أداة لتحليل حزم البيانات وفحص بروتوكولات الشبكة.</li>
+<li><strong>Cisco Packet Tracer:</strong> أداة محاكاة لتصميم وتكوين واختبار الشبكات.</li>
+<li><strong>GNS3:</strong> أداة محاكاة متقدمة تسمح بتشغيل صور نظام التشغيل الحقيقية للموجهات.</li>
+</ul>
+<h2>خلاصة</h2>
+<p>التوجيه هو عملية أساسية في عالم الشبكات، تمكن الاتصال بين الشبكات المختلفة. فهم مبادئ التوجيه وبروتوكولاته المختلفة يساعدك على تصميم وتنفيذ وإدارة الشبكات بشكل فعال.</p>
+<p>في هذا الدرس، تعلمنا:</p>
+<ul>
+<li>مفهوم التوجيه وكيفية عمله.</li>
+<li>جدول التوجيه ومكوناته.</li>
+<li>أنواع التوجيه (الثابت والديناميكي).</li>
+<li>بروتوكولات التوجيه الديناميكي وتصنيفاتها.</li>
+<li>بروتوكولات التوجيه الشائعة (RIP، OSPF، EIGRP، BGP).</li>
+<li>مفاهيم متقدمة في التوجيه.</li>
+<li>تطبيقات عملية للتوجيه.</li>
+<li>أدوات التوجيه وأوامر التشخيص.</li>
+</ul>
+<p>في الدرس القادم، سنتعمق في مفاهيم التبديل (Switching) وكيفية عمل السويتشات في الشبكات المحلية.</p>
+</div>
+<div class="lesson-navigation">
+<a class="prev-lesson" href="ip-addressing.html">الدرس السابق: عنونة IP وتقسيم الشبكات</a>
+<a class="next-lesson" href="switching.html">الدرس التالي: أساسيات التبديل</a>
+</div>
+</main>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

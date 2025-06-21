@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>أساسيات التبديل - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس المستوى الأول</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="ip-addressing.html">عنونة IP وتقسيم الشبكات</a></li>
+<li><a href="routing.html">أساسيات التوجيه</a></li>
+<li><a class="active" href="switching.html">أساسيات التبديل</a></li>
+<li><a href="vlan.html">الشبكات المحلية الافتراضية</a></li>
+<li><a href="wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="security.html">أساسيات أمان الشبكات</a></li>
+<li><a href="nat.html">ترجمة عناوين الشبكة</a></li>
+<li><a href="dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="dns.html">نظام أسماء النطاقات</a></li>
+<li><a href="troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="vpn.html">الشبكات الخاصة الافتراضية</a></li>
+<li><a href="monitoring.html">مراقبة الشبكات وإدارتها</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">أساسيات التبديل</h1>
+<div class="lesson-content">
+<h2>مقدمة في التبديل</h2>
+<p>التبديل (Switching) هو عملية توجيه البيانات بين الأجهزة داخل شبكة محلية (LAN). يعتبر التبديل من العمليات الأساسية في الشبكات الحديثة، حيث يسمح للأجهزة بالتواصل بكفاءة وسرعة عالية داخل نفس الشبكة.</p>
+<p>يتم تنفيذ عملية التبديل بواسطة أجهزة متخصصة تسمى المبدلات أو السويتشات (Switches)، والتي تعمل في طبقة وصلة البيانات (الطبقة الثانية) من نموذج OSI. تستخدم السويتشات عناوين MAC (العناوين الفيزيائية) لاتخاذ قرارات التبديل.</p>
+<img alt="مفهوم التبديل" src="../images/switching_concept_illustration.jpeg"/>
+<p class="image-caption">رسم توضيحي لعملية التبديل داخل شبكة محلية وكيف يستخدم السويتش عناوين MAC لتوجيه الإطارات.</p>
+<h2>كيف يعمل التبديل؟</h2>
+<p>عندما تريد إرسال بيانات من جهاز إلى آخر داخل نفس الشبكة المحلية، تمر هذه البيانات عبر عدة خطوات:</p>
+<ol>
+<li><strong>إنشاء الإطار (Frame):</strong> يقوم الجهاز المصدر بتغليف البيانات في إطار يحتوي على عنوان MAC للمصدر وعنوان MAC للوجهة.</li>
+<li><strong>إرسال الإطار:</strong> يرسل الجهاز المصدر الإطار إلى السويتش.</li>
+<li><strong>معالجة الإطار:</strong> يستلم السويتش الإطار ويقرأ عنوان MAC للوجهة.</li>
+<li><strong>البحث في جدول العناوين:</strong> يبحث السويتش في جدول عناوين MAC الخاص به لتحديد المنفذ المتصل بالجهاز الوجهة.</li>
+<li><strong>توجيه الإطار:</strong> يرسل السويتش الإطار فقط إلى المنفذ المتصل بالجهاز الوجهة.</li>
+<li><strong>استلام الإطار:</strong> يستلم الجهاز الوجهة الإطار ويستخرج البيانات منه.</li>
+</ol>
+<h3>جدول عناوين MAC (MAC Address Table)</h3>
+<p>جدول عناوين MAC (يسمى أيضًا جدول التبديل أو جدول CAM) هو قاعدة بيانات يحتفظ بها السويتش، وتحتوي على معلومات تربط بين عناوين MAC والمنافذ المتصلة بها. يستخدم السويتش هذا الجدول لاتخاذ قرارات التبديل.</p>
+<p>يتم بناء جدول عناوين MAC بشكل ديناميكي من خلال عملية تسمى "التعلم" (Learning)، حيث يقوم السويتش بما يلي:</p>
+<ol>
+<li>فحص عنوان MAC المصدر في كل إطار يستلمه.</li>
+<li>تسجيل عنوان MAC المصدر والمنفذ الذي استلم منه الإطار في جدول العناوين.</li>
+<li>تحديث الجدول عندما يتغير موقع الجهاز.</li>
+</ol>
+<p>مثال على جدول عناوين MAC:</p>
+<table class="lesson-table" style="width: 100%; margin: 20px 0;">
+<tr>
+<th style="padding: 10px; text-align: center;">عنوان MAC</th>
+<th style="padding: 10px; text-align: center;">المنفذ</th>
+<th style="padding: 10px; text-align: center;">نوع الإدخال</th>
+<th style="padding: 10px; text-align: center;">العمر</th>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">00:1A:2B:3C:4D:5E</td>
+<td style="padding: 10px; text-align: center;">Fa0/1</td>
+<td style="padding: 10px; text-align: center;">ديناميكي</td>
+<td style="padding: 10px; text-align: center;">300 ثانية</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">00:6F:7G:8H:9I:0J</td>
+<td style="padding: 10px; text-align: center;">Fa0/2</td>
+<td style="padding: 10px; text-align: center;">ديناميكي</td>
+<td style="padding: 10px; text-align: center;">250 ثانية</td>
+</tr>
+<tr>
+<td style="padding: 10px; text-align: center;">00:AA:BB:CC:DD:EE</td>
+<td style="padding: 10px; text-align: center;">Fa0/3</td>
+<td style="padding: 10px; text-align: center;">ثابت</td>
+<td style="padding: 10px; text-align: center;">-</td>
+</tr>
+</table>
+<h3>طرق توجيه الإطارات</h3>
+<p>يستخدم السويتش ثلاث طرق رئيسية لتوجيه الإطارات:</p>
+<h4>1. التوجيه المباشر (Unicast)</h4>
+<p>عندما يعرف السويتش المنفذ المتصل بالجهاز الوجهة (من خلال جدول عناوين MAC)، يرسل الإطار فقط إلى ذلك المنفذ. هذه هي الطريقة الأكثر كفاءة.</p>
+<h4>2. البث (Broadcast)</h4>
+<p>عندما يكون عنوان MAC للوجهة هو عنوان البث (FF:FF:FF:FF:FF:FF)، يرسل السويتش الإطار إلى جميع المنافذ باستثناء المنفذ الذي استلم منه الإطار.</p>
+<h4>3. الفيضان (Flooding)</h4>
+<p>عندما لا يعرف السويتش المنفذ المتصل بالجهاز الوجهة (لأن عنوان MAC غير موجود في جدول العناوين)، يرسل الإطار إلى جميع المنافذ باستثناء المنفذ الذي استلم منه الإطار. هذه الطريقة تستخدم عندما يستلم السويتش إطارًا لأول مرة لجهاز غير معروف.</p>
+<h2>أنواع السويتشات</h2>
+<p>هناك عدة أنواع من السويتشات، تختلف في قدراتها وميزاتها وتكلفتها:</p>
+<h3>1. السويتشات غير المدارة (Unmanaged Switches)</h3>
+<p>هي سويتشات بسيطة تعمل بشكل تلقائي دون الحاجة إلى تكوين. تستخدم في الشبكات الصغيرة والمنزلية.</p>
+<h4>خصائص السويتشات غير المدارة:</h4>
+<ul>
+<li>سهلة الاستخدام (توصيل وتشغيل).</li>
+<li>تكلفة منخفضة.</li>
+<li>لا تحتاج إلى تكوين.</li>
+<li>ميزات محدودة.</li>
+</ul>
+<h3>2. السويتشات المدارة (Managed Switches)</h3>
+<p>هي سويتشات متقدمة توفر إمكانيات إدارة وتكوين متعددة. تستخدم في الشبكات المتوسطة والكبيرة.</p>
+<h4>خصائص السويتشات المدارة:</h4>
+<ul>
+<li>توفر واجهة إدارة (CLI، Web، SNMP).</li>
+<li>تدعم ميزات متقدمة مثل VLAN و QoS و STP.</li>
+<li>توفر إمكانيات مراقبة وتشخيص.</li>
+<li>تكلفة أعلى.</li>
+<li>تحتاج إلى خبرة للتكوين والإدارة.</li>
+</ul>
+<h3>3. السويتشات الذكية (Smart Switches)</h3>
+<p>هي سويتشات تقع بين السويتشات غير المدارة والمدارة، توفر بعض ميزات الإدارة بتكلفة أقل من السويتشات المدارة الكاملة.</p>
+<h4>خصائص السويتشات الذكية:</h4>
+<ul>
+<li>توفر واجهة إدارة بسيطة (عادة عبر الويب).</li>
+<li>تدعم بعض الميزات المتقدمة مثل VLAN الأساسية.</li>
+<li>تكلفة متوسطة.</li>
+<li>سهولة التكوين مقارنة بالسويتشات المدارة الكاملة.</li>
+</ul>
+<h2>طرق التبديل</h2>
+<p>هناك ثلاث طرق رئيسية للتبديل في السويتشات:</p>
+<h3>1. التبديل المباشر (Cut-Through Switching)</h3>
+<p>في هذه الطريقة، يبدأ السويتش بإرسال الإطار بمجرد قراءة عنوان MAC للوجهة، دون انتظار استلام الإطار بالكامل. هذا يقلل من التأخير ولكنه قد يؤدي إلى نقل إطارات تالفة.</p>
+<h4>أنواع التبديل المباشر:</h4>
+<ul>
+<li><strong>التبديل السريع (Fast-Forward Switching):</strong> يبدأ الإرسال بمجرد قراءة عنوان MAC للوجهة.</li>
+<li><strong>التبديل الخالي من الأخطاء (Fragment-Free Switching):</strong> ينتظر استلام أول 64 بايت من الإطار (حيث تحدث معظم الأخطاء) قبل بدء الإرسال.</li>
+</ul>
+<h3>2. التبديل المخزن والمرسل (Store-and-Forward Switching)</h3>
+<p>في هذه الطريقة، ينتظر السويتش استلام الإطار بالكامل ويتحقق من سلامته قبل إرساله. هذا يزيد من التأخير ولكنه يمنع نقل الإطارات التالفة.</p>
+<h4>مميزات التبديل المخزن والمرسل:</h4>
+<ul>
+<li>يتحقق من سلامة الإطار باستخدام CRC.</li>
+<li>يمنع انتشار الإطارات التالفة في الشبكة.</li>
+<li>يسمح بتبديل الإطارات بين منافذ ذات سرعات مختلفة.</li>
+</ul>
+<h3>3. التبديل الهجين (Adaptive Switching)</h3>
+<p>في هذه الطريقة، يمكن للسويتش التبديل بين طريقة التبديل المباشر وطريقة التبديل المخزن والمرسل بناءً على ظروف الشبكة. على سبيل المثال، قد يستخدم التبديل المباشر عندما تكون نسبة الأخطاء منخفضة، ويتحول إلى التبديل المخزن والمرسل عندما تزداد نسبة الأخطاء.</p>
+<h2>ميزات السويتشات المتقدمة</h2>
+<p>تدعم السويتشات المدارة العديد من الميزات المتقدمة التي تحسن أداء وأمان وإدارة الشبكة:</p>
+<h3>1. الشبكات المحلية الافتراضية (VLAN)</h3>
+<p>تسمح الشبكات المحلية الافتراضية بتقسيم شبكة فيزيائية واحدة إلى عدة شبكات منطقية منفصلة. هذا يحسن الأداء والأمان ويسهل إدارة الشبكة. (سنتناول هذا الموضوع بالتفصيل في الدرس القادم)</p>
+<h3>2. بروتوكول شجرة التغطية (Spanning Tree Protocol - STP)</h3>
+<p>يمنع بروتوكول شجرة التغطية حدوث حلقات في الشبكة عند وجود مسارات متعددة بين السويتشات. يعمل STP على اختيار مسار واحد للبيانات وتعطيل المسارات الأخرى، مع الاحتفاظ بها كمسارات احتياطية في حالة فشل المسار الرئيسي.</p>
+<h4>كيف يعمل STP:</h4>
+<ol>
+<li>اختيار سويتش جذر (Root Bridge) بناءً على أولوية السويتش وعنوان MAC.</li>
+<li>تحديد المنفذ الجذر (Root Port) على كل سويتش غير جذر.</li>
+<li>تحديد المنفذ المعين (Designated Port) على كل قطعة شبكة.</li>
+<li>حظر المنافذ الأخرى (Blocked Ports) لمنع الحلقات.</li>
+</ol>
+<h4>إصدارات STP:</h4>
+<ul>
+<li><strong>STP الأصلي (IEEE 802.1D):</strong> الإصدار الأصلي، يستغرق حوالي 30-50 ثانية للتقارب.</li>
+<li><strong>RSTP (Rapid STP - IEEE 802.1w):</strong> إصدار محسن، يستغرق حوالي 1-5 ثوانٍ للتقارب.</li>
+<li><strong>MSTP (Multiple STP - IEEE 802.1s):</strong> يدعم عدة مثيلات STP للشبكات المحلية الافتراضية المختلفة.</li>
+</ul>
+<h3>3. تجميع الوصلات (Link Aggregation)</h3>
+<p>يسمح تجميع الوصلات (يسمى أيضًا EtherChannel أو Port Channel) بدمج عدة وصلات فيزيائية في وصلة منطقية واحدة. هذا يزيد من عرض النطاق الترددي ويوفر تكرارًا في حالة فشل إحدى الوصلات.</p>
+<h4>بروتوكولات تجميع الوصلات:</h4>
+<ul>
+<li><strong>PAgP (Port Aggregation Protocol):</strong> بروتوكول خاص بشركة سيسكو.</li>
+<li><strong>LACP (Link Aggregation Control Protocol - IEEE 802.3ad):</strong> بروتوكول قياسي يدعمه معظم المصنعين.</li>
+</ul>
+<h3>4. جودة الخدمة (Quality of Service - QoS)</h3>
+<p>تسمح جودة الخدمة بإعطاء أولوية لأنواع معينة من حركة البيانات (مثل الصوت والفيديو) على حساب أنواع أخرى (مثل نقل الملفات). هذا يضمن أداءً أفضل للتطبيقات الحساسة للتأخير.</p>
+<h4>آليات QoS:</h4>
+<ul>
+<li><strong>تصنيف وتمييز الحزم:</strong> تحديد نوع حركة البيانات.</li>
+<li><strong>وضع علامات على الحزم:</strong> تعيين قيم أولوية للحزم.</li>
+<li><strong>جدولة الحزم:</strong> تحديد ترتيب إرسال الحزم بناءً على أولويتها.</li>
+<li><strong>تشكيل حركة البيانات:</strong> التحكم في معدل إرسال البيانات.</li>
+</ul>
+<h3>5. مرآة المنفذ (Port Mirroring)</h3>
+<p>تسمح مرآة المنفذ (تسمى أيضًا SPAN في سويتشات سيسكو) بنسخ حركة البيانات من منفذ أو عدة منافذ إلى منفذ آخر للمراقبة والتحليل. هذا مفيد لاستكشاف الأخطاء وإصلاحها ومراقبة الشبكة.</p>
+<h3>6. الأمان على مستوى المنفذ (Port Security)</h3>
+<p>يسمح الأمان على مستوى المنفذ بتقييد عدد وهوية الأجهزة التي يمكنها الاتصال بمنفذ معين. هذا يمنع الوصول غير المصرح به إلى الشبكة.</p>
+<h4>خيارات الأمان على مستوى المنفذ:</h4>
+<ul>
+<li><strong>تقييد عدد عناوين MAC:</strong> تحديد الحد الأقصى لعدد الأجهزة التي يمكنها الاتصال بالمنفذ.</li>
+<li><strong>تقييد عناوين MAC محددة:</strong> السماح فقط لأجهزة معينة بالاتصال بالمنفذ.</li>
+<li><strong>إجراءات الانتهاك:</strong> تحديد ما يحدث عند انتهاك سياسة الأمان (مثل إغلاق المنفذ أو إرسال إشعار).</li>
+</ul>
+<h2>تكوين السويتش الأساسي</h2>
+<p>فيما يلي بعض الأوامر الأساسية لتكوين سويتش سيسكو:</p>
+<h3>1. الإعدادات الأساسية</h3>
+<pre>
+Switch&gt; enable                      // الدخول إلى وضع التمكين
+Switch# configure terminal           // الدخول إلى وضع التكوين العام
+Switch(config)# hostname SW1         // تعيين اسم للسويتش
+SW1(config)# enable secret password  // تعيين كلمة مرور للوضع الممكن
+SW1(config)# line console 0          // الدخول إلى وضع تكوين خط وحدة التحكم
+SW1(config-line)# password password  // تعيين كلمة مرور لخط وحدة التحكم
+SW1(config-line)# login              // تمكين المصادقة
+SW1(config-line)# exit               // الخروج من وضع تكوين الخط
+                </pre>
+<h3>2. تكوين واجهة الإدارة</h3>
+<pre>
+SW1(config)# interface vlan 1                  // الدخول إلى وضع تكوين واجهة VLAN 1
+SW1(config-if)# ip address 192.168.1.10 255.255.255.0  // تعيين عنوان IP
+SW1(config-if)# no shutdown                    // تمكين الواجهة
+SW1(config-if)# exit                           // الخروج من وضع تكوين الواجهة
+SW1(config)# ip default-gateway 192.168.1.1    // تعيين البوابة الافتراضية
+                </pre>
+<h3>3. تكوين المنافذ</h3>
+<pre>
+SW1(config)# interface fastethernet 0/1        // الدخول إلى وضع تكوين المنفذ
+SW1(config-if)# description Connection to PC1  // إضافة وصف للمنفذ
+SW1(config-if)# speed 100                      // تعيين سرعة المنفذ
+SW1(config-if)# duplex full                    // تعيين وضع الازدواج
+SW1(config-if)# no shutdown                    // تمكين المنفذ
+                </pre>
+<h3>4. عرض معلومات السويتش</h3>
+<pre>
+SW1# show running-config                // عرض التكوين الحالي
+SW1# show interfaces                    // عرض معلومات عن جميع الواجهات
+SW1# show mac address-table             // عرض جدول عناوين MAC
+SW1# show vlan                          // عرض معلومات عن الشبكات المحلية الافتراضية
+SW1# show spanning-tree                 // عرض معلومات عن بروتوكول شجرة التغطية
+                </pre>
+<h2>تطبيقات عملية للتبديل</h2>
+<h3>1. تكوين شبكة محلية بسيطة</h3>
+<p>لنفترض أن لدينا شبكة محلية بسيطة تتكون من سويتش واحد وعدة أجهزة:</p>
+<pre>
+SW1(config)# hostname SW1
+SW1(config)# enable secret cisco
+SW1(config)# interface vlan 1
+SW1(config-if)# ip address 192.168.1.10 255.255.255.0
+SW1(config-if)# no shutdown
+SW1(config-if)# exit
+SW1(config)# ip default-gateway 192.168.1.1
+SW1(config)# interface range fastethernet 0/1 - 24
+SW1(config-if-range)# no shutdown
+                </pre>
+<h3>2. تكوين الأمان على مستوى المنفذ</h3>
+<p>لنفترض أننا نريد تقييد المنفذ Fa0/1 ليسمح فقط بجهاز واحد بعنوان MAC محدد:</p>
+<pre>
+SW1(config)# interface fastethernet 0/1
+SW1(config-if)# switchport mode access
+SW1(config-if)# switchport port-security
+SW1(config-if)# switchport port-security maximum 1
+SW1(config-if)# switchport port-security mac-address 00:1A:2B:3C:4D:5E
+SW1(config-if)# switchport port-security violation shutdown
+                </pre>
+<h3>3. تكوين تجميع الوصلات</h3>
+<p>لنفترض أننا نريد تجميع المنافذ Fa0/1 و Fa0/2 في قناة واحدة باستخدام LACP:</p>
+<pre>
+SW1(config)# interface range fastethernet 0/1 - 2
+SW1(config-if-range)# channel-group 1 mode active
+SW1(config-if-range)# exit
+SW1(config)# interface port-channel 1
+SW1(config-if)# switchport mode trunk
+                </pre>
+<h3>4. تكوين مرآة المنفذ</h3>
+<p>لنفترض أننا نريد مراقبة حركة البيانات على المنفذ Fa0/1 باستخدام المنفذ Fa0/24:</p>
+<pre>
+SW1(config)# monitor session 1 source interface fastethernet 0/1
+SW1(config)# monitor session 1 destination interface fastethernet 0/24
+                </pre>
+<h2>استكشاف أخطاء التبديل وإصلاحها</h2>
+<p>فيما يلي بعض المشكلات الشائعة في التبديل وكيفية استكشافها وإصلاحها:</p>
+<h3>1. مشكلات الاتصال</h3>
+<ul>
+<li><strong>المشكلة:</strong> عدم القدرة على الاتصال بين الأجهزة.</li>
+<li><strong>الأسباب المحتملة:</strong> كابل معيب، منفذ معطل، إعدادات غير صحيحة، مشكلة في جدول عناوين MAC.</li>
+<li><strong>الحل:</strong>
+<ul>
+<li>التحقق من حالة المنفذ باستخدام الأمر <code>show interfaces</code>.</li>
+<li>التحقق من مؤشرات LED على السويتش والأجهزة.</li>
+<li>تجربة كابل آخر أو منفذ آخر.</li>
+<li>إعادة تعيين جدول عناوين MAC باستخدام الأمر <code>clear mac address-table</code>.</li>
+</ul>
+</li>
+</ul>
+<h3>2. مشكلات الأداء</h3>
+<ul>
+<li><strong>المشكلة:</strong> بطء في نقل البيانات أو تأخير عالي.</li>
+<li><strong>الأسباب المحتملة:</strong> ازدحام الشبكة، عدم تطابق السرعة أو وضع الازدواج، حلقات في الشبكة.</li>
+<li><strong>الحل:</strong>
+<ul>
+<li>التحقق من إحصائيات الواجهة باستخدام الأمر <code>show interfaces</code>.</li>
+<li>التحقق من تكوين السرعة ووضع الازدواج.</li>
+<li>التحقق من حالة STP باستخدام الأمر <code>show spanning-tree</code>.</li>
+<li>استخدام أدوات مراقبة الشبكة لتحديد مصدر الازدحام.</li>
+</ul>
+</li>
+</ul>
+<h3>3. مشكلات الأمان</h3>
+<ul>
+<li><strong>المشكلة:</strong> انتهاكات الأمان على مستوى المنفذ، وصول غير مصرح به.</li>
+<li><strong>الأسباب المحتملة:</strong> محاولات الوصول غير المصرح به، تغيير الأجهزة المتصلة.</li>
+<li><strong>الحل:</strong>
+<ul>
+<li>التحقق من حالة الأمان على مستوى المنفذ باستخدام الأمر <code>show port-security</code>.</li>
+<li>مراجعة سجلات السويتش باستخدام الأمر <code>show logging</code>.</li>
+<li>إعادة تعيين المنافذ المغلقة باستخدام الأمر <code>shutdown</code> ثم <code>no shutdown</code>.</li>
+</ul>
+</li>
+</ul>
+<h2>أفضل الممارسات في التبديل</h2>
+<p>فيما يلي بعض أفضل الممارسات التي يجب اتباعها عند تصميم وتنفيذ وإدارة شبكات التبديل:</p>
+<h3>1. تصميم الشبكة</h3>
+<ul>
+<li>استخدام نموذج التصميم الهرمي (Core-Distribution-Access) للشبكات الكبيرة.</li>
+<li>تخطيط السعة بناءً على متطلبات عرض النطاق الترددي الحالية والمستقبلية.</li>
+<li>توفير التكرار في المكونات والمسارات الحرجة.</li>
+<li>تقسيم الشبكة إلى شبكات محلية افتراضية منطقية.</li>
+</ul>
+<h3>2. الأمان</h3>
+<ul>
+<li>تغيير كلمات المرور الافتراضية.</li>
+<li>تعطيل المنافذ غير المستخدمة.</li>
+<li>استخدام الأمان على مستوى المنفذ لتقييد الوصول.</li>
+<li>تنفيذ DHCP Snooping لمنع هجمات DHCP المزيفة.</li>
+<li>استخدام Dynamic ARP Inspection لمنع هجمات ARP Poisoning.</li>
+</ul>
+<h3>3. الإدارة</h3>
+<ul>
+<li>توثيق تكوين الشبكة وتغييراتها.</li>
+<li>استخدام SNMP لمراقبة السويتشات.</li>
+<li>تنفيذ NTP لمزامنة الوقت بين جميع أجهزة الشبكة.</li>
+<li>إعداد نسخ احتياطية منتظمة لتكوينات السويتشات.</li>
+<li>تحديث البرامج الثابتة بانتظام لإصلاح الثغرات الأمنية وتحسين الأداء.</li>
+</ul>
+<h2>خلاصة</h2>
+<p>التبديل هو عملية أساسية في الشبكات المحلية، تمكن الأجهزة من التواصل بكفاءة وسرعة عالية. فهم مبادئ التبديل وميزات السويتشات المختلفة يساعدك على تصميم وتنفيذ وإدارة شبكات محلية فعالة.</p>
+<p>في هذا الدرس، تعلمنا:</p>
+<ul>
+<li>مفهوم التبديل وكيفية عمله.</li>
+<li>جدول عناوين MAC وكيفية بنائه.</li>
+<li>طرق توجيه الإطارات (التوجيه المباشر، البث، الفيضان).</li>
+<li>أنواع السويتشات (غير المدارة، مدارة، ذكية).</li>
+<li>طرق التبديل (المباشر، المخزن والمرسل، الهجين).</li>
+<li>ميزات السويتشات المتقدمة (VLAN، STP، تجميع الوصلات، QoS، مرآة المنفذ، الأمان على مستوى المنفذ).</li>
+<li>تكوين السويتش الأساسي.</li>
+<li>تطبيقات عملية للتبديل.</li>
+<li>استكشاف أخطاء التبديل وإصلاحها.</li>
+<li>أفضل الممارسات في التبديل.</li>
+</ul>
+<p>في الدرس القادم، سنتعمق في مفهوم الشبكات المحلية الافتراضية (VLAN) وكيفية تنفيذها وإدارتها.</p>
+</div>
+<div class="lesson-navigation">
+<a class="prev-lesson" href="routing.html">الدرس السابق: أساسيات التوجيه</a>
+<a class="next-lesson" href="vlan.html">الدرس التالي: الشبكات المحلية الافتراضية</a>
+</div>
+</main>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

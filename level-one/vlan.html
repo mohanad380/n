@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>الشبكات المحلية الافتراضية - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس المستوى الأول</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="ip-addressing.html">عنونة IP وتقسيم الشبكات</a></li>
+<li><a href="routing.html">أساسيات التوجيه</a></li>
+<li><a href="switching.html">أساسيات التبديل</a></li>
+<li><a class="active" href="vlan.html">الشبكات المحلية الافتراضية</a></li>
+<li><a href="wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="security.html">أساسيات أمان الشبكات</a></li>
+<li><a href="nat.html">ترجمة عناوين الشبكة</a></li>
+<li><a href="dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="dns.html">نظام أسماء النطاقات</a></li>
+<li><a href="troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="vpn.html">الشبكات الخاصة الافتراضية</a></li>
+<li><a href="monitoring.html">مراقبة الشبكات وإدارتها</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">الشبكات المحلية الافتراضية (VLAN)</h1>
+<div class="lesson-content">
+<h2>مقدمة في الشبكات المحلية الافتراضية</h2>
+<p>الشبكة المحلية الافتراضية (Virtual Local Area Network - VLAN) هي تقنية تسمح بتقسيم شبكة محلية فيزيائية واحدة إلى عدة شبكات منطقية منفصلة. تعمل كل شبكة محلية افتراضية كشبكة مستقلة، على الرغم من أنها تشترك في نفس البنية التحتية الفيزيائية.</p>
+<p>تعتبر تقنية VLAN من التقنيات الأساسية في شبكات المؤسسات الحديثة، حيث توفر مرونة في تصميم الشبكة وتحسن الأداء والأمان وتسهل الإدارة.</p>
+<img alt="مفهوم الشبكات المحلية الافتراضية" src="../images/vlan_concept_illustration.gif"/>
+<h2>فوائد الشبكات المحلية الافتراضية</h2>
+<p>توفر تقنية VLAN العديد من الفوائد للشبكات المحلية:</p>
+<h3>1. تحسين الأداء</h3>
+<ul>
+<li><strong>تقليل نطاق البث (Broadcast Domain):</strong> تقسيم الشبكة إلى نطاقات بث أصغر يقلل من حركة البث ويحسن الأداء.</li>
+<li><strong>تقليل الازدحام:</strong> فصل حركة البيانات المختلفة يقلل من الازدحام ويحسن استخدام عرض النطاق الترددي.</li>
+</ul>
+<h3>2. تعزيز الأمان</h3>
+<ul>
+<li><strong>عزل حركة البيانات:</strong> فصل الأجهزة في شبكات مختلفة يمنع الوصول غير المصرح به.</li>
+<li><strong>تقسيم الشبكة حسب المستخدمين أو التطبيقات:</strong> يمكن وضع الأجهزة ذات المتطلبات الأمنية المماثلة في نفس الشبكة المحلية الافتراضية.</li>
+</ul>
+<h3>3. تسهيل الإدارة</h3>
+<ul>
+<li><strong>تنظيم منطقي للشبكة:</strong> تجميع الأجهزة المتشابهة في نفس الشبكة المحلية الافتراضية بغض النظر عن موقعها الفيزيائي.</li>
+<li><strong>تبسيط إدارة الشبكة:</strong> تسهيل تطبيق السياسات وإدارة الموارد لمجموعات محددة من الأجهزة.</li>
+</ul>
+<h3>4. تقليل التكاليف</h3>
+<ul>
+<li><strong>تقليل الحاجة إلى أجهزة إضافية:</strong> يمكن استخدام البنية التحتية الحالية لإنشاء شبكات منطقية متعددة.</li>
+<li><strong>تبسيط توسيع الشبكة:</strong> يمكن إضافة أجهزة جديدة إلى الشبكات المحلية الافتراضية المناسبة دون الحاجة إلى تغييرات فيزيائية كبيرة.</li>
+</ul>
+<h2>كيف تعمل الشبكات المحلية الافتراضية</h2>
+<p>تعمل الشبكات المحلية الافتراضية من خلال إضافة علامة (Tag) إلى إطارات البيانات (Frames) لتحديد الشبكة المحلية الافتراضية التي تنتمي إليها. يتم تنفيذ هذه العملية وفقًا لمعيار IEEE 802.1Q.</p>
+<h3>معيار IEEE 802.1Q</h3>
+<p>معيار IEEE 802.1Q (يسمى أيضًا Dot1q) هو المعيار الأكثر استخدامًا لتنفيذ الشبكات المحلية الافتراضية. يعمل من خلال إدخال حقل إضافي بطول 4 بايت في رأس إطار Ethernet، يحتوي على معرف الشبكة المحلية الافتراضية (VLAN ID).</p>
+<p>يتكون حقل 802.1Q من:</p>
+<ul>
+<li><strong>معرف بروتوكول الإطار (TPID):</strong> 2 بايت، قيمته 0x8100 للإشارة إلى أن الإطار يحتوي على علامة VLAN.</li>
+<li><strong>معلومات التحكم (TCI):</strong> 2 بايت، تتضمن:
+                        <ul>
+<li><strong>أولوية المستخدم (Priority):</strong> 3 بت، تستخدم لتحديد أولوية الإطار (QoS).</li>
+<li><strong>مؤشر التنسيق القانوني (CFI):</strong> 1 بت، يشير إلى ما إذا كان الإطار يحتوي على عنوان MAC بتنسيق قانوني.</li>
+<li><strong>معرف VLAN (VID):</strong> 12 بت، يحدد الشبكة المحلية الافتراضية التي ينتمي إليها الإطار (0-4095).</li>
+</ul>
+</li>
+</ul>
+<img alt="إطار 802.1Q" src="images/placeholder.svg"/>
+<h3>عملية التبديل في الشبكات المحلية الافتراضية</h3>
+<p>عندما يستلم السويتش إطارًا، يتبع الخطوات التالية:</p>
+<ol>
+<li>يتحقق مما إذا كان الإطار يحتوي على علامة VLAN.</li>
+<li>إذا كان الإطار غير معلم، يضيف علامة VLAN بناءً على تكوين المنفذ الذي استلم منه الإطار.</li>
+<li>يتخذ قرار التبديل بناءً على عنوان MAC للوجهة ومعرف VLAN.</li>
+<li>يرسل الإطار إلى المنفذ المناسب، مع إزالة العلامة إذا كان المنفذ مكونًا كمنفذ وصول.</li>
+</ol>
+<h2>أنواع منافذ VLAN</h2>
+<p>هناك نوعان رئيسيان من منافذ VLAN:</p>
+<h3>1. منفذ الوصول (Access Port)</h3>
+<p>منفذ الوصول هو منفذ ينتمي إلى شبكة محلية افتراضية واحدة فقط. عادة ما يتم توصيل الأجهزة النهائية (مثل أجهزة الكمبيوتر والطابعات) بمنافذ الوصول.</p>
+<h4>خصائص منفذ الوصول:</h4>
+<ul>
+<li>ينتمي إلى شبكة محلية افتراضية واحدة فقط.</li>
+<li>يستقبل إطارات غير معلمة ويضيف علامة VLAN داخليًا.</li>
+<li>يزيل علامة VLAN قبل إرسال الإطارات إلى الجهاز المتصل.</li>
+</ul>
+<h3>2. منفذ الجذع (Trunk Port)</h3>
+<p>منفذ الجذع هو منفذ يمكنه نقل حركة البيانات لعدة شبكات محلية افتراضية. عادة ما يتم استخدام منافذ الجذع للاتصال بين السويتشات أو بين السويتش والموجه.</p>
+<h4>خصائص منفذ الجذع:</h4>
+<ul>
+<li>يمكنه نقل حركة البيانات لعدة شبكات محلية افتراضية.</li>
+<li>يحتفظ بعلامات VLAN عند إرسال الإطارات.</li>
+<li>يمكن تكوينه للسماح بشبكات محلية افتراضية محددة فقط.</li>
+</ul>
+<h3>3. منفذ الوضع الهجين (Hybrid Port)</h3>
+<p>منفذ الوضع الهجين هو منفذ يجمع بين خصائص منفذ الوصول ومنفذ الجذع. يمكنه نقل حركة البيانات لعدة شبكات محلية افتراضية، مع إمكانية تكوين سلوك العلامات لكل شبكة محلية افتراضية.</p>
+<h4>خصائص منفذ الوضع الهجين:</h4>
+<ul>
+<li>يمكنه نقل حركة البيانات لعدة شبكات محلية افتراضية.</li>
+<li>يمكن تكوينه لإزالة علامات VLAN لبعض الشبكات المحلية الافتراضية والاحتفاظ بها للبعض الآخر.</li>
+<li>يوفر مرونة أكبر في تكوين السلوك لكل شبكة محلية افتراضية.</li>
+</ul>
+<img alt="أنواع منافذ VLAN" src="../images/vlan_port_types_illustration.jpeg"/>
+<h2>أنواع الشبكات المحلية الافتراضية</h2>
+<p>يمكن تصنيف الشبكات المحلية الافتراضية بعدة طرق:</p>
+<h3>1. حسب الغرض</h3>
+<ul>
+<li><strong>VLAN للبيانات (Data VLAN):</strong> تستخدم لفصل حركة بيانات المستخدمين.</li>
+<li><strong>VLAN للإدارة (Management VLAN):</strong> تستخدم لإدارة أجهزة الشبكة.</li>
+<li><strong>VLAN للصوت (Voice VLAN):</strong> تستخدم لحركة الصوت (VoIP).</li>
+<li><strong>VLAN الافتراضية (Default VLAN):</strong> الشبكة المحلية الافتراضية التي تنتمي إليها جميع المنافذ عند التكوين الأولي (عادة VLAN 1).</li>
+<li><strong>VLAN الأصلية (Native VLAN):</strong> الشبكة المحلية الافتراضية التي لا يتم وضع علامة على إطاراتها في منافذ الجذع.</li>
+</ul>
+<h3>2. حسب النطاق</h3>
+<ul>
+<li><strong>VLAN محلية (Local VLAN):</strong> تقتصر على سويتش واحد.</li>
+<li><strong>VLAN موزعة (Distributed VLAN):</strong> تمتد عبر عدة سويتشات.</li>
+<li><strong>VLAN على مستوى المؤسسة (Enterprise VLAN):</strong> تمتد عبر الشبكة بأكملها.</li>
+</ul>
+<h3>3. حسب طريقة التعيين</h3>
+<ul>
+<li><strong>VLAN المنفذ (Port-Based VLAN):</strong> يتم تعيين المنافذ إلى شبكات محلية افتراضية محددة.</li>
+<li><strong>VLAN العنوان MAC (MAC-Based VLAN):</strong> يتم تعيين الأجهزة إلى شبكات محلية افتراضية بناءً على عناوين MAC الخاصة بها.</li>
+<li><strong>VLAN البروتوكول (Protocol-Based VLAN):</strong> يتم تعيين الإطارات إلى شبكات محلية افتراضية بناءً على نوع البروتوكول.</li>
+<li><strong>VLAN المصادقة (Authentication-Based VLAN):</strong> يتم تعيين المستخدمين إلى شبكات محلية افتراضية بناءً على هويتهم.</li>
+</ul>
+<h2>تكوين الشبكات المحلية الافتراضية</h2>
+<p>فيما يلي الخطوات الأساسية لتكوين الشبكات المحلية الافتراضية على سويتش سيسكو:</p>
+<h3>1. إنشاء الشبكات المحلية الافتراضية</h3>
+<pre>
+Switch(config)# vlan 10                  // إنشاء VLAN 10
+Switch(config-vlan)# name Marketing      // تسمية VLAN 10 باسم "Marketing"
+Switch(config-vlan)# exit                // الخروج من وضع تكوين VLAN
+Switch(config)# vlan 20                  // إنشاء VLAN 20
+Switch(config-vlan)# name Engineering    // تسمية VLAN 20 باسم "Engineering"
+Switch(config-vlan)# exit                // الخروج من وضع تكوين VLAN
+                </pre>
+<h3>2. تكوين منافذ الوصول</h3>
+<pre>
+Switch(config)# interface fastethernet 0/1                // الدخول إلى وضع تكوين المنفذ
+Switch(config-if)# switchport mode access                 // تعيين المنفذ كمنفذ وصول
+Switch(config-if)# switchport access vlan 10              // تعيين المنفذ إلى VLAN 10
+Switch(config-if)# exit                                   // الخروج من وضع تكوين المنفذ
+Switch(config)# interface fastethernet 0/2                // الدخول إلى وضع تكوين المنفذ
+Switch(config-if)# switchport mode access                 // تعيين المنفذ كمنفذ وصول
+Switch(config-if)# switchport access vlan 20              // تعيين المنفذ إلى VLAN 20
+Switch(config-if)# exit                                   // الخروج من وضع تكوين المنفذ
+                </pre>
+<h3>3. تكوين منافذ الجذع</h3>
+<pre>
+Switch(config)# interface fastethernet 0/24               // الدخول إلى وضع تكوين المنفذ
+Switch(config-if)# switchport mode trunk                  // تعيين المنفذ كمنفذ جذع
+Switch(config-if)# switchport trunk allowed vlan 10,20    // السماح بمرور VLAN 10 و 20 فقط
+Switch(config-if)# switchport trunk native vlan 99         // تعيين VLAN 99 كـ VLAN أصلية
+Switch(config-if)# exit                                   // الخروج من وضع تكوين المنفذ
+                </pre>
+<h3>4. التحقق من تكوين VLAN</h3>
+<pre>
+Switch# show vlan                    // عرض معلومات عن جميع الشبكات المحلية الافتراضية
+Switch# show vlan brief              // عرض ملخص للشبكات المحلية الافتراضية
+Switch# show interfaces trunk        // عرض معلومات عن منافذ الجذع
+Switch# show interfaces fastethernet 0/1 switchport  // عرض معلومات VLAN لمنفذ محدد
+                </pre>
+<h2>التوجيه بين الشبكات المحلية الافتراضية</h2>
+<p>الشبكات المحلية الافتراضية المختلفة لا يمكنها التواصل مع بعضها البعض بشكل مباشر، حيث تعمل كشبكات منفصلة. للسماح بالتواصل بين الشبكات المحلية الافتراضية، يجب استخدام جهاز من الطبقة الثالثة (مثل الموجه) لتوجيه حركة البيانات بينها.</p>
+<p>هناك ثلاث طرق رئيسية للتوجيه بين الشبكات المحلية الافتراضية:</p>
+<h3>1. التوجيه التقليدي (Traditional Inter-VLAN Routing)</h3>
+<p>في هذه الطريقة، يتم توصيل كل شبكة محلية افتراضية بواجهة فيزيائية منفصلة على الموجه. تعتبر هذه الطريقة بسيطة ولكنها غير فعالة من حيث استخدام الموارد، حيث تتطلب واجهة فيزيائية لكل شبكة محلية افتراضية.</p>
+<h4>مثال على التكوين:</h4>
+<pre>
+// تكوين السويتش
+Switch(config)# interface fastethernet 0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10
+Switch(config-if)# exit
+Switch(config)# interface fastethernet 0/2
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 20
+Switch(config-if)# exit
+
+// تكوين الموجه
+Router(config)# interface fastethernet 0/0
+Router(config-if)# ip address 192.168.10.1 255.255.255.0
+Router(config-if)# no shutdown
+Router(config-if)# exit
+Router(config)# interface fastethernet 0/1
+Router(config-if)# ip address 192.168.20.1 255.255.255.0
+Router(config-if)# no shutdown
+                </pre>
+<h3>2. التوجيه على الوصلة (Router-on-a-Stick)</h3>
+<p>في هذه الطريقة، يتم استخدام واجهة فيزيائية واحدة على الموجه مع تقسيمها إلى واجهات فرعية (Subinterfaces) لكل شبكة محلية افتراضية. يتم توصيل هذه الواجهة بمنفذ جذع على السويتش.</p>
+<h4>مثال على التكوين:</h4>
+<pre>
+// تكوين السويتش
+Switch(config)# interface fastethernet 0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10
+Switch(config-if)# exit
+Switch(config)# interface fastethernet 0/2
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 20
+Switch(config-if)# exit
+Switch(config)# interface fastethernet 0/24
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk allowed vlan 10,20
+Switch(config-if)# exit
+
+// تكوين الموجه
+Router(config)# interface fastethernet 0/0
+Router(config-if)# no shutdown
+Router(config-if)# exit
+Router(config)# interface fastethernet 0/0.10
+Router(config-subif)# encapsulation dot1q 10
+Router(config-subif)# ip address 192.168.10.1 255.255.255.0
+Router(config-subif)# exit
+Router(config)# interface fastethernet 0/0.20
+Router(config-subif)# encapsulation dot1q 20
+Router(config-subif)# ip address 192.168.20.1 255.255.255.0
+                </pre>
+<h3>3. التوجيه بين الشبكات المحلية الافتراضية على مستوى الطبقة الثالثة (Layer 3 Switching)</h3>
+<p>في هذه الطريقة، يتم استخدام سويتش من الطبقة الثالثة (Layer 3 Switch) الذي يمكنه أداء وظائف التوجيه والتبديل. هذه الطريقة هي الأكثر كفاءة وأداءً، حيث يتم تنفيذ التوجيه بين الشبكات المحلية الافتراضية في الأجهزة.</p>
+<h4>مثال على التكوين:</h4>
+<pre>
+// تكوين السويتش من الطبقة الثالثة
+Switch(config)# vlan 10
+Switch(config-vlan)# name Marketing
+Switch(config-vlan)# exit
+Switch(config)# vlan 20
+Switch(config-vlan)# name Engineering
+Switch(config-vlan)# exit
+Switch(config)# interface vlan 10
+Switch(config-if)# ip address 192.168.10.1 255.255.255.0
+Switch(config-if)# no shutdown
+Switch(config-if)# exit
+Switch(config)# interface vlan 20
+Switch(config-if)# ip address 192.168.20.1 255.255.255.0
+Switch(config-if)# no shutdown
+Switch(config-if)# exit
+Switch(config)# ip routing
+                </pre>
+<img alt="التوجيه بين الشبكات المحلية الافتراضية" src="images/placeholder.svg"/>
+<h2>بروتوكول VLAN Trunking Protocol (VTP)</h2>
+<p>بروتوكول VTP هو بروتوكول خاص بشركة سيسكو يستخدم لإدارة الشبكات المحلية الافتراضية في شبكة متعددة السويتشات. يسمح VTP بإنشاء وحذف وتعديل الشبكات المحلية الافتراضية على سويتش واحد (VTP Server)، ثم نشر هذه التغييرات تلقائيًا إلى جميع السويتشات الأخرى في نفس مجال VTP.</p>
+<h3>أوضاع VTP</h3>
+<ul>
+<li><strong>وضع الخادم (Server Mode):</strong> يمكن إنشاء وحذف وتعديل الشبكات المحلية الافتراضية، ونشر هذه التغييرات إلى السويتشات الأخرى.</li>
+<li><strong>وضع العميل (Client Mode):</strong> لا يمكن إنشاء أو حذف أو تعديل الشبكات المحلية الافتراضية، ولكن يمكن استقبال وتطبيق التغييرات من الخادم.</li>
+<li><strong>وضع شفاف (Transparent Mode):</strong> لا يشارك في عملية VTP، ولكنه يمرر إعلانات VTP إلى السويتشات الأخرى.</li>
+</ul>
+<h3>تكوين VTP</h3>
+<pre>
+// تكوين VTP على سويتش الخادم
+Switch(config)# vtp mode server
+Switch(config)# vtp domain MyDomain
+Switch(config)# vtp password MyPassword
+
+// تكوين VTP على سويتش العميل
+Switch(config)# vtp mode client
+Switch(config)# vtp domain MyDomain
+Switch(config)# vtp password MyPassword
+                </pre>
+<h3>التحقق من تكوين VTP</h3>
+<pre>
+Switch# show vtp status
+Switch# show vtp password
+                </pre>
+<h2>تطبيقات عملية للشبكات المحلية الافتراضية</h2>
+<h3>1. تقسيم الشبكة حسب الأقسام</h3>
+<p>لنفترض أن لدينا شركة بها أربعة أقسام: الإدارة، التسويق، الهندسة، والموارد البشرية. يمكننا إنشاء شبكة محلية افتراضية لكل قسم:</p>
+<pre>
+Switch(config)# vlan 10
+Switch(config-vlan)# name Management
+Switch(config-vlan)# exit
+Switch(config)# vlan 20
+Switch(config-vlan)# name Marketing
+Switch(config-vlan)# exit
+Switch(config)# vlan 30
+Switch(config-vlan)# name Engineering
+Switch(config-vlan)# exit
+Switch(config)# vlan 40
+Switch(config-vlan)# name HR
+Switch(config-vlan)# exit
+
+// تعيين المنافذ إلى الشبكات المحلية الافتراضية المناسبة
+Switch(config)# interface range fastethernet 0/1-5
+Switch(config-if-range)# switchport mode access
+Switch(config-if-range)# switchport access vlan 10
+Switch(config-if-range)# exit
+Switch(config)# interface range fastethernet 0/6-10
+Switch(config-if-range)# switchport mode access
+Switch(config-if-range)# switchport access vlan 20
+Switch(config-if-range)# exit
+Switch(config)# interface range fastethernet 0/11-15
+Switch(config-if-range)# switchport mode access
+Switch(config-if-range)# switchport access vlan 30
+Switch(config-if-range)# exit
+Switch(config)# interface range fastethernet 0/16-20
+Switch(config-if-range)# switchport mode access
+Switch(config-if-range)# switchport access vlan 40
+                </pre>
+<h3>2. تكوين VLAN للصوت</h3>
+<p>لنفترض أن لدينا هواتف IP متصلة بنفس المنافذ التي تتصل بها أجهزة الكمبيوتر. يمكننا تكوين VLAN للصوت لفصل حركة الصوت عن حركة البيانات:</p>
+<pre>
+Switch(config)# vlan 100
+Switch(config-vlan)# name Voice
+Switch(config-vlan)# exit
+Switch(config)# interface fastethernet 0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 20
+Switch(config-if)# switchport voice vlan 100
+                </pre>
+<h3>3. تكوين التوجيه بين الشبكات المحلية الافتراضية</h3>
+<p>لنفترض أننا نريد السماح بالتواصل بين VLAN 10 (الإدارة) و VLAN 20 (التسويق)، ولكن نريد عزل VLAN 30 (الهندسة) و VLAN 40 (الموارد البشرية). يمكننا استخدام التوجيه على الوصلة:</p>
+<pre>
+// تكوين السويتش
+Switch(config)# interface fastethernet 0/24
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk allowed vlan 10,20,30,40
+Switch(config-if)# exit
+
+// تكوين الموجه
+Router(config)# interface fastethernet 0/0
+Router(config-if)# no shutdown
+Router(config-if)# exit
+Router(config)# interface fastethernet 0/0.10
+Router(config-subif)# encapsulation dot1q 10
+Router(config-subif)# ip address 192.168.10.1 255.255.255.0
+Router(config-subif)# exit
+Router(config)# interface fastethernet 0/0.20
+Router(config-subif)# encapsulation dot1q 20
+Router(config-subif)# ip address 192.168.20.1 255.255.255.0
+Router(config-subif)# exit
+Router(config)# interface fastethernet 0/0.30
+Router(config-subif)# encapsulation dot1q 30
+Router(config-subif)# ip address 192.168.30.1 255.255.255.0
+Router(config-subif)# exit
+Router(config)# interface fastethernet 0/0.40
+Router(config-subif)# encapsulation dot1q 40
+Router(config-subif)# ip address 192.168.40.1 255.255.255.0
+Router(config-subif)# exit
+
+// تكوين قوائم التحكم بالوصول (ACL) للسماح بالتواصل بين VLAN 10 و VLAN 20 فقط
+Router(config)# access-list 101 permit ip 192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255
+Router(config)# access-list 101 permit ip 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255
+Router(config)# access-list 101 deny ip any any
+Router(config)# interface fastethernet 0/0.10
+Router(config-subif)# ip access-group 101 in
+Router(config-subif)# exit
+Router(config)# interface fastethernet 0/0.20
+Router(config-subif)# ip access-group 101 in
+                </pre>
+<h2>استكشاف أخطاء الشبكات المحلية الافتراضية وإصلاحها</h2>
+<p>فيما يلي بعض المشكلات الشائعة في الشبكات المحلية الافتراضية وكيفية استكشافها وإصلاحها:</p>
+<h3>1. مشكلات الاتصال داخل نفس الشبكة المحلية الافتراضية</h3>
+<ul>
+<li><strong>المشكلة:</strong> عدم القدرة على الاتصال بين الأجهزة في نفس الشبكة المحلية الافتراضية.</li>
+<li><strong>الأسباب المحتملة:</strong> تكوين غير صحيح للمنافذ، عدم تمكين الشبكة المحلية الافتراضية، مشكلات في الكابلات.</li>
+<li><strong>الحل:</strong>
+<ul>
+<li>التحقق من تكوين المنافذ باستخدام الأمر <code>show interfaces switchport</code>.</li>
+<li>التحقق من حالة الشبكة المحلية الافتراضية باستخدام الأمر <code>show vlan</code>.</li>
+<li>التحقق من حالة المنافذ باستخدام الأمر <code>show interfaces status</code>.</li>
+</ul>
+</li>
+</ul>
+<h3>2. مشكلات الاتصال بين الشبكات المحلية الافتراضية</h3>
+<ul>
+<li><strong>المشكلة:</strong> عدم القدرة على الاتصال بين الأجهزة في شبكات محلية افتراضية مختلفة.</li>
+<li><strong>الأسباب المحتملة:</strong> عدم تكوين التوجيه بين الشبكات المحلية الافتراضية، مشكلات في تكوين الموجه، قوائم التحكم بالوصول.</li>
+<li><strong>الحل:</strong>
+<ul>
+<li>التحقق من تكوين التوجيه بين الشبكات المحلية الافتراضية.</li>
+<li>التحقق من جداول التوجيه باستخدام الأمر <code>show ip route</code>.</li>
+<li>التحقق من قوائم التحكم بالوصول باستخدام الأمر <code>show access-lists</code>.</li>
+<li>استخدام الأمر <code>ping</code> لاختبار الاتصال بين الشبكات المحلية الافتراضية.</li>
+</ul>
+</li>
+</ul>
+<h3>3. مشكلات منافذ الجذع</h3>
+<ul>
+<li><strong>المشكلة:</strong> عدم نقل حركة البيانات عبر منافذ الجذع.</li>
+<li><strong>الأسباب المحتملة:</strong> عدم تطابق وضع المنفذ، عدم تطابق الشبكات المحلية الافتراضية المسموح بها، عدم تطابق الشبكة المحلية الافتراضية الأصلية.</li>
+<li><strong>الحل:</strong>
+<ul>
+<li>التحقق من تكوين منافذ الجذع باستخدام الأمر <code>show interfaces trunk</code>.</li>
+<li>التأكد من أن وضع المنفذ هو "trunk" على كلا طرفي الاتصال.</li>
+<li>التأكد من أن الشبكات المحلية الافتراضية المسموح بها متطابقة على كلا طرفي الاتصال.</li>
+<li>التأكد من أن الشبكة المحلية الافتراضية الأصلية متطابقة على كلا طرفي الاتصال.</li>
+</ul>
+</li>
+</ul>
+<h3>4. مشكلات VTP</h3>
+<ul>
+<li><strong>المشكلة:</strong> عدم نشر الشبكات المحلية الافتراضية عبر السويتشات.</li>
+<li><strong>الأسباب المحتملة:</strong> عدم تطابق مجال VTP، عدم تطابق كلمة مرور VTP، عدم تطابق رقم المراجعة.</li>
+<li><strong>الحل:</strong>
+<ul>
+<li>التحقق من تكوين VTP باستخدام الأمر <code>show vtp status</code>.</li>
+<li>التأكد من أن مجال VTP متطابق على جميع السويتشات.</li>
+<li>التأكد من أن كلمة مرور VTP متطابقة على جميع السويتشات.</li>
+<li>إذا كان رقم المراجعة على سويتش العميل أعلى من رقم المراجعة على سويتش الخادم، قم بإعادة تعيين رقم المراجعة على سويتش العميل.</li>
+</ul>
+</li>
+</ul>
+<h2>أفضل الممارسات للشبكات المحلية الافتراضية</h2>
+<p>فيما يلي بعض أفضل الممارسات التي يجب اتباعها عند تصميم وتنفيذ وإدارة الشبكات المحلية الافتراضية:</p>
+<h3>1. تصميم الشبكات المحلية الافتراضية</h3>
+<ul>
+<li>تقسيم الشبكة إلى شبكات محلية افتراضية منطقية بناءً على الوظيفة أو القسم أو الموقع.</li>
+<li>الحد من حجم نطاق البث لتحسين الأداء.</li>
+<li>استخدام أرقام VLAN ذات معنى لتسهيل الإدارة.</li>
+<li>توثيق تصميم الشبكات المحلية الافتراضية وتخصيص عناوين IP.</li>
+</ul>
+<h3>2. الأمان</h3>
+<ul>
+<li>تغيير الشبكة المحلية الافتراضية الافتراضية (VLAN 1) لوظائف الإدارة فقط.</li>
+<li>تعطيل VLAN 1 على منافذ الجذع غير المستخدمة.</li>
+<li>استخدام VLAN منفصلة للإدارة.</li>
+<li>تقييد الشبكات المحلية الافتراضية المسموح بها على منافذ الجذع.</li>
+<li>استخدام VLAN الأصلية غير المستخدمة على منافذ الجذع.</li>
+</ul>
+<h3>3. التوجيه بين الشبكات المحلية الافتراضية</h3>
+<ul>
+<li>استخدام التوجيه على مستوى الطبقة الثالثة عندما يكون ذلك ممكنًا للحصول على أداء أفضل.</li>
+<li>استخدام قوائم التحكم بالوصول لتقييد التواصل بين الشبكات المحلية الافتراضية.</li>
+<li>تنفيذ سياسات أمان متسقة عبر جميع الشبكات المحلية الافتراضية.</li>
+</ul>
+<h3>4. إدارة VTP</h3>
+<ul>
+<li>استخدام وضع VTP الشفاف في البيئات الصغيرة أو عندما تكون الإدارة المركزية غير ضرورية.</li>
+<li>استخدام كلمة مرور قوية لمجال VTP.</li>
+<li>التحقق من رقم مراجعة VTP قبل إضافة سويتش جديد إلى الشبكة.</li>
+<li>توثيق تكوين VTP وتغييراته.</li>
+</ul>
+<h2>خلاصة</h2>
+<p>الشبكات المحلية الافتراضية هي تقنية أساسية في شبكات المؤسسات الحديثة، توفر مرونة في تصميم الشبكة وتحسن الأداء والأمان وتسهل الإدارة. فهم مبادئ الشبكات المحلية الافتراضية وكيفية تنفيذها وإدارتها يساعدك على تصميم وتنفيذ شبكات فعالة وآمنة.</p>
+<p>في هذا الدرس، تعلمنا:</p>
+<ul>
+<li>مفهوم الشبكات المحلية الافتراضية وفوائدها.</li>
+<li>كيفية عمل الشبكات المحلية الافتراضية ومعيار IEEE 802.1Q.</li>
+<li>أنواع منافذ VLAN (الوصول، الجذع، الهجين).</li>
+<li>أنواع الشبكات المحلية الافتراضية وتصنيفاتها.</li>
+<li>تكوين الشبكات المحلية الافتراضية على سويتشات سيسكو.</li>
+<li>التوجيه بين الشبكات المحلية الافتراضية.</li>
+<li>بروتوكول VTP وكيفية استخدامه.</li>
+<li>تطبيقات عملية للشبكات المحلية الافتراضية.</li>
+<li>استكشاف أخطاء الشبكات المحلية الافتراضية وإصلاحها.</li>
+<li>أفضل الممارسات للشبكات المحلية الافتراضية.</li>
+</ul>
+<p>في الدرس القادم، سنتعمق في مفهوم الشبكات اللاسلكية وكيفية تنفيذها وإدارتها وتأمينها.</p>
+</div>
+<div class="lesson-navigation">
+<a class="prev-lesson" href="switching.html">الدرس السابق: أساسيات التبديل</a>
+<a class="next-lesson" href="wireless.html">الدرس التالي: الشبكات اللاسلكية</a>
+</div>
+</main>
+</div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>أمن الشبكات المتقدم - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<button aria-label="Toggle sidebar" class="sidebar-toggle"><i class="fas fa-list"></i></button>
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس المستوى الثاني</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="mikrotik-intro.html">مقدمة في أجهزة وأنظمة مايكروتك</a></li>
+<li><a href="mikrotik-setup.html">تركيب وإعداد أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-config.html">برمجة وتكوين أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-routing.html">التوجيه المتقدم في مايكروتك</a></li>
+<li><a href="mikrotik-wireless.html">تكوين الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="mikrotik-vpn.html">تكوين VPN في مايكروتك</a></li>
+<li><a class="active" href="advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="cloud-networking.html">الحوسبة السحابية وتقنيات الشبكات الحديثة</a></li>
+<li><a href="iot-networking.html">شبكات إنترنت الأشياء (IoT)</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">أمن الشبكات المتقدم</h1>
+<div class="lesson-content">
+<div class="lesson-section">
+<h2>مقدمة في أمن الشبكات المتقدم</h2>
+<p>أمن الشبكات المتقدم هو مجموعة من التقنيات والإجراءات والسياسات المصممة لحماية سلامة وسرية وتوافر البيانات والأنظمة في بيئات الشبكات المعقدة. مع تزايد التهديدات السيبرانية وتطورها، أصبح من الضروري تبني استراتيجيات أمنية متقدمة تتجاوز الحلول التقليدية مثل جدران الحماية وبرامج مكافحة الفيروسات.</p>
+<p>في هذا الدرس، سنتعمق في استراتيجيات وتقنيات أمن الشبكات المتقدمة التي تساعد المؤسسات على حماية بنيتها التحتية من التهديدات المتطورة والمستمرة.</p>
+<div class="lesson-image">
+<img alt="رسم توضيحي لأمن الشبكات المتقدم" src="images/placeholder.svg"/>
+<p class="image-caption">مفهوم أمن الشبكات المتقدم والحماية متعددة الطبقات</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تطور التهديدات السيبرانية</h2>
+<p>لفهم أهمية أمن الشبكات المتقدم، من المهم أولاً فهم كيفية تطور التهديدات السيبرانية:</p>
+<h3>1. التهديدات التقليدية</h3>
+<ul>
+<li><strong>الفيروسات والبرمجيات الخبيثة</strong>: برامج ضارة مصممة لإلحاق الضرر بالأنظمة</li>
+<li><strong>هجمات التصيد</strong>: محاولات خداع المستخدمين للكشف عن معلومات حساسة</li>
+<li><strong>هجمات حجب الخدمة (DoS)</strong>: هجمات تهدف إلى تعطيل الخدمات</li>
+<li><strong>الاختراقات البسيطة</strong>: استغلال نقاط الضعف المعروفة</li>
+</ul>
+<h3>2. التهديدات المتقدمة المستمرة (APTs)</h3>
+<p>التهديدات المتقدمة المستمرة هي هجمات معقدة ومستهدفة تستمر لفترات طويلة:</p>
+<ul>
+<li><strong>الاستهداف المحدد</strong>: استهداف منظمات أو قطاعات محددة</li>
+<li><strong>التخفي والاستمرارية</strong>: القدرة على التخفي والبقاء في الأنظمة لفترات طويلة</li>
+<li><strong>التقنيات المتطورة</strong>: استخدام تقنيات متطورة للتسلل والتحكم</li>
+<li><strong>الدعم المؤسسي</strong>: غالبًا ما تكون مدعومة من دول أو منظمات كبيرة</li>
+</ul>
+<h3>3. تهديدات الذكاء الاصطناعي والتعلم الآلي</h3>
+<p>مع تطور تقنيات الذكاء الاصطناعي، ظهرت تهديدات جديدة:</p>
+<ul>
+<li><strong>هجمات التعلم الآلي المضادة</strong>: تقنيات لخداع أنظمة التعلم الآلي</li>
+<li><strong>الهجمات المؤتمتة</strong>: استخدام الذكاء الاصطناعي لأتمتة الهجمات وتحسينها</li>
+<li><strong>التزييف العميق (Deepfakes)</strong>: استخدام الذكاء الاصطناعي لإنشاء محتوى مزيف مقنع</li>
+</ul>
+<div class="lesson-image">
+<img alt="تطور التهديدات السيبرانية" src="../images/cyber_threats_evolution_replacement.png"/>
+<p class="image-caption">تطور التهديدات السيبرانية عبر الزمن</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>استراتيجيات أمن الشبكات المتقدمة</h2>
+<h3>1. نموذج الدفاع متعدد الطبقات (Defense in Depth)</h3>
+<p>نموذج الدفاع متعدد الطبقات هو استراتيجية تعتمد على استخدام طبقات متعددة من الضوابط الأمنية لحماية الأصول الحساسة:</p>
+<ul>
+<li><strong>الطبقة الفيزيائية</strong>: ضوابط الوصول المادي، أنظمة المراقبة</li>
+<li><strong>طبقة المحيط</strong>: جدران الحماية، أنظمة كشف/منع التسلل</li>
+<li><strong>طبقة الشبكة</strong>: تقسيم الشبكة، التشفير، VLANs</li>
+<li><strong>طبقة المضيف</strong>: تصلب النظام، مكافحة الفيروسات، إدارة التصحيحات</li>
+<li><strong>طبقة التطبيق</strong>: أمان التطبيقات، اختبار الاختراق</li>
+<li><strong>طبقة البيانات</strong>: تشفير البيانات، إدارة الوصول</li>
+<li><strong>طبقة المستخدم</strong>: التوعية الأمنية، التدريب</li>
+</ul>
+<h3>2. نموذج الأمان Zero Trust</h3>
+<p>نموذج Zero Trust هو نهج أمني يفترض عدم وجود ثقة افتراضية، سواء داخل أو خارج حدود الشبكة:</p>
+<ul>
+<li><strong>التحقق من الهوية المستمر</strong>: التحقق من هوية المستخدمين والأجهزة باستمرار</li>
+<li><strong>الوصول الأقل امتيازًا</strong>: منح الحد الأدنى من الامتيازات اللازمة</li>
+<li><strong>التقسيم الدقيق</strong>: تقسيم الشبكة إلى أجزاء صغيرة ومعزولة</li>
+<li><strong>المراقبة المستمرة</strong>: مراقبة جميع الأنشطة للكشف عن السلوك غير العادي</li>
+<li><strong>التشفير الشامل</strong>: تشفير جميع البيانات، سواء أثناء النقل أو التخزين</li>
+</ul>
+<h3>3. الأمان القائم على السلوك</h3>
+<p>الأمان القائم على السلوك يركز على تحليل سلوك المستخدمين والأنظمة للكشف عن الأنشطة غير العادية:</p>
+<ul>
+<li><strong>تحليل سلوك المستخدم (UBA)</strong>: مراقبة وتحليل سلوك المستخدمين</li>
+<li><strong>تحليل سلوك الشبكة (NBA)</strong>: مراقبة وتحليل حركة الشبكة</li>
+<li><strong>تحليل سلوك الكيانات (EBA)</strong>: مراقبة وتحليل سلوك الكيانات مثل الخوادم والتطبيقات</li>
+<li><strong>الكشف عن الشذوذ</strong>: استخدام التعلم الآلي للكشف عن الأنماط غير العادية</li>
+</ul>
+<div class="lesson-image">
+<img alt="نموذج الأمان Zero Trust وسياسات الوصول" src="images/placeholder.svg"/>
+<p class="image-caption">مكونات نموذج الأمان Zero Trust مع التركيز على الهوية والجهاز وسياسات الوصول</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تقنيات أمن الشبكات المتقدمة</h2>
+<h3>1. أنظمة كشف ومنع التسلل المتقدمة</h3>
+<p>أنظمة كشف ومنع التسلل المتقدمة توفر حماية متطورة ضد التهديدات:</p>
+<ul>
+<li><strong>أنظمة كشف التسلل القائمة على الشبكة (NIDS)</strong>: مراقبة حركة الشبكة للكشف عن الأنشطة المشبوهة</li>
+<li><strong>أنظمة كشف التسلل القائمة على المضيف (HIDS)</strong>: مراقبة أنشطة النظام للكشف عن التغييرات غير المصرح بها</li>
+<li><strong>أنظمة منع التسلل (IPS)</strong>: منع الهجمات بشكل استباقي</li>
+<li><strong>التحليل السلوكي</strong>: استخدام التعلم الآلي لتحليل السلوك وكشف التهديدات</li>
+<li><strong>التكامل مع معلومات التهديدات</strong>: استخدام معلومات التهديدات لتحسين الكشف</li>
+</ul>
+<h3>2. جدران الحماية من الجيل التالي (NGFWs)</h3>
+<p>جدران الحماية من الجيل التالي توفر وظائف متقدمة تتجاوز جدران الحماية التقليدية:</p>
+<ul>
+<li><strong>فحص عميق للحزم (DPI)</strong>: فحص محتوى الحزم بعمق</li>
+<li><strong>التحكم في التطبيقات</strong>: التحكم في الوصول إلى التطبيقات</li>
+<li><strong>منع التسلل المدمج</strong>: وظائف IPS مدمجة</li>
+<li><strong>مكافحة البرمجيات الخبيثة</strong>: فحص البرمجيات الخبيثة في الوقت الفعلي</li>
+<li><strong>فك تشفير SSL/TLS</strong>: فحص الحركة المشفرة</li>
+<li><strong>التكامل مع معلومات التهديدات</strong>: استخدام معلومات التهديدات لتحسين الحماية</li>
+</ul>
+<h3>3. أنظمة إدارة المعلومات والأحداث الأمنية (SIEM)</h3>
+<p>أنظمة SIEM توفر رؤية شاملة للأحداث الأمنية في المؤسسة:</p>
+<ul>
+<li><strong>جمع السجلات</strong>: جمع السجلات من مصادر متعددة</li>
+<li><strong>تحليل الأحداث</strong>: تحليل الأحداث للكشف عن التهديدات</li>
+<li><strong>الارتباط</strong>: ربط الأحداث المتعلقة ببعضها البعض</li>
+<li><strong>التنبيهات</strong>: إنشاء تنبيهات للأحداث المشبوهة</li>
+<li><strong>التقارير</strong>: إنشاء تقارير عن الحالة الأمنية</li>
+<li><strong>التكامل مع التعلم الآلي</strong>: استخدام التعلم الآلي لتحسين الكشف</li>
+</ul>
+<h3>4. الاستجابة التلقائية للحوادث</h3>
+<p>الاستجابة التلقائية للحوادث تسمح بالاستجابة السريعة للتهديدات:</p>
+<ul>
+<li><strong>الكشف التلقائي</strong>: الكشف التلقائي عن التهديدات</li>
+<li><strong>التحليل التلقائي</strong>: تحليل التهديدات تلقائيًا</li>
+<li><strong>الاستجابة التلقائية</strong>: اتخاذ إجراءات تلقائية للتصدي للتهديدات</li>
+<li><strong>التعافي التلقائي</strong>: استعادة الأنظمة المتضررة تلقائيًا</li>
+<li><strong>التكامل مع أدوات الأمان الأخرى</strong>: التكامل مع أدوات مثل SIEM و EDR</li>
+</ul>
+<div class="lesson-image">
+<img alt="نظام SIEM" src="../images/siem_system_replacement.png"/>
+<p class="image-caption">مكونات نظام إدارة المعلومات والأحداث الأمنية (SIEM)</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تقسيم الشبكة المتقدم (Network Segmentation)</h2>
+<p>تقسيم الشبكة هو ممارسة تقسيم الشبكة إلى أجزاء منفصلة لتحسين الأداء والأمان:</p>
+<h3>1. أساليب تقسيم الشبكة</h3>
+<ul>
+<li><strong>التقسيم الفيزيائي</strong>: استخدام أجهزة منفصلة فيزيائيًا</li>
+<li><strong>التقسيم المنطقي</strong>: استخدام VLANs لتقسيم الشبكة منطقيًا</li>
+<li><strong>التقسيم القائم على السياسات</strong>: استخدام سياسات للتحكم في الاتصال بين الأجزاء</li>
+<li><strong>التقسيم الدقيق (Micro-segmentation)</strong>: تقسيم الشبكة إلى أجزاء صغيرة جدًا</li>
+</ul>
+<h3>2. التقسيم الدقيق (Micro-segmentation)</h3>
+<p>التقسيم الدقيق هو نهج متقدم لتقسيم الشبكة يوفر تحكمًا دقيقًا في الاتصالات:</p>
+<ul>
+<li><strong>التحكم على مستوى التطبيق</strong>: التحكم في الاتصالات على مستوى التطبيق</li>
+<li><strong>سياسات مستندة إلى الهوية</strong>: تطبيق سياسات بناءً على هوية المستخدم أو الجهاز</li>
+<li><strong>التكيف الديناميكي</strong>: تعديل السياسات ديناميكيًا بناءً على التهديدات</li>
+<li><strong>التكامل مع SDN</strong>: استخدام الشبكات المعرفة بالبرمجيات لتنفيذ التقسيم</li>
+</ul>
+<h3>3. فوائد التقسيم المتقدم</h3>
+<ul>
+<li><strong>تقليل مساحة الهجوم</strong>: تقييد انتشار التهديدات داخل الشبكة</li>
+<li><strong>حماية البيانات الحساسة</strong>: عزل البيانات الحساسة في أجزاء محمية</li>
+<li><strong>تحسين الامتثال</strong>: تلبية متطلبات الامتثال التنظيمي</li>
+<li><strong>تحسين الأداء</strong>: تقليل الازدحام وتحسين أداء الشبكة</li>
+<li><strong>تبسيط إدارة الأمان</strong>: تطبيق سياسات أمان محددة لكل جزء</li>
+</ul>
+<div class="lesson-image">
+<img alt="معمارية التقسيم الدقيق للشبكة" src="images/placeholder.svg"/>
+<p class="image-caption">مثال على معمارية التقسيم الدقيق (Micro-segmentation) للشبكة</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>التشفير المتقدم وإدارة المفاتيح</h2>
+<p>التشفير هو عملية تحويل المعلومات إلى شكل غير مفهوم لمنع الوصول غير المصرح به:</p>
+<h3>1. تقنيات التشفير المتقدمة</h3>
+<ul>
+<li><strong>التشفير المتماثل</strong>: استخدام مفتاح واحد للتشفير وفك التشفير (AES, 3DES)</li>
+<li><strong>التشفير غير المتماثل</strong>: استخدام زوج من المفاتيح (RSA, ECC)</li>
+<li><strong>التشفير الهجين</strong>: الجمع بين التشفير المتماثل وغير المتماثل</li>
+<li><strong>التشفير من طرف إلى طرف (E2EE)</strong>: تشفير البيانات من المصدر إلى الوجهة</li>
+<li><strong>التشفير المتجانس (Homomorphic Encryption)</strong>: إجراء عمليات على البيانات المشفرة</li>
+<li><strong>التشفير ما بعد الكمومي</strong>: تشفير مقاوم للحوسبة الكمومية</li>
+</ul>
+<h3>2. إدارة المفاتيح المتقدمة</h3>
+<p>إدارة المفاتيح هي عملية إنشاء وتخزين وتوزيع واستبدال وإلغاء مفاتيح التشفير:</p>
+<ul>
+<li><strong>البنية التحتية للمفاتيح العامة (PKI)</strong>: نظام لإدارة الشهادات والمفاتيح العامة</li>
+<li><strong>وحدات أمان الأجهزة (HSMs)</strong>: أجهزة متخصصة لتخزين وإدارة المفاتيح</li>
+<li><strong>تدوير المفاتيح التلقائي</strong>: تغيير المفاتيح تلقائيًا بشكل دوري</li>
+<li><strong>استرداد المفاتيح</strong>: آليات لاسترداد المفاتيح المفقودة</li>
+<li><strong>تقسيم المعرفة</strong>: تقسيم المفاتيح بين عدة أشخاص</li>
+</ul>
+<h3>3. تطبيقات التشفير في الشبكات</h3>
+<ul>
+<li><strong>تشفير طبقة النقل (TLS/SSL)</strong>: تأمين الاتصالات عبر الإنترنت</li>
+<li><strong>الشبكات الافتراضية الخاصة (VPN)</strong>: تأمين الاتصالات عبر الشبكات العامة</li>
+<li><strong>تشفير الشبكات اللاسلكية</strong>: تأمين الشبكات اللاسلكية (WPA3)</li>
+<li><strong>تشفير البيانات أثناء النقل</strong>: تأمين البيانات أثناء نقلها عبر الشبكة</li>
+<li><strong>تشفير البيانات أثناء التخزين</strong>: تأمين البيانات المخزنة</li>
+</ul>
+<div class="lesson-image">
+<img alt="رسم توضيحي لإدارة المفاتيح بواسطة العميل" src="images/placeholder.svg"/>
+<p class="image-caption">مثال على إدارة المفاتيح بواسطة العميل (Customer-Managed Keys) في بيئة سحابية</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>الأمان القائم على الذكاء الاصطناعي والتعلم الآلي</h2>
+<p>الذكاء الاصطناعي والتعلم الآلي يوفران قدرات متقدمة لتحسين أمان الشبكات:</p>
+<h3>1. تطبيقات الذكاء الاصطناعي في أمان الشبكات</h3>
+<ul>
+<li><strong>الكشف عن التهديدات</strong>: استخدام التعلم الآلي للكشف عن التهديدات غير المعروفة</li>
+<li><strong>تحليل السلوك</strong>: تحليل سلوك المستخدمين والأنظمة للكشف عن الشذوذ</li>
+<li><strong>التنبؤ بالتهديدات</strong>: التنبؤ بالتهديدات المحتملة قبل حدوثها</li>
+<li><strong>الاستجابة التلقائية</strong>: اتخاذ إجراءات تلقائية للتصدي للتهديدات</li>
+<li><strong>تحليل البرمجيات الخبيثة</strong>: تحليل البرمجيات الخبيثة وتصنيفها</li>
+</ul>
+<h3>2. تقنيات التعلم الآلي في أمان الشبكات</h3>
+<ul>
+<li><strong>التعلم الخاضع للإشراف</strong>: استخدام بيانات مصنفة لتدريب النماذج</li>
+<li><strong>التعلم غير الخاضع للإشراف</strong>: اكتشاف الأنماط والشذوذ في البيانات غير المصنفة</li>
+<li><strong>التعلم المعزز</strong>: تحسين الإجراءات من خلال التجربة والخطأ</li>
+<li><strong>التعلم العميق</strong>: استخدام الشبكات العصبية العميقة لتحليل البيانات المعقدة</li>
+<li><strong>التعلم الفيدرالي</strong>: تدريب النماذج بشكل موزع مع الحفاظ على خصوصية البيانات</li>
+</ul>
+<h3>3. تحديات وقيود الأمان القائم على الذكاء الاصطناعي</h3>
+<ul>
+<li><strong>التنبيهات الكاذبة</strong>: إنشاء عدد كبير من التنبيهات الكاذبة</li>
+<li><strong>الحاجة إلى بيانات كبيرة</strong>: الحاجة إلى كميات كبيرة من البيانات للتدريب</li>
+<li><strong>الهجمات المضادة</strong>: إمكانية خداع أنظمة التعلم الآلي</li>
+<li><strong>الشفافية والتفسير</strong>: صعوبة تفسير قرارات بعض نماذج التعلم الآلي</li>
+<li><strong>التحيز</strong>: إمكانية وجود تحيز في النماذج بناءً على بيانات التدريب</li>
+</ul>
+<div class="lesson-image">
+<img alt="الأمان القائم على الذكاء الاصطناعي" src="../images/ai_cybersecurity_replacement.jpg"/>
+<p class="image-caption">استخدام الذكاء الاصطناعي والتعلم الآلي في أمان الشبكات</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>الاستجابة للحوادث والتعافي من الكوارث</h2>
+<p>الاستجابة للحوادث والتعافي من الكوارث هما عمليتان حاسمتان للتعامل مع الحوادث الأمنية والكوارث:</p>
+<h3>1. إدارة الاستجابة للحوادث</h3>
+<p>إدارة الاستجابة للحوادث هي عملية منظمة للتعامل مع الحوادث الأمنية:</p>
+<ul>
+<li><strong>التخطيط والإعداد</strong>: إعداد خطط وإجراءات للاستجابة للحوادث</li>
+<li><strong>الكشف والتحليل</strong>: اكتشاف الحوادث وتحليلها</li>
+<li><strong>الاحتواء والقضاء</strong>: احتواء الحادث والقضاء على التهديد</li>
+<li><strong>التعافي</strong>: استعادة الأنظمة والبيانات المتضررة</li>
+<li><strong>النشاط بعد الحادث</strong>: تحليل الحادث واستخلاص الدروس</li>
+</ul>
+<h3>2. فرق الاستجابة للحوادث الأمنية (CSIRT)</h3>
+<p>فرق الاستجابة للحوادث الأمنية هي فرق متخصصة في التعامل مع الحوادث الأمنية:</p>
+<ul>
+<li><strong>الهيكل التنظيمي</strong>: تنظيم الفريق وتحديد الأدوار والمسؤوليات</li>
+<li><strong>المهارات والتدريب</strong>: تطوير مهارات أعضاء الفريق وتدريبهم</li>
+<li><strong>الأدوات والتقنيات</strong>: توفير الأدوات والتقنيات اللازمة للاستجابة</li>
+<li><strong>التنسيق والتواصل</strong>: التنسيق مع الجهات الداخلية والخارجية</li>
+</ul>
+<h3>3. التعافي من الكوارث</h3>
+<p>التعافي من الكوارث هو عملية استعادة الأنظمة والبيانات بعد حدوث كارثة:</p>
+<ul>
+<li><strong>تحليل تأثير الأعمال (BIA)</strong>: تحديد العمليات الحرجة وأهداف التعافي</li>
+<li><strong>استراتيجيات التعافي</strong>: تحديد استراتيجيات التعافي المناسبة</li>
+<li><strong>النسخ الاحتياطي والاستعادة</strong>: إجراءات النسخ الاحتياطي والاستعادة</li>
+<li><strong>مواقع التعافي</strong>: إعداد مواقع بديلة للتعافي</li>
+<li><strong>اختبار خطة التعافي</strong>: اختبار خطة التعافي بانتظام</li>
+</ul>
+<div class="lesson-image">
+<img alt="سير عمل الاستجابة للحوادث باستخدام XDR" src="images/placeholder.svg"/>
+<p class="image-caption">مثال على سير عمل الاستجابة للحوادث باستخدام حلول الكشف والاستجابة الموسعة (XDR)</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>أفضل الممارسات لأمن الشبكات المتقدم</h2>
+<ul>
+<li><strong>تبني نهج شامل</strong>: تطبيق استراتيجية أمنية شاملة تغطي جميع جوانب الشبكة</li>
+<li><strong>التحديث المستمر</strong>: تحديث الأنظمة والبرامج بانتظام لسد الثغرات الأمنية</li>
+<li><strong>المراقبة المستمرة</strong>: مراقبة الشبكة باستمرار للكشف عن التهديدات</li>
+<li><strong>التقييم الدوري</strong>: إجراء تقييمات أمنية دورية واختبارات اختراق</li>
+<li><strong>التوعية والتدريب</strong>: تدريب المستخدمين وتوعيتهم بالمخاطر الأمنية</li>
+<li><strong>التخطيط للطوارئ</strong>: إعداد خطط للاستجابة للحوادث والتعافي من الكوارث</li>
+<li><strong>التعاون والمشاركة</strong>: التعاون مع المجتمع الأمني ومشاركة المعلومات</li>
+<li><strong>الامتثال التنظيمي</strong>: الالتزام بالمعايير واللوائح الأمنية</li>
+<li><strong>التحسين المستمر</strong>: تحسين الإجراءات والضوابط الأمنية باستمرار</li>
+</ul>
+</div>
+<div class="lesson-section">
+<h2>خلاصة</h2>
+<p>أمن الشبكات المتقدم هو مجال متطور باستمرار يتطلب نهجًا شاملًا ومتعدد الطبقات. مع تزايد التهديدات السيبرانية وتطورها، أصبح من الضروري تبني استراتيجيات وتقنيات أمنية متقدمة تتجاوز الحلول التقليدية.</p>
+<p>من خلال فهم التهديدات المتطورة وتطبيق استراتيجيات مثل نموذج الدفاع متعدد الطبقات ونموذج Zero Trust، واستخدام تقنيات متقدمة مثل التقسيم الدقيق والتشفير المتقدم والذكاء الاصطناعي، يمكن للمؤسسات تحسين موقفها الأمني ومواجهة التحديات الأمنية المعاصرة.</p>
+<p>في النهاية، يجب أن يكون أمن الشبكات عملية مستمرة تتضمن التقييم والتحسين المستمر، مع التركيز على الأشخاص والعمليات والتكنولوجيا.</p>
+</div>
+<div class="lesson-navigation">
+<a class="btn" href="../level-two.html">العودة إلى المستوى الثاني</a>
+<a class="btn" href="../tests/level-two-test.html">اختبار المستوى الثاني</a>
+</div>
+</div>
+</main></div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

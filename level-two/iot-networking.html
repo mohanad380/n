@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>إنترنت الأشياء وتطبيقاتها في الشبكات - عالم الشبكات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- القائمة الرئيسية -->
+<header>
+<div class="container header-container">
+<a class="logo" href="../index.html">عالم الشبكات</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<nav class="main-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</nav>
+<!-- New Dropdown Menu -->
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li class="has-submenu">
+<a href="#">الأساسيات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../basics/intro.html">مقدمة في الشبكات</a></li>
+<li><a href="../basics/types.html">أنواع الشبكات</a></li>
+<li><a href="../basics/topology.html">طوبولوجيا الشبكات</a></li>
+<li><a href="../basics/protocols.html">بروتوكولات الشبكات</a></li>
+<li><a href="../basics/devices.html">أجهزة الشبكات</a></li>
+<li><a href="../basics/osi.html">نموذج OSI</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الأول <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-one/ip-addressing.html">عنونة IP</a></li>
+<li><a href="../level-one/routing.html">التوجيه</a></li>
+<li><a href="../level-one/switching.html">التبديل</a></li>
+<li><a href="../level-one/vlan.html">الشبكات الافتراضية VLAN</a></li>
+<li><a href="../level-one/wireless.html">الشبكات اللاسلكية</a></li>
+<li><a href="../level-one/security.html">أمن الشبكات</a></li>
+<li><a href="../level-one/nat.html">ترجمة عناوين الشبكة NAT</a></li>
+<li><a href="../level-one/dhcp.html">بروتوكول DHCP</a></li>
+<li><a href="../level-one/dns.html">نظام أسماء النطاقات DNS</a></li>
+<li><a href="../level-one/troubleshooting.html">استكشاف الأخطاء وإصلاحها</a></li>
+<li><a href="../level-one/vpn.html">الشبكات الخاصة الافتراضية VPN</a></li>
+<li><a href="../level-one/monitoring.html">مراقبة الشبكة</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">المستوى الثاني <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../level-two/mikrotik-intro.html">مقدمة في أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-setup.html">إعداد أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-config.html">تكوين أجهزة مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-routing.html">التوجيه في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-wireless.html">إعدادات الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="../level-two/mikrotik-vpn.html">إعداد VPN في مايكروتك</a></li>
+<li><a href="../level-two/enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="../level-two/cloud-networking.html">شبكات الحوسبة السحابية</a></li>
+<li><a href="../level-two/advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="../level-two/iot-networking.html">شبكات إنترنت الأشياء</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href="#">الاختبارات <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="submenu">
+<li><a href="../tests/basics-test.html">اختبار الأساسيات</a></li>
+<li><a href="../tests/level-one-test.html">اختبار المستوى الأول</a></li>
+<li><a href="../tests/level-two-test.html">اختبار المستوى الثاني</a></li>
+<li><a href="../tests/comprehensive-test.html">الاختبار الشامل</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- محتوى الدرس -->
+<div class="container content-container">
+<aside class="sidebar">
+<h3 class="sidebar-title">دروس المستوى الثاني</h3>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="mikrotik-intro.html">مقدمة في أجهزة وأنظمة مايكروتك</a></li>
+<li><a href="mikrotik-setup.html">تركيب وإعداد أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-config.html">برمجة وتكوين أجهزة مايكروتك</a></li>
+<li><a href="mikrotik-routing.html">التوجيه المتقدم في مايكروتك</a></li>
+<li><a href="mikrotik-wireless.html">تكوين الشبكات اللاسلكية في مايكروتك</a></li>
+<li><a href="mikrotik-vpn.html">تكوين VPN في مايكروتك</a></li>
+<li><a href="advanced-network-security.html">أمن الشبكات المتقدم</a></li>
+<li><a href="enterprise-network-design.html">تصميم شبكات المؤسسات</a></li>
+<li><a href="cloud-networking.html">الحوسبة السحابية وتقنيات الشبكات الحديثة</a></li>
+<li><a class="active" href="iot-networking.html">شبكات إنترنت الأشياء (IoT)</a></li>
+</ul>
+</nav>
+</aside>
+<main class="main-content">
+<h1 class="lesson-title">إنترنت الأشياء وتطبيقاتها في الشبكات</h1>
+<div class="lesson-content">
+<div class="lesson-section">
+<h2>مقدمة في إنترنت الأشياء (IoT)</h2>
+<p>إنترنت الأشياء (Internet of Things - IoT) هو مفهوم يشير إلى شبكة من الأجهزة المادية المتصلة بالإنترنت، والتي تحتوي على مستشعرات ومعالجات وبرمجيات تمكنها من جمع البيانات وتبادلها. تتيح هذه التقنية للأجهزة التواصل والتفاعل مع بعضها البعض ومع البيئة المحيطة، مما يفتح آفاقًا جديدة للتطبيقات والخدمات في مختلف المجالات.</p>
+<p>في هذا الدرس، سنتعرف على مفاهيم إنترنت الأشياء وتقنياتها وتطبيقاتها، وكيفية تأثيرها على تصميم وإدارة الشبكات الحديثة.</p>
+<div class="lesson-image">
+<img alt="مفهوم إنترنت الأشياء" src="images/placeholder.svg"/>
+<p class="image-caption">مفهوم إنترنت الأشياء وترابط الأجهزة المختلفة</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>مكونات نظام إنترنت الأشياء</h2>
+<p>يتكون نظام إنترنت الأشياء النموذجي من عدة مكونات رئيسية:</p>
+<h3>1. الأجهزة (Devices)</h3>
+<p>الأجهزة هي العناصر المادية في نظام إنترنت الأشياء، وتشمل:</p>
+<ul>
+<li><strong>المستشعرات (Sensors)</strong>: تجمع البيانات من البيئة المحيطة (درجة الحرارة، الرطوبة، الضوء، الحركة، إلخ)</li>
+<li><strong>المشغلات (Actuators)</strong>: تنفذ إجراءات في العالم المادي (مثل تشغيل/إيقاف الأجهزة، فتح/إغلاق الأبواب)</li>
+<li><strong>الأجهزة المدمجة (Embedded Devices)</strong>: أجهزة صغيرة مدمجة في المنتجات والأنظمة</li>
+<li><strong>الأجهزة الذكية (Smart Devices)</strong>: أجهزة متطورة مثل الهواتف الذكية والساعات الذكية</li>
+</ul>
+<h3>2. الاتصال (Connectivity)</h3>
+<p>تقنيات الاتصال تربط الأجهزة ببعضها البعض وبالإنترنت:</p>
+<ul>
+<li><strong>تقنيات قصيرة المدى</strong>: Bluetooth، Zigbee، Z-Wave، NFC، RFID</li>
+<li><strong>تقنيات متوسطة المدى</strong>: Wi-Fi، Thread، 6LoWPAN</li>
+<li><strong>تقنيات بعيدة المدى</strong>: شبكات الخلوية (2G/3G/4G/5G)، LoRaWAN، Sigfox، NB-IoT</li>
+<li><strong>بروتوكولات الاتصال</strong>: MQTT، CoAP، AMQP، HTTP/HTTPS</li>
+</ul>
+<h3>3. البوابات (Gateways)</h3>
+<p>البوابات هي أجهزة وسيطة تربط بين أجهزة إنترنت الأشياء والإنترنت أو السحابة:</p>
+<ul>
+<li><strong>ترجمة البروتوكولات</strong>: تحويل بروتوكولات الاتصال المحلية إلى بروتوكولات الإنترنت</li>
+<li><strong>تجميع البيانات</strong>: جمع البيانات من أجهزة متعددة</li>
+<li><strong>المعالجة الطرفية (Edge Processing)</strong>: معالجة البيانات محليًا قبل إرسالها</li>
+<li><strong>الأمان</strong>: توفير طبقة أمان إضافية</li>
+</ul>
+<h3>4. منصات إنترنت الأشياء (IoT Platforms)</h3>
+<p>منصات إنترنت الأشياء هي برمجيات تدير وتحلل البيانات من أجهزة إنترنت الأشياء:</p>
+<ul>
+<li><strong>إدارة الأجهزة</strong>: تسجيل وإدارة ومراقبة الأجهزة</li>
+<li><strong>جمع البيانات وتخزينها</strong>: جمع البيانات من الأجهزة وتخزينها</li>
+<li><strong>تحليل البيانات</strong>: تحليل البيانات لاستخراج المعلومات المفيدة</li>
+<li><strong>التصور</strong>: عرض البيانات والتحليلات بشكل مرئي</li>
+<li><strong>التكامل</strong>: التكامل مع أنظمة وتطبيقات أخرى</li>
+</ul>
+<h3>5. التطبيقات (Applications)</h3>
+<p>التطبيقات هي البرمجيات التي تستخدم بيانات إنترنت الأشياء لتوفير قيمة للمستخدمين:</p>
+<ul>
+<li><strong>تطبيقات المستخدم النهائي</strong>: تطبيقات الهاتف المحمول والويب للتحكم ومراقبة الأجهزة</li>
+<li><strong>تطبيقات الأعمال</strong>: تطبيقات لتحسين العمليات التجارية</li>
+<li><strong>تطبيقات التحليلات</strong>: تطبيقات لتحليل البيانات واستخراج الرؤى</li>
+<li><strong>تطبيقات الذكاء الاصطناعي</strong>: تطبيقات تستخدم الذكاء الاصطناعي لاتخاذ قرارات ذكية</li>
+</ul>
+<div class="lesson-image">
+<img alt="معمارية إنترنت الأشياء" src="images/placeholder.svg"/>
+<p class="image-caption">المكونات الرئيسية لمعمارية إنترنت الأشياء</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تقنيات الاتصال في إنترنت الأشياء</h2>
+<p>تتنوع تقنيات الاتصال المستخدمة في إنترنت الأشياء لتلبية متطلبات مختلف التطبيقات:</p>
+<h3>1. تقنيات الاتصال قصيرة المدى</h3>
+<ul>
+<li><strong>Bluetooth Low Energy (BLE)</strong>
+<ul>
+<li>المدى: 10-100 متر</li>
+<li>معدل نقل البيانات: 1 ميجابت/ثانية</li>
+<li>استهلاك الطاقة: منخفض جدًا</li>
+<li>التطبيقات: الأجهزة القابلة للارتداء، أجهزة المنزل الذكي</li>
+</ul>
+</li>
+<li><strong>Zigbee</strong>
+<ul>
+<li>المدى: 10-100 متر</li>
+<li>معدل نقل البيانات: 250 كيلوبت/ثانية</li>
+<li>استهلاك الطاقة: منخفض</li>
+<li>التطبيقات: أتمتة المنازل، التحكم الصناعي</li>
+</ul>
+</li>
+<li><strong>Z-Wave</strong>
+<ul>
+<li>المدى: 30-100 متر</li>
+<li>معدل نقل البيانات: 100 كيلوبت/ثانية</li>
+<li>استهلاك الطاقة: منخفض</li>
+<li>التطبيقات: أتمتة المنازل، التحكم في الإضاءة</li>
+</ul>
+</li>
+<li><strong>RFID (Radio Frequency Identification)</strong>
+<ul>
+<li>المدى: بضعة سنتيمترات إلى عدة أمتار</li>
+<li>معدل نقل البيانات: متغير</li>
+<li>استهلاك الطاقة: منخفض جدًا (سلبي) أو منخفض (نشط)</li>
+<li>التطبيقات: تتبع المخزون، بطاقات الوصول</li>
+</ul>
+</li>
+<li><strong>NFC (Near Field Communication)</strong>
+<ul>
+<li>المدى: بضعة سنتيمترات</li>
+<li>معدل نقل البيانات: 424 كيلوبت/ثانية</li>
+<li>استهلاك الطاقة: منخفض جدًا</li>
+<li>التطبيقات: المدفوعات، مشاركة البيانات</li>
+</ul>
+</li>
+</ul>
+<h3>2. تقنيات الاتصال متوسطة المدى</h3>
+<ul>
+<li><strong>Wi-Fi</strong>
+<ul>
+<li>المدى: 50-100 متر</li>
+<li>معدل نقل البيانات: عدة مئات من ميجابت/ثانية</li>
+<li>استهلاك الطاقة: متوسط إلى مرتفع</li>
+<li>التطبيقات: الأجهزة المنزلية الذكية، كاميرات المراقبة</li>
+</ul>
+</li>
+<li><strong>Thread</strong>
+<ul>
+<li>المدى: 10-100 متر</li>
+<li>معدل نقل البيانات: 250 كيلوبت/ثانية</li>
+<li>استهلاك الطاقة: منخفض</li>
+<li>التطبيقات: أتمتة المنازل، التحكم في الأجهزة</li>
+</ul>
+</li>
+<li><strong>6LoWPAN</strong>
+<ul>
+<li>المدى: متغير (يعتمد على الطبقة المادية)</li>
+<li>معدل نقل البيانات: متغير</li>
+<li>استهلاك الطاقة: منخفض</li>
+<li>التطبيقات: الشبكات المنخفضة الطاقة، المدن الذكية</li>
+</ul>
+</li>
+</ul>
+<h3>3. تقنيات الاتصال بعيدة المدى</h3>
+<ul>
+<li><strong>شبكات الخلوية (2G/3G/4G/5G)</strong>
+<ul>
+<li>المدى: عدة كيلومترات</li>
+<li>معدل نقل البيانات: متغير (من كيلوبت/ثانية إلى جيجابت/ثانية)</li>
+<li>استهلاك الطاقة: متوسط إلى مرتفع</li>
+<li>التطبيقات: المركبات المتصلة، التطبيقات المتنقلة</li>
+</ul>
+</li>
+<li><strong>LoRaWAN</strong>
+<ul>
+<li>المدى: 2-15 كيلومتر</li>
+<li>معدل نقل البيانات: 0.3-50 كيلوبت/ثانية</li>
+<li>استهلاك الطاقة: منخفض جدًا</li>
+<li>التطبيقات: المدن الذكية، الزراعة الذكية</li>
+</ul>
+</li>
+<li><strong>Sigfox</strong>
+<ul>
+<li>المدى: 10-50 كيلومتر</li>
+<li>معدل نقل البيانات: 100 بت/ثانية</li>
+<li>استهلاك الطاقة: منخفض جدًا</li>
+<li>التطبيقات: تتبع الأصول، قراءة العدادات</li>
+</ul>
+</li>
+<li><strong>NB-IoT (Narrowband IoT)</strong>
+<ul>
+<li>المدى: 1-10 كيلومتر</li>
+<li>معدل نقل البيانات: 60-100 كيلوبت/ثانية</li>
+<li>استهلاك الطاقة: منخفض</li>
+<li>التطبيقات: المدن الذكية، المباني الذكية</li>
+</ul>
+</li>
+</ul>
+<div class="lesson-image">
+<img alt="تقنيات الاتصال في إنترنت الأشياء" src="images/placeholder.svg"/>
+<p class="image-caption">مقارنة بين تقنيات الاتصال المختلفة في إنترنت الأشياء</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>بروتوكولات إنترنت الأشياء</h2>
+<p>تستخدم أنظمة إنترنت الأشياء مجموعة متنوعة من البروتوكولات لتبادل البيانات:</p>
+<h3>1. بروتوكولات طبقة التطبيق</h3>
+<ul>
+<li><strong>MQTT (Message Queuing Telemetry Transport)</strong>
+<ul>
+<li>نموذج النشر/الاشتراك (Publish/Subscribe)</li>
+<li>خفيف الوزن ومناسب للأجهزة محدودة الموارد</li>
+<li>يدعم ثلاثة مستويات من جودة الخدمة (QoS)</li>
+<li>مناسب للاتصالات غير المستقرة</li>
+</ul>
+</li>
+<li><strong>CoAP (Constrained Application Protocol)</strong>
+<ul>
+<li>بروتوكول مشابه لـ HTTP ولكنه أخف وزنًا</li>
+<li>مصمم للأجهزة محدودة الموارد</li>
+<li>يدعم نموذج الطلب/الاستجابة (Request/Response)</li>
+<li>يعمل فوق UDP بدلاً من TCP</li>
+</ul>
+</li>
+<li><strong>AMQP (Advanced Message Queuing Protocol)</strong>
+<ul>
+<li>بروتوكول متقدم لتبادل الرسائل</li>
+<li>يوفر موثوقية عالية وأمان</li>
+<li>يدعم المعاملات والتوجيه المتقدم</li>
+<li>مناسب للتطبيقات المؤسسية</li>
+</ul>
+</li>
+<li><strong>HTTP/HTTPS</strong>
+<ul>
+<li>بروتوكول الويب القياسي</li>
+<li>سهل التنفيذ والتكامل</li>
+<li>يستهلك موارد أكثر من البروتوكولات الأخرى</li>
+<li>مناسب للأجهزة ذات الموارد الكافية</li>
+</ul>
+</li>
+</ul>
+<h3>2. بروتوكولات طبقة الشبكة</h3>
+<ul>
+<li><strong>IPv6</strong>: يوفر مساحة عنونة كبيرة تكفي لمليارات الأجهزة</li>
+<li><strong>6LoWPAN</strong>: تكييف IPv6 للشبكات منخفضة الطاقة</li>
+<li><strong>RPL (Routing Protocol for Low-Power and Lossy Networks)</strong>: بروتوكول توجيه للشبكات منخفضة الطاقة</li>
+</ul>
+<h3>3. بروتوكولات الأمان</h3>
+<ul>
+<li><strong>DTLS (Datagram Transport Layer Security)</strong>: تأمين الاتصالات عبر UDP</li>
+<li><strong>TLS (Transport Layer Security)</strong>: تأمين الاتصالات عبر TCP</li>
+<li><strong>OAuth 2.0</strong>: بروتوكول تفويض للتحكم في الوصول</li>
+</ul>
+<div class="lesson-image">
+<img alt="بروتوكولات إنترنت الأشياء" src="images/placeholder.svg"/>
+<p class="image-caption">بروتوكولات إنترنت الأشياء في الطبقات المختلفة</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تطبيقات إنترنت الأشياء</h2>
+<p>تتنوع تطبيقات إنترنت الأشياء في مختلف المجالات:</p>
+<h3>1. المنازل الذكية (Smart Homes)</h3>
+<ul>
+<li><strong>التحكم في الإضاءة</strong>: التحكم في الإضاءة عن بعد وجدولتها</li>
+<li><strong>التحكم في درجة الحرارة</strong>: ترموستات ذكي يتكيف مع عادات المستخدم</li>
+<li><strong>أنظمة الأمان</strong>: كاميرات المراقبة، أجهزة استشعار الحركة، أقفال ذكية</li>
+<li><strong>الأجهزة المنزلية الذكية</strong>: ثلاجات، غسالات، أفران ذكية</li>
+<li><strong>المساعدات الصوتية</strong>: أجهزة مثل Amazon Echo، Google Home</li>
+</ul>
+<h3>2. المدن الذكية (Smart Cities)</h3>
+<ul>
+<li><strong>إدارة حركة المرور</strong>: أنظمة ذكية لتحسين تدفق حركة المرور</li>
+<li><strong>إدارة مواقف السيارات</strong>: أنظمة لتحديد مواقف السيارات المتاحة</li>
+<li><strong>إدارة النفايات</strong>: حاويات ذكية تخبر عندما تمتلئ</li>
+<li><strong>الإضاءة العامة الذكية</strong>: إضاءة تتكيف مع الظروف المحيطة</li>
+<li><strong>مراقبة جودة الهواء</strong>: أجهزة استشعار لقياس جودة الهواء</li>
+</ul>
+<h3>3. الرعاية الصحية (Healthcare)</h3>
+<ul>
+<li><strong>مراقبة المرضى عن بعد</strong>: أجهزة لمراقبة الحالة الصحية للمرضى</li>
+<li><strong>الأجهزة القابلة للارتداء</strong>: ساعات ذكية، أجهزة تتبع اللياقة البدنية</li>
+<li><strong>إدارة الأدوية</strong>: أنظمة تذكير بمواعيد الأدوية</li>
+<li><strong>رعاية كبار السن</strong>: أنظمة لمراقبة ومساعدة كبار السن</li>
+<li><strong>التشخيص المبكر</strong>: أجهزة للكشف المبكر عن الأمراض</li>
+</ul>
+<h3>4. الصناعة (Industry 4.0)</h3>
+<ul>
+<li><strong>الصيانة التنبؤية</strong>: التنبؤ بالأعطال قبل حدوثها</li>
+<li><strong>مراقبة الإنتاج</strong>: مراقبة عمليات الإنتاج في الوقت الفعلي</li>
+<li><strong>إدارة المخزون</strong>: تتبع المخزون بشكل آلي</li>
+<li><strong>سلامة العمال</strong>: أنظمة لمراقبة سلامة العمال</li>
+<li><strong>تحسين الكفاءة</strong>: تحسين استهلاك الطاقة والموارد</li>
+</ul>
+<h3>5. الزراعة الذكية (Smart Agriculture)</h3>
+<ul>
+<li><strong>الري الذكي</strong>: أنظمة ري تعتمد على رطوبة التربة</li>
+<li><strong>مراقبة المحاصيل</strong>: مراقبة نمو المحاصيل وصحتها</li>
+<li><strong>تتبع الماشية</strong>: تتبع موقع وصحة الماشية</li>
+<li><strong>مراقبة الظروف البيئية</strong>: مراقبة درجة الحرارة والرطوبة</li>
+<li><strong>الزراعة الدقيقة</strong>: استخدام البيانات لتحسين الإنتاج</li>
+</ul>
+<div class="lesson-image">
+<img alt="تطبيقات إنترنت الأشياء" src="images/placeholder.svg"/>
+<p class="image-caption">تطبيقات إنترنت الأشياء في مختلف المجالات</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>تأثير إنترنت الأشياء على تصميم الشبكات</h2>
+<p>يؤثر انتشار أجهزة إنترنت الأشياء بشكل كبير على كيفية تصميم وإدارة الشبكات:</p>
+<h3>1. التحديات الرئيسية</h3>
+<ul>
+<li><strong>الحجم الهائل</strong>: مليارات الأجهزة المتصلة</li>
+<li><strong>التنوع</strong>: أنواع مختلفة من الأجهزة والبروتوكولات</li>
+<li><strong>محدودية الموارد</strong>: أجهزة ذات قدرات محدودة</li>
+<li><strong>استهلاك الطاقة</strong>: الحاجة إلى تقنيات منخفضة استهلاك الطاقة</li>
+<li><strong>الأمان</strong>: تحديات أمنية فريدة</li>
+<li><strong>حجم البيانات</strong>: كميات هائلة من البيانات</li>
+</ul>
+<h3>2. تطور معمارية الشبكات</h3>
+<ul>
+<li><strong>الحوسبة الطرفية (Edge Computing)</strong>: نقل المعالجة إلى حافة الشبكة</li>
+<li><strong>الحوسبة الضبابية (Fog Computing)</strong>: طبقة وسيطة بين الأجهزة والسحابة</li>
+<li><strong>الشبكات المعرفة بالبرمجيات (SDN)</strong>: فصل مستوى التحكم عن مستوى البيانات</li>
+<li><strong>تقنية NFV (Network Functions Virtualization)</strong>: تحويل وظائف الشبكة إلى برمجيات</li>
+<li><strong>الشبكات المتكيفة</strong>: شبكات تتكيف مع الظروف المتغيرة</li>
+</ul>
+<h3>3. اعتبارات تصميم الشبكات لإنترنت الأشياء</h3>
+<ul>
+<li><strong>قابلية التوسع</strong>: تصميم يدعم النمو المستقبلي</li>
+<li><strong>المرونة</strong>: القدرة على التكيف مع المتطلبات المتغيرة</li>
+<li><strong>التوافر العالي</strong>: ضمان استمرارية الخدمة</li>
+<li><strong>الأمان المدمج</strong>: دمج الأمان في جميع مستويات الشبكة</li>
+<li><strong>كفاءة الطاقة</strong>: تصميم يراعي استهلاك الطاقة</li>
+<li><strong>إدارة النطاق الترددي</strong>: تحسين استخدام النطاق الترددي</li>
+</ul>
+<div class="lesson-image">
+<img alt="معمارية الشبكات لإنترنت الأشياء" src="images/placeholder.svg"/>
+<p class="image-caption">تطور معمارية الشبكات لدعم إنترنت الأشياء</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>أمان إنترنت الأشياء</h2>
+<p>يعد أمان إنترنت الأشياء من أهم التحديات التي تواجه هذه التقنية:</p>
+<h3>1. التحديات الأمنية</h3>
+<ul>
+<li><strong>محدودية الموارد</strong>: صعوبة تنفيذ حلول أمنية قوية على أجهزة محدودة الموارد</li>
+<li><strong>التحديثات</strong>: صعوبة تحديث البرامج الثابتة والبرمجيات</li>
+<li><strong>التنوع</strong>: تنوع الأجهزة والبروتوكولات يزيد من تعقيد الأمان</li>
+<li><strong>الخصوصية</strong>: جمع كميات هائلة من البيانات الشخصية</li>
+<li><strong>مساحة الهجوم</strong>: زيادة عدد نقاط الدخول المحتملة</li>
+</ul>
+<h3>2. التهديدات الشائعة</h3>
+<ul>
+<li><strong>هجمات DDoS</strong>: استخدام أجهزة إنترنت الأشياء المخترقة لشن هجمات حجب الخدمة</li>
+<li><strong>اختراق الأجهزة</strong>: الوصول غير المصرح به إلى الأجهزة</li>
+<li><strong>اعتراض البيانات</strong>: اعتراض البيانات المتبادلة بين الأجهزة</li>
+<li><strong>هجمات الوسيط (Man-in-the-Middle)</strong>: اعتراض وتعديل الاتصالات</li>
+<li><strong>هجمات البرمجيات الخبيثة</strong>: إصابة الأجهزة بالبرمجيات الخبيثة</li>
+</ul>
+<h3>3. استراتيجيات الأمان</h3>
+<ul>
+<li><strong>الأمان بالتصميم</strong>: دمج الأمان في مرحلة التصميم</li>
+<li><strong>التشفير</strong>: تشفير البيانات أثناء النقل والتخزين</li>
+<li><strong>المصادقة والتفويض</strong>: التحقق من هوية الأجهزة والمستخدمين</li>
+<li><strong>تقسيم الشبكة</strong>: عزل أجهزة إنترنت الأشياء عن الشبكة الرئيسية</li>
+<li><strong>التحديثات الآمنة</strong>: آليات آمنة لتحديث البرامج الثابتة</li>
+<li><strong>المراقبة المستمرة</strong>: مراقبة الشبكة للكشف عن الأنشطة المشبوهة</li>
+</ul>
+<h3>4. أطر عمل ومعايير الأمان</h3>
+<ul>
+<li><strong>OWASP IoT</strong>: إطار عمل لأمان إنترنت الأشياء</li>
+<li><strong>NIST Cybersecurity Framework</strong>: إطار عمل للأمان السيبراني</li>
+<li><strong>ISO/IEC 27001</strong>: معيار لأمن المعلومات</li>
+<li><strong>ETSI TS 103 645</strong>: معيار لأمان أجهزة المستهلك في إنترنت الأشياء</li>
+</ul>
+<div class="lesson-image">
+<img alt="أمان إنترنت الأشياء" src="images/placeholder.svg"/>
+<p class="image-caption">استراتيجيات أمان إنترنت الأشياء</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>مستقبل إنترنت الأشياء</h2>
+<p>يستمر إنترنت الأشياء في التطور، مع ظهور اتجاهات وتقنيات جديدة:</p>
+<h3>1. الاتجاهات المستقبلية</h3>
+<ul>
+<li><strong>التكامل مع الذكاء الاصطناعي</strong>: دمج الذكاء الاصطناعي مع إنترنت الأشياء</li>
+<li><strong>الروبوتات المتصلة</strong>: روبوتات متصلة بالإنترنت للتفاعل مع البيئة</li>
+<li><strong>التوأم الرقمي (Digital Twin)</strong>: نماذج رقمية للأنظمة المادية</li>
+<li><strong>الواقع المعزز/الافتراضي</strong>: دمج إنترنت الأشياء مع تقنيات AR/VR</li>
+<li><strong>الحوسبة الكمومية</strong>: استخدام الحوسبة الكمومية لتحليل بيانات إنترنت الأشياء</li>
+</ul>
+<h3>2. التحديات المستقبلية</h3>
+<ul>
+<li><strong>التوحيد القياسي</strong>: الحاجة إلى معايير موحدة</li>
+<li><strong>الخصوصية</strong>: حماية خصوصية المستخدمين</li>
+<li><strong>الاستدامة</strong>: تقليل الأثر البيئي لأجهزة إنترنت الأشياء</li>
+<li><strong>التنظيم</strong>: تطوير أطر تنظيمية مناسبة</li>
+<li><strong>الفجوة الرقمية</strong>: ضمان الوصول العادل إلى تقنيات إنترنت الأشياء</li>
+</ul>
+<h3>3. تقنيات الجيل التالي</h3>
+<ul>
+<li><strong>5G وما بعدها</strong>: شبكات اتصال أسرع وأكثر موثوقية</li>
+<li><strong>الحوسبة الطرفية المتقدمة</strong>: قدرات معالجة أكبر على حافة الشبكة</li>
+<li><strong>أجهزة استشعار متقدمة</strong>: أجهزة استشعار أصغر وأكثر كفاءة</li>
+<li><strong>تقنيات الطاقة</strong>: حصاد الطاقة وبطاريات متطورة</li>
+<li><strong>المواد الذكية</strong>: مواد تتفاعل مع البيئة وتجمع البيانات</li>
+</ul>
+<div class="lesson-image">
+<img alt="مستقبل إنترنت الأشياء" src="images/placeholder.svg"/>
+<p class="image-caption">اتجاهات مستقبلية في تقنيات إنترنت الأشياء</p>
+</div>
+</div>
+<div class="lesson-section">
+<h2>خلاصة</h2>
+<p>إنترنت الأشياء هو تقنية ثورية تغير الطريقة التي نتفاعل بها مع العالم من حولنا. من خلال ربط مليارات الأجهزة بالإنترنت، يمكن جمع وتحليل كميات هائلة من البيانات لتحسين حياتنا وعملياتنا التجارية والصناعية.</p>
+<p>ومع ذلك، يأتي هذا التطور مع تحديات كبيرة، خاصة في مجالات الأمان والخصوصية وتصميم الشبكات. يتطلب التعامل مع هذه التحديات نهجًا شاملًا يأخذ في الاعتبار جميع جوانب النظام، من الأجهزة والاتصالات إلى البرمجيات والتطبيقات.</p>
+<p>مع استمرار تطور تقنيات إنترنت الأشياء، سنشهد تطبيقات وحلولًا جديدة تساهم في بناء عالم أكثر ذكاءً واتصالًا. سيكون فهم هذه التقنيات وتأثيرها على الشبكات أمرًا حاسمًا للمتخصصين في مجال تكنولوجيا المعلومات والاتصالات.</p>
+</div>
+<div class="lesson-navigation">
+<a class="btn" href="../level-two.html">العودة إلى المستوى الثاني</a>
+<a class="btn" href="../tests/level-two-test.html">اختبار المستوى الثاني</a>
+</div>
+</div>
+</main></div>
+<!-- الفوتر -->
+<footer>
+<div class="container footer-content">
+<div class="footer-section">
+<h3>عالم الشبكات</h3>
+<p>الموقع التعليمي الأول المتخصص في تعليم أساسيات الشبكات وتقنياتها المتقدمة بأسلوب علمي سهل ومدعوم بالصور والرسومات التوضيحية.</p>
+</div>
+<div class="footer-section">
+<h3>روابط سريعة</h3>
+<ul>
+<li><a href="../index.html">الرئيسية</a></li>
+<li><a href="../basics.html">الأساسيات</a></li>
+<li><a href="../level-one.html">المستوى الأول</a></li>
+<li><a href="../level-two.html">المستوى الثاني</a></li>
+<li><a href="../tests.html">الاختبارات</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>تواصل معنا</h3>
+<ul>
+<li><i class="fas fa-envelope"></i> البريد الإلكتروني: mohannadm380w108@gmail.com</li>
+<li><i class="fas fa-phone"></i> الهاتف: 772505594</li>
+<li><i class="fas fa-user"></i> مهند مهدي</li>
+</ul>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100026471569171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://wa.me/772505594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+<div class="container copyright">
+<p>جميع الحقوق محفوظة © 2025 - عالم الشبكات</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
